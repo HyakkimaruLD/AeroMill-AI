@@ -1,0 +1,65 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "data_hashes": {
+    "train": "6cc96dd86ba06dcb86db4900c802dd7ba76c8a9cf166033796037955c4f9b6b3",
+    "validation": "77d264a04b8e5a00ead4ca7626597a0ac02bfd469fc9edca0e128fb4ccac0c97"
+  },
+  "feature_order": [
+    "x_rms_ratio",
+    "x_crest",
+    "x_kurtosis",
+    "x_dominant_hz",
+    "x_spectral_entropy",
+    "x_off_harmonic",
+    "x_rms_change",
+    "y_rms_ratio",
+    "y_crest",
+    "y_kurtosis",
+    "y_dominant_hz",
+    "y_spectral_entropy",
+    "y_off_harmonic",
+    "y_rms_change",
+    "z_rms_ratio",
+    "z_crest",
+    "z_kurtosis",
+    "z_dominant_hz",
+    "z_spectral_entropy",
+    "z_off_harmonic",
+    "z_rms_change",
+    "rpm",
+    "feed_mm_min"
+  ],
+  "manifest_sha256": "22d3b89655d7f930e8bee9c25e2dca85a412fbedf7a7225009b10d4c6ff38749",
+  "model_sha256": "270cd886d96610201b1acc7a67a42284f90a02f9a938232aa4674c6271e5a814",
+  "parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": "balanced",
+    "criterion": "gini",
+    "max_depth": 10,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 200,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "sklearn": "1.9.1",
+  "training_seconds": 7.933092021965422,
+  "versions": {
+    "features": "ordered-23-v1",
+    "generator": "engagement-v2",
+    "model": "rf-200-depth10-v1"
+  }
+}

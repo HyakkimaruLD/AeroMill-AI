@@ -1,0 +1,124 @@
+"""Causal synthetic milling simulation, not validated on real CNC.
+
+The controller supplies accepted targets. This module alone integrates physical
+slew, position, envelope and continuous phase, once per sample. No success flags.
+"""
+from fractions import Fraction
+from math import exp, isfinite, pi, sin
+
+import numpy as np
+
+from .config import (
+    AXIS_MULTIPLIERS, CHATTER_MIN, ENVELOPE_TAU_S, FEED_LIMITS, FEED_SLEW,
+    IMPACT_TAU_S, RPM_LIMITS, RPM_SLEW, SAMPLE_RATE, STABLE_MAX, ToolProfile,
+)
+from .contracts import AppliedState, StepResult, TelemetryChunk, TruthFrame, TruthState
+from .scenarios import Scenario
+
+
+def resonance(rpm: float, centers: tuple[float, ...], widths: tuple[float, ...]) -> float:
+    return min(1., sum(exp(-((rpm - center) / width) ** 2)
+                       for center, width in zip(centers, widths, strict=True)))
+
+
+def axis_noise(seed: int, start: int, count: int) -> np.ndarray:
+    """Standard normals indexed by absolute sample; two raw draws per sample.
+
+    Source: installed NumPy Philox docstring, four uint64 draws per counter.
+    Box–Muller uses a fixed draw count, unlike rejection-based normal samplers.
+    """
+    rng = np.random.Philox(seed)
+    rng.advance(start // 2)
+    offset = 2 * (start % 2)
+    raw = rng.random_raw(offset + 2 * count)[offset:].reshape(count, 2)
+    # 52 bits plus half a unit keeps both endpoints strictly inside (0, 1).
+    uniform = ((raw >> np.uint64(12)).astype(np.float64) + .5) / 2**52
+    return np.sqrt(-2 * np.log(uniform[:, 0])) * np.cos(2 * pi * uniform[:, 1])
+
+
+class Simulator:
+    def __init__(self, scenario: Scenario, *, seed: int = 42,
+                 profile: ToolProfile = ToolProfile(), noise_std: float = .05,
+                 chatter_hz: float = 1200., run_id: str = 'run'):
+        if type(seed) is not int or seed < 0:
+            raise ValueError('seed must be a nonnegative integer')
+        if not isfinite(noise_std) or noise_std < 0:
+            raise ValueError('noise_std must be finite and nonnegative')
+        if not isfinite(chatter_hz) or not 0 < chatter_hz < SAMPLE_RATE / 2:
+            raise ValueError('chatter_hz must be below Nyquist and positive')
+        self.scenario, self.profile, self.run_id = scenario, profile, run_id
+        self.seed, self.noise_std, self.chatter_hz = seed, noise_std, chatter_hz
+        self._elapsed = Fraction(0)
+        self._index = self._sequence = 0
+        self._rpm, self._feed, self._x, self._amplitude = 3200., 1200., 0., .1
+        self._tooth_phase = self._chatter_phase = 0.
+        self._impact_starts: list[int] = []
+
+    def step(self, dt_s: float, applied_state: AppliedState) -> StepResult:
+        """Emit right-end samples through floor(total duration * 8192).
+
+        Stop bypasses feed slew immediately. A later restart is prevented by
+        the future controller's stop latch, not by an extra command path here.
+        Commands take effect on emitted samples; sub-sample calls may emit none
+        and their targets are not queued. Normal controller calls are 0.1 s.
+        """
+        if not isfinite(dt_s) or dt_s <= 0:
+            raise ValueError('dt_s must be finite and positive')
+        if not isinstance(applied_state, AppliedState):
+            raise TypeError('expected controller-accepted AppliedState')
+        if not applied_state.stopped and not (
+            RPM_LIMITS[0] <= applied_state.rpm <= RPM_LIMITS[1]
+            and FEED_LIMITS[0] <= applied_state.feed_mm_min <= FEED_LIMITS[1]
+        ):
+            raise ValueError('operating target is outside v1 limits')
+        self._elapsed += Fraction(str(dt_s))
+        end = int(self._elapsed * SAMPLE_RATE)
+        count = end - self._index
+        dt = 1 / SAMPLE_RATE
+        decay = exp(-dt / ENVELOPE_TAU_S)
+        vibration = np.empty((count, 3), dtype=np.float64)
+        rpm, feed, x, amplitude = (np.empty(count, dtype=np.float64) for _ in range(4))
+        zones = []
+        noise = np.column_stack([axis_noise(3 * self.seed + axis, self._index, count)
+                                 for axis in range(3)]) * self.noise_std
+        for offset in range(count):
+            index = self._index + offset
+            stopped = applied_state.stopped or self._x >= self.scenario.path_length_mm
+            if stopped:
+                self._feed = 0.
+            else:
+                self._rpm += max(-RPM_SLEW * dt, min(RPM_SLEW * dt, applied_state.rpm - self._rpm))
+                self._feed += max(-FEED_SLEW * dt, min(FEED_SLEW * dt, applied_state.feed_mm_min - self._feed))
+            previous_x = self._x
+            self._x = min(self.scenario.path_length_mm, self._x + self._feed / 60 * dt)
+            region = self.scenario.region_at(self._x)
+            target = 0. if stopped else .1 + 4 * (region.gain if region else 0.) * (self._feed / 1200) * (
+                resonance(self._rpm, region.centers, region.widths) if region else 0.
+            )
+            self._amplitude = target + (self._amplitude - target) * decay
+            self._tooth_phase = (self._tooth_phase + 2 * pi * self.profile.teeth * self._rpm / 60 * dt) % (2 * pi)
+            self._chatter_phase = (self._chatter_phase + 2 * pi * self.chatter_hz * dt) % (2 * pi)
+            for coordinate in self.scenario.impact_positions_mm:
+                if previous_x < coordinate <= self._x:
+                    self._impact_starts.append(index)
+            impulse = sum(exp(-(index - start) * dt / IMPACT_TAU_S)
+                          * sin(2 * pi * self.chatter_hz * (index - start) * dt)
+                          for start in self._impact_starts)
+            signal = (self.profile.h * (.6 * sin(self._tooth_phase) + .2 * sin(2 * self._tooth_phase))
+                      + self._amplitude * sin(self._chatter_phase) + impulse)
+            vibration[offset] = [m * signal for m in AXIS_MULTIPLIERS]
+            rpm[offset], feed[offset], x[offset], amplitude[offset] = self._rpm, self._feed, self._x, self._amplitude
+            zones.append(region.zone_class if region else 'nominal')
+        vibration += noise
+        xyz = np.zeros((count, 3), dtype=np.float64)
+        xyz[:, 0] = x
+        telemetry = TelemetryChunk(
+            self.run_id, self._sequence, self._index,
+            np.arange(self._index + 1, end + 1, dtype=np.float64) / SAMPLE_RATE,
+            xyz, tuple(zones), rpm, feed, vibration,
+        )
+        states = np.where(amplitude <= STABLE_MAX, TruthState.STABLE.value,
+                          np.where(amplitude >= CHATTER_MIN, TruthState.CHATTER.value, TruthState.TRANSITION.value))
+        truth = TruthFrame(amplitude, states, x, feed > 0)
+        self._index, self._sequence = end, self._sequence + 1
+        return StepResult(telemetry, truth)

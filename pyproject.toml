@@ -1,0 +1,12 @@
+[project]
+name = "aeromill"
+version = "0.1.0"
+description = "AeroMill-Adaptive AI: synthetic milling chatter-control agent (not validated on real CNC)"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy", "scipy", "scikit-learn", "streamlit", "plotly"]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
