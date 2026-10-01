@@ -7,6 +7,20 @@ from .contracts import AppliedState, Detection
 from .features import extract_features
 
 
+def single_window_proba(model, features: np.ndarray) -> np.ndarray:
+    """The frozen binary forest, summed in sklearn's original tree order."""
+    if not hasattr(model, "estimators_"):
+        return model.predict_proba(features)
+    # sklearn 1.9 _forest.py:946-962 and tree/_classes.py:1048-1053.
+    # Validate/cast once; tree_.predict is the same leaf lookup without joblib.
+    values = model._validate_X_predict(features)
+    probabilities = np.zeros((len(values), model.n_classes_), dtype=np.float64)
+    for tree in model.estimators_:
+        probabilities += tree.tree_.predict(values)[:, : model.n_classes_]
+    probabilities /= len(model.estimators_)
+    return probabilities
+
+
 class RMSDetector:
     def __init__(self, profile: ToolProfile):
         self.profile = profile
@@ -43,7 +57,7 @@ class RFDetector:
         )
         self.previous_rms = np.asarray(features[:21:7]) * self.profile.reference_rms
         score = float(
-            self.model.predict_proba(np.asarray(features).reshape(1, -1))[0, 1]
+            single_window_proba(self.model, np.asarray(features).reshape(1, -1))[0, 1]
         )
         return Detection(
             features,

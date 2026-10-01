@@ -1,6 +1,7 @@
 """Fixed 100 ms tick loop. Truth stays on the returned side channel, never in Agent."""
 
 import json
+from dataclasses import replace
 from pathlib import Path
 from time import perf_counter
 from uuid import uuid4
@@ -15,6 +16,13 @@ from .detector import RMSDetector, RFDetector
 from .features import FeatureStream
 from .evaluation import RunEvaluator
 from .simulator import Simulator
+
+
+def append_event(path, events, row):
+    """A log sink may hold public events, never an engine or hidden state."""
+    with path.open("a") as file:
+        file.write(json.dumps(row, allow_nan=False) + "\n")
+    events.append(row)
 
 
 class Engine:
@@ -55,7 +63,12 @@ class Engine:
             chatter_hz=chatter_hz,
             initial_phase=initial_phase,
         )
-        self.controller = Controller(self.run_id, fault=fault)
+        if fault not in (None, "reject", "lost_ack", "nan", "missing", "out_of_order"):
+            raise ValueError("unknown fault")
+        self._fault = fault
+        self.controller = Controller(
+            self.run_id, fault=fault if fault in ("reject", "lost_ack") else None
+        )
         self.detector = (
             detector
             if detector is not None
@@ -89,12 +102,13 @@ class Engine:
             model_version = json.loads((Path(model_dir) / "model.json").read_text())[
                 "model_sha256"
             ]
+        self._agent_events = []
         self.agent = Agent(
             self.run_id,
             profile,
             mode=mode,
             path_length_mm=scenario.path_length_mm,
-            log=self.log,
+            log=self._agent_events.append,
             memory=memory,
             model_version=model_version,
         )
@@ -126,9 +140,13 @@ class Engine:
         return self.agent.state in ("HOLD", "COMPLETED")
 
     def log(self, row: dict) -> None:
-        with self.log_path.open("a") as file:
-            file.write(json.dumps(row, allow_nan=False) + "\n")
-        self.events.append(row)
+        self._flush_agent_events()
+        append_event(self.log_path, self.events, row)
+
+    def _flush_agent_events(self):
+        while self._agent_events:
+            append_event(self.log_path, self.events, self._agent_events[0])
+            del self._agent_events[0]
 
     def stop(self, reason: str) -> None:
         self.agent.now = self.index
@@ -147,6 +165,7 @@ class Engine:
         )
         self.simulator.stop_at_boundary(self.controller.applied)
         self.agent.hold(reason)
+        self._flush_agent_events()
 
     def valid(self, t) -> bool:
         start = (self.index - 1) * SAMPLE_RATE // 10
@@ -217,6 +236,17 @@ class Engine:
             if result.status == "rejected":
                 self.stop("COMMAND_REJECTED")
         step = self.simulator.step(0.1, self.controller.applied)
+        if self.index == 10 and self._fault in ("nan", "missing", "out_of_order"):
+            telemetry = step.telemetry
+            if self._fault == "missing":
+                telemetry = None
+            elif self._fault == "nan":
+                vibration = telemetry.vibration.copy()
+                vibration[0, 0] = np.nan
+                telemetry = replace(telemetry, vibration=vibration)
+            else:
+                telemetry = replace(telemetry, sequence=telemetry.sequence - 1)
+            step = replace(step, telemetry=telemetry)
         if self.done:
             return step
         t = step.telemetry

@@ -1,0 +1,234 @@
+{
+  "threshold": 0.8,
+  "overall": {
+    "chatter_windows": 5110,
+    "stable_windows": 7890,
+    "recall": 1.0,
+    "fpr": 0.0
+  },
+  "regime": {
+    "after": {
+      "chatter_windows": 4345,
+      "stable_windows": 5120,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "before": {
+      "chatter_windows": 45,
+      "stable_windows": 2205,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "during": {
+      "chatter_windows": 720,
+      "stable_windows": 565,
+      "recall": 1.0,
+      "fpr": 0.0
+    }
+  },
+  "engagement": {
+    "False": {
+      "chatter_windows": 4120,
+      "stable_windows": 5815,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "True": {
+      "chatter_windows": 990,
+      "stable_windows": 2075,
+      "recall": 1.0,
+      "fpr": 0.0
+    }
+  },
+  "family": {
+    "windows-recover_a-0": {
+      "chatter_windows": 20,
+      "stable_windows": 855,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-recover_a-5": {
+      "chatter_windows": 10,
+      "stable_windows": 925,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-recover_c-0": {
+      "chatter_windows": 595,
+      "stable_windows": 320,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-recover_c-5": {
+      "chatter_windows": 565,
+      "stable_windows": 345,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-repeat_after_c-0": {
+      "chatter_windows": 655,
+      "stable_windows": 1090,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-repeat_after_c-5": {
+      "chatter_windows": 995,
+      "stable_windows": 915,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-retry_b-0": {
+      "chatter_windows": 400,
+      "stable_windows": 490,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-retry_b-5": {
+      "chatter_windows": 250,
+      "stable_windows": 640,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-stable-0": {
+      "chatter_windows": 0,
+      "stable_windows": 990,
+      "recall": null,
+      "fpr": 0.0
+    },
+    "windows-stable-5": {
+      "chatter_windows": 0,
+      "stable_windows": 990,
+      "recall": null,
+      "fpr": 0.0
+    },
+    "windows-unrecoverable-0": {
+      "chatter_windows": 835,
+      "stable_windows": 140,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-unrecoverable-5": {
+      "chatter_windows": 785,
+      "stable_windows": 190,
+      "recall": 1.0,
+      "fpr": 0.0
+    }
+  },
+  "total_rms": {
+    "threshold": 0.8,
+    "overall": {
+      "chatter_windows": 5110,
+      "stable_windows": 7890,
+      "recall": 0.9941291585127201,
+      "fpr": 0.059569074778200254
+    },
+    "regime": {
+      "after": {
+        "chatter_windows": 4345,
+        "stable_windows": 5120,
+        "recall": 0.998849252013809,
+        "fpr": 0.0751953125
+      },
+      "before": {
+        "chatter_windows": 45,
+        "stable_windows": 2205,
+        "recall": 1.0,
+        "fpr": 0.006802721088435374
+      },
+      "during": {
+        "chatter_windows": 720,
+        "stable_windows": 565,
+        "recall": 0.9652777777777778,
+        "fpr": 0.12389380530973451
+      }
+    },
+    "engagement": {
+      "False": {
+        "chatter_windows": 4120,
+        "stable_windows": 5815,
+        "recall": 0.9927184466019418,
+        "fpr": 0.0
+      },
+      "True": {
+        "chatter_windows": 990,
+        "stable_windows": 2075,
+        "recall": 1.0,
+        "fpr": 0.22650602409638554
+      }
+    },
+    "family": {
+      "windows-recover_a-0": {
+        "chatter_windows": 20,
+        "stable_windows": 855,
+        "recall": 1.0,
+        "fpr": 0.23391812865497075
+      },
+      "windows-recover_a-5": {
+        "chatter_windows": 10,
+        "stable_windows": 925,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-recover_c-0": {
+        "chatter_windows": 595,
+        "stable_windows": 320,
+        "recall": 1.0,
+        "fpr": 0.03125
+      },
+      "windows-recover_c-5": {
+        "chatter_windows": 565,
+        "stable_windows": 345,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-repeat_after_c-0": {
+        "chatter_windows": 655,
+        "stable_windows": 1090,
+        "recall": 1.0,
+        "fpr": 0.16972477064220184
+      },
+      "windows-repeat_after_c-5": {
+        "chatter_windows": 995,
+        "stable_windows": 915,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-retry_b-0": {
+        "chatter_windows": 400,
+        "stable_windows": 490,
+        "recall": 1.0,
+        "fpr": 0.08163265306122448
+      },
+      "windows-retry_b-5": {
+        "chatter_windows": 250,
+        "stable_windows": 640,
+        "recall": 0.88,
+        "fpr": 0.0
+      },
+      "windows-stable-0": {
+        "chatter_windows": 0,
+        "stable_windows": 990,
+        "recall": null,
+        "fpr": 0.03535353535353535
+      },
+      "windows-stable-5": {
+        "chatter_windows": 0,
+        "stable_windows": 990,
+        "recall": null,
+        "fpr": 0.0
+      },
+      "windows-unrecoverable-0": {
+        "chatter_windows": 835,
+        "stable_windows": 140,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-unrecoverable-5": {
+        "chatter_windows": 785,
+        "stable_windows": 190,
+        "recall": 1.0,
+        "fpr": 0.0
+      }
+    }
+  }
+}

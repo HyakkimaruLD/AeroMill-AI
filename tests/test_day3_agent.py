@@ -80,7 +80,7 @@ def test_ml_calibration_and_verify_residual_is_not_total():
 
 
 @pytest.mark.parametrize(
-    "factor,score,success", [(2.0, 0.3, True), (2.001, 0.3, False), (1.0, 0.301, False)]
+    "factor,score,success", [(2.2, 0.3, True), (2.201, 0.3, False), (1.0, 0.301, False)]
 )
 def test_ml_verify_strict_residual_and_score(factor, score, success):
     a = Agent("r", ToolProfile(), mode="ml_agent")

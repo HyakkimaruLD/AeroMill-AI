@@ -1,48 +1,86 @@
 # AeroMill-Adaptive AI
 
-A local agent that detects simulated milling chatter, changes spindle speed and
-feed, checks the result, and then either keeps cutting or stops safely.
+A local agent detects simulated milling chatter, changes spindle speed and feed,
+verifies the result, and retries or stops. **Synthetic simulation; not validated
+on real CNC.** All control deadlines use simulation time in 100 ms ticks.
 
-**Synthetic simulation; not validated on real CNC.**
-
-## Setup
+## Run locally
 
 Python 3.12 and [uv](https://docs.astral.sh/uv/):
 
 ```bash
 uv sync
-```
-
-## Run
-
-```bash
 uv run streamlit run app.py
 uv run python -m aeromill run --scenario recover_a --seed 42 --mode ml_agent
-uv run python -m aeromill evaluate --split validation --mode all
 uv run python -m pytest -q
 ```
 
-The dashboard shows the agent loop, live vibration, spectrum, detector score,
-the agent's plan and decision log, and the evaluator's verdict when a run ends.
+The shipped `artifacts/model.pkl` and `model.json` contain the frozen
+RF and its hash/version contract. Only load trusted pickle artifacts.
 
-Modes: `no_adaptation`, `baseline`, `threshold_search`, `ml_agent`. The feed-only
-baseline stays inside the resonance zone by construction, so the ML agent is
-compared with `threshold_search`, which uses the same candidates.
+Modes are `no_adaptation`, `baseline`, `threshold_search`, and `ml_agent`.
+The CLI writes `runs/<run_id>.jsonl`. The feed-only baseline remains resonant by
+construction; compare ML with threshold_search to isolate the detector's effect.
+RF scores are model scores, not probabilities of an accident.
 
-## Evaluation and memory
+## Session and viewer APIs
 
-The evaluator grades every run from the simulator's hidden state and never uses
-the detector score as truth. Validation results are in `artifacts/day4-validation/`.
-Memory is cold by default, and a remembered correction has to pass verification
-again before it counts. Test, final and reserve runs stay disabled until the
-model is frozen.
+`RunSession(scenario, seed, mode)` owns one engine. `advance(ticks)` advances it;
+`snapshot()` returns detached observations; `request_stop()` latches Stop on
+the next tick. `export()` returns CSV and JSON bytes. Evaluations appear only
+at termination, and online recovery claims remain provisional until then.
 
-## Rebuild the dataset and the model
+```python
+from aeromill.parts import Part, random_part, validate_part
+from aeromill.session import RunSession
+from aeromill.viewer import catalog, trajectory
 
-```bash
-uv run python -m aeromill data build
-uv run python -m aeromill train
+part = random_part()  # Optional reproducible demo seed: 500000–599999.
+session = RunSession.from_part(part, "ml_agent")
+live = session.advance(10)
+# live has no hidden zones, parameters, truth, or reconstructible seed.
+finished = session.advance(650)
+truth = session.reveal()  # Raises before HOLD or COMPLETED.
+heatmap = session.stability_map(1200., [2880., 3200., 3520., 3840.], [80., 200.])
+path = trajectory(finished)
 ```
 
-The shipped `artifacts/model.pkl` is the trained RandomForest; `model.json` holds
-its feature order, versions and hashes. Only load pickle files you trust.
+Custom `Part` values use `Scenario`, `Region`, and `EngagementSegment` records.
+Construction and `validate_part(part)` refuse nonfinite or unsupported values
+with a field-specific reason. Bounds come from the frozen dataset generator;
+gain is fixed at 1, widths are 100–180 or the broad-band preset's 2000.
+Random demos use the fixed known tool profile so public profile fields cannot
+identify their hidden seed. Unknown runs use unchanged initial RPM/feed and
+frozen detectors/thresholds.
+They are demonstrations, not acceptance metrics.
+
+`catalog()` describes all presets, including NaN/missing/out-of-order telemetry,
+command rejection, missing acknowledgment, manual Stop and startup chatter.
+Each row's `run` dictionary can be passed to `RunSession(**row["run"])`.
+`stability_map(part_or_scenario, feed, rpm_grid, x_grid)` in `aeromill.viewer`
+returns gain × resonance and static A_target (zero at stopped feed), with shape
+`(len(rpm_grid), len(x_grid))`. It is viewer-only. Use the session method for
+Unknown parts so the terminal gate is enforced. Maps are synthetic simulator
+explanations, not physical stability-lobe predictions.
+
+## Evidence and limits
+
+The tests include command safety, causal features, detector behavior, independent
+truth grading, fault handling, Unknown-part isolation, and viewer formulas.
+Reference scripts used by some tests live in `tests/evidence/`.
+
+The latest four-mode validation is in
+`artifacts/prefreeze-validation/acceptance.md`. ML verification uses a residual
+RMS ratio limit of 2.2, selected on validation. Two false retries remain in the
+40-part demo diagnostic; those parts were not used for tuning.
+
+Cold validation results are in `artifacts/day4-validation/`; warm results use
+its `warm/` directory and retain a separate priming run. Memory is cold by default;
+reused corrections must pass verification again. The evaluator never treats
+RF scores as truth. Test/final/reserve execution remains disabled, and no freeze
+marker is included. Validation datasets and raw runs are not shipped.
+
+The offline dataset/training commands remain available for reproducing training:
+`python -m aeromill data build` and `python -m aeromill train`. Smoke seeds
+900000–900001 and demo seeds 500000–599999 are separate from all manifest splits.
+The shipped model was not retrained for Unknown parts or the faster RF path.

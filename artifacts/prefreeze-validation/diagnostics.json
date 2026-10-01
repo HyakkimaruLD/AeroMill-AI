@@ -1,0 +1,5792 @@
+{
+  "before": {
+    "successes": 32,
+    "holds": 8,
+    "false_interventions": 2,
+    "false_recoveries": 0,
+    "unverified_recoveries": 0,
+    "missed_incidents": 0,
+    "runs": [
+      {
+        "name": "500000",
+        "seed": 500000,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 86.96762350148715,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                166.03944719692248,
+                170.21806722052,
+                122.82938614697325
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                124.13002847166695
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.410400390625,
+            "end_s": 15.5208740234375,
+            "detection_s": 4.7,
+            "detection_latency_s": 0.2895996093750002,
+            "confirmed_recovery_s": 17.3,
+            "stabilization_time_s": 12.889599609375
+          },
+          {
+            "start_s": 28.1439208984375,
+            "end_s": 32.5277099609375,
+            "detection_s": 28.5,
+            "detection_latency_s": 0.3560791015625,
+            "confirmed_recovery_s": 34.4,
+            "stabilization_time_s": 6.256079101562499
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.3,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.4,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.45556640625,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.7999267578125,
+        "traversal_time_s": 40.7999267578125,
+        "rms_before": [
+          0.8590993063015613,
+          0.6884122748575824,
+          0.5174228168816928
+        ],
+        "rms_after": [
+          0.45778304880663195,
+          0.3688396670636953,
+          0.27804461925826535
+        ],
+        "rms_reduction": 0.46713605115408996
+      },
+      {
+        "name": "500001",
+        "seed": 500001,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 95.12606700790516,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.8184814453125,
+            "end_s": null,
+            "detection_s": 5.1,
+            "detection_latency_s": 0.28151855468749964,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.881591796875,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 14.699951171875,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.8395331145531544,
+          0.6723455571849142,
+          0.5045519597480542
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500002",
+        "seed": 500002,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 72.41326366977007,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 155.38361678636969,
+              "level": 0.8886443067287562
+            },
+            {
+              "start_mm": 230.0,
+              "end_mm": 337.49238921401627,
+              "level": 1.498245146042035
+            }
+          ]
+        },
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.682861328125,
+            "end_s": null,
+            "detection_s": 4.0,
+            "detection_latency_s": 0.317138671875,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.917236328125,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 13.5999755859375,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.9027124680053532,
+          0.7268296626711551,
+          0.5484828271929091
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500003",
+        "seed": 500003,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500004",
+        "seed": 500004,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500005",
+        "seed": 500005,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500006",
+        "seed": 500006,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 87.98485763987635,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                152.91361668069368,
+                152.1614520596396,
+                156.71786775649758
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                104.25976032563581
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 133.14298001793037,
+              "level": 0.8573033799363929
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.4613037109375,
+            "end_s": 15.7391357421875,
+            "detection_s": 4.8,
+            "detection_latency_s": 0.3386962890624998,
+            "confirmed_recovery_s": 17.4,
+            "stabilization_time_s": 12.938696289062499
+          },
+          {
+            "start_s": 28.0772705078125,
+            "end_s": 32.385009765625,
+            "detection_s": 28.4,
+            "detection_latency_s": 0.3227294921874986,
+            "confirmed_recovery_s": 34.3,
+            "stabilization_time_s": 6.222729492187497
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.4,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.3,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.47998046875,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.699951171875,
+        "traversal_time_s": 40.699951171875,
+        "rms_before": [
+          0.9325446126777784,
+          0.7496344919325179,
+          0.5642130934377864
+        ],
+        "rms_after": [
+          0.4662911606941603,
+          0.37807649153701556,
+          0.28977253388844343
+        ],
+        "rms_reduction": 0.4999797818195346
+      },
+      {
+        "name": "500007",
+        "seed": 500007,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 95.36100405917338,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                128.3089337024327,
+                152.07056936914768,
+                119.4717504336337
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 150.6835217857615,
+              "level": 1.3547584714772414
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 253.33749044948954,
+              "level": 1.973371150866659
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 350.2262182914565,
+              "level": 1.724407567123925
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.830078125,
+            "end_s": 15.9951171875,
+            "detection_s": 5.2,
+            "detection_latency_s": 0.3699218750000002,
+            "confirmed_recovery_s": 17.8,
+            "stabilization_time_s": 12.969921875
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.8,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.6485595703125,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 27.7999267578125,
+        "traversal_time_s": 27.7999267578125,
+        "rms_before": [
+          1.1022444354004575,
+          0.8811374288621878,
+          0.6614306362630147
+        ],
+        "rms_after": [
+          0.48369692215070687,
+          0.38716945644786777,
+          0.2912758347119534
+        ],
+        "rms_reduction": 0.5611709103571256
+      },
+      {
+        "name": "500008",
+        "seed": 500008,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 86.87267555187162,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                146.7739712981905
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.40576171875,
+            "end_s": 8.94580078125,
+            "detection_s": 4.7,
+            "detection_latency_s": 0.2942382812500002,
+            "confirmed_recovery_s": 10.6,
+            "stabilization_time_s": 6.19423828125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 7.6,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.970947265625,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 23.7999267578125,
+        "traversal_time_s": 23.7999267578125,
+        "rms_before": [
+          0.8677336676054553,
+          0.6968551622934489,
+          0.5262924728253255
+        ],
+        "rms_after": [
+          0.4634010955962425,
+          0.3758625036908107,
+          0.28653889157994406
+        ],
+        "rms_reduction": 0.46596390932368026
+      },
+      {
+        "name": "500009",
+        "seed": 500009,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 143.99383951079096,
+              "level": 1.4558747322368695
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 274.9591523916402,
+              "level": 0.8641247042629248
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 370.9629703080602,
+              "level": 1.3391814604304533
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500010",
+        "seed": 500010,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 69.028931710746,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                119.0405092698501,
+                116.19386565572226,
+                179.56344439986512
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                179.21985245731778
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 3.5135498046875,
+            "end_s": 15.01318359375,
+            "detection_s": 3.8,
+            "detection_latency_s": 0.2864501953124998,
+            "confirmed_recovery_s": 16.4,
+            "stabilization_time_s": 12.886450195312499
+          },
+          {
+            "start_s": 28.7440185546875,
+            "end_s": 33.7689208984375,
+            "detection_s": 29.0,
+            "detection_latency_s": 0.2559814453125,
+            "confirmed_recovery_s": 34.9,
+            "stabilization_time_s": 6.155981445312499
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 13.4,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.9,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.50830078125,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 41.2999267578125,
+        "traversal_time_s": 41.2999267578125,
+        "rms_before": [
+          0.8549743333281847,
+          0.6848202364381193,
+          0.5151062801069733
+        ],
+        "rms_after": [
+          0.4758951832798117,
+          0.38421711442452927,
+          0.2946215646191735
+        ],
+        "rms_reduction": 0.4433807370248415
+      },
+      {
+        "name": "500011",
+        "seed": 500011,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 94.13865674373054,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                128.28958129971198
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.76904296875,
+            "end_s": 9.2840576171875,
+            "detection_s": 5.1,
+            "detection_latency_s": 0.33095703124999964,
+            "confirmed_recovery_s": 11.0,
+            "stabilization_time_s": 6.23095703125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 8.0,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.990234375,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 23.699951171875,
+        "traversal_time_s": 23.699951171875,
+        "rms_before": [
+          0.945084273454591,
+          0.7587305741688037,
+          0.5705155909904579
+        ],
+        "rms_after": [
+          0.4604885877349223,
+          0.3739400215278261,
+          0.2859008383640275
+        ],
+        "rms_reduction": 0.5127539409245627
+      },
+      {
+        "name": "500012",
+        "seed": 500012,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 69.64673812252336,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.5445556640625,
+            "end_s": null,
+            "detection_s": 3.9,
+            "detection_latency_s": 0.3554443359374999,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.95556640625,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 13.5,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.9910855783762574,
+          0.7932638715614139,
+          0.5972187071361149
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500013",
+        "seed": 500013,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 89.439372771886,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.5341796875,
+            "end_s": null,
+            "detection_s": 4.8,
+            "detection_latency_s": 0.2658203124999998,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.8658447265625,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 14.39990234375,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.8133831841593472,
+          0.6509224331917551,
+          0.4930689617140834
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500014",
+        "seed": 500014,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 80.11025364902216,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                141.85838684244564,
+                104.14811651459611,
+                166.3814305049749
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.067626953125,
+            "end_s": 15.3936767578125,
+            "detection_s": 4.4,
+            "detection_latency_s": 0.33237304687500036,
+            "confirmed_recovery_s": 17.0,
+            "stabilization_time_s": 12.932373046875
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.0,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.6700439453125,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.2999267578125,
+        "traversal_time_s": 28.2999267578125,
+        "rms_before": [
+          0.945711239254884,
+          0.7586374229171565,
+          0.5687089203682839
+        ],
+        "rms_after": [
+          0.4648996128606678,
+          0.3719614598861536,
+          0.28200552688624503
+        ],
+        "rms_reduction": 0.508412723077123
+      },
+      {
+        "name": "500015",
+        "seed": 500015,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 90.87297210292792,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                136.13714959019597
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.605712890625,
+            "end_s": 9.0960693359375,
+            "detection_s": 4.9,
+            "detection_latency_s": 0.29428710937500036,
+            "confirmed_recovery_s": 10.8,
+            "stabilization_time_s": 6.194287109375001
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 7.8,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.9530029296875,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 23.7999267578125,
+        "traversal_time_s": 23.7999267578125,
+        "rms_before": [
+          0.8666166827122476,
+          0.6956475082694688,
+          0.5230505064465315
+        ],
+        "rms_after": [
+          0.4591923764086058,
+          0.36851667090489815,
+          0.2793510280103028
+        ],
+        "rms_reduction": 0.470132083112602
+      },
+      {
+        "name": "500016",
+        "seed": 500016,
+        "scenario": {
+          "name": "retry_b",
+          "regions": [
+            {
+              "start_mm": 72.56081745915606,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                112.12609848757494,
+                170.68906058865917
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.6900634765625,
+            "end_s": 11.36083984375,
+            "detection_s": 4.0,
+            "detection_latency_s": 0.3099365234375,
+            "confirmed_recovery_s": 13.1,
+            "stabilization_time_s": 9.4099365234375
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 10.1,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 4.156005859375,
+        "commands": 2,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 24.0,
+        "traversal_time_s": 24.0,
+        "rms_before": [
+          0.8974964075637407,
+          0.7189686756370751,
+          0.539867685358709
+        ],
+        "rms_after": [
+          0.45381578348625573,
+          0.36373111773021183,
+          0.2737813939096989
+        ],
+        "rms_reduction": 0.49435364903783696
+      },
+      {
+        "name": "500017",
+        "seed": 500017,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 93.2199045957901,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                123.65226980574133,
+                103.38277153021562,
+                103.81014520912626
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                146.5176032685759
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 157.02216338266294,
+              "level": 0.8668552021102567
+            },
+            {
+              "start_mm": 330.0,
+              "end_mm": 387.70281795733007,
+              "level": 0.848982925310833
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.7230224609375,
+            "end_s": 15.730224609375,
+            "detection_s": 5.0,
+            "detection_latency_s": 0.2769775390625,
+            "confirmed_recovery_s": 17.6,
+            "stabilization_time_s": 12.876977539062501
+          },
+          {
+            "start_s": 27.9439697265625,
+            "end_s": 32.409912109375,
+            "detection_s": 28.3,
+            "detection_latency_s": 0.3560302734375007,
+            "confirmed_recovery_s": 34.2,
+            "stabilization_time_s": 6.256030273437503
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.6,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.2,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.3917236328125,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.5999755859375,
+        "traversal_time_s": 40.5999755859375,
+        "rms_before": [
+          0.8003934236881968,
+          0.6409672668330024,
+          0.4811507499341025
+        ],
+        "rms_after": [
+          0.4536998662633271,
+          0.3630045720007157,
+          0.2733606180502289
+        ],
+        "rms_reduction": 0.4331539305099644
+      },
+      {
+        "name": "500018",
+        "seed": 500018,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 76.48400659766449,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                120.04011141256728,
+                165.4473326622492,
+                159.63935525057815
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.88623046875,
+            "end_s": 15.1622314453125,
+            "detection_s": 4.2,
+            "detection_latency_s": 0.3137695312500002,
+            "confirmed_recovery_s": 16.8,
+            "stabilization_time_s": 12.91376953125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 13.8,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.668212890625,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.39990234375,
+        "traversal_time_s": 28.39990234375,
+        "rms_before": [
+          0.909167592866269,
+          0.7279746535886116,
+          0.5490987838659248
+        ],
+        "rms_after": [
+          0.4651294574379904,
+          0.376119027817268,
+          0.28534379833091894
+        ],
+        "rms_reduction": 0.48840075131625693
+      },
+      {
+        "name": "500019",
+        "seed": 500019,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 61.54061177979039,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 135.6777996154365,
+              "level": 1.498654888906048
+            }
+          ]
+        },
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.1392822265625,
+            "end_s": null,
+            "detection_s": 3.5,
+            "detection_latency_s": 0.3607177734375,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.9608154296875,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 13.0999755859375,
+        "traversal_time_s": null,
+        "rms_before": [
+          1.0178907908803452,
+          0.8147031818984128,
+          0.6132968188360957
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500020",
+        "seed": 500020,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 126.21524378193958,
+              "level": 1.992123881735215
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 234.91069132787325,
+              "level": 1.3427657201211676
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 360.7801341625723,
+              "level": 1.5691487633137216
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500021",
+        "seed": 500021,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 73.08695845033483,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                147.6788357453121
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 106.11396519715275,
+              "level": 0.8958446248276244
+            },
+            {
+              "start_mm": 230.0,
+              "end_mm": 294.3317573061955,
+              "level": 1.9842096079879235
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.7164306640625,
+            "end_s": 8.2476806640625,
+            "detection_s": 4.0,
+            "detection_latency_s": 0.2835693359375,
+            "confirmed_recovery_s": 9.9,
+            "stabilization_time_s": 6.1835693359375
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 6.9,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.9583740234375,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 24.0,
+        "traversal_time_s": 24.0,
+        "rms_before": [
+          0.8382580896418901,
+          0.673110689259907,
+          0.506504840268111
+        ],
+        "rms_after": [
+          0.4641763599163919,
+          0.37496014862919164,
+          0.28576369735474916
+        ],
+        "rms_reduction": 0.44626080481407415
+      },
+      {
+        "name": "500022",
+        "seed": 500022,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500023",
+        "seed": 500023,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 97.28596446306544,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                170.7371139896792,
+                108.2438642698902,
+                134.86222677684776
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                102.009617408183
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 152.13821958091313,
+              "level": 0.8321763511697301
+            },
+            {
+              "start_mm": 330.0,
+              "end_mm": 403.263367216898,
+              "level": 1.9080016645592974
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.9263916015625,
+            "end_s": 16.013671875,
+            "detection_s": 5.2,
+            "detection_latency_s": 0.2736083984375002,
+            "confirmed_recovery_s": 17.8,
+            "stabilization_time_s": 12.8736083984375
+          },
+          {
+            "start_s": 27.8106689453125,
+            "end_s": 32.072021484375,
+            "detection_s": 28.1,
+            "detection_latency_s": 0.2893310546875014,
+            "confirmed_recovery_s": 34.0,
+            "stabilization_time_s": 6.1893310546875
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.8,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.0,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.3060302734375,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.39990234375,
+        "traversal_time_s": 40.39990234375,
+        "rms_before": [
+          0.7883279117431612,
+          0.6328781936619116,
+          0.47592817321797165
+        ],
+        "rms_after": [
+          0.4593472319581486,
+          0.3706471380803435,
+          0.28306706198872583
+        ],
+        "rms_reduction": 0.41731451453693447
+      },
+      {
+        "name": "500024",
+        "seed": 500024,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 84.08021326746558,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.2662353515625,
+            "end_s": null,
+            "detection_s": 4.6,
+            "detection_latency_s": 0.33376464843749964,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.933837890625,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 14.199951171875,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.9478943498218766,
+          0.7615447921333625,
+          0.5699417586735491
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500025",
+        "seed": 500025,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 89.37196292522621,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                171.64815697425536,
+                178.25441670493797,
+                154.71365631790673
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 179.60834745591131,
+              "level": 0.825090593855363
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.5306396484375,
+            "end_s": 15.74267578125,
+            "detection_s": 4.8,
+            "detection_latency_s": 0.2693603515624998,
+            "confirmed_recovery_s": 17.4,
+            "stabilization_time_s": 12.869360351562499
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.4,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.6295166015625,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.0,
+        "traversal_time_s": 28.0,
+        "rms_before": [
+          0.7789403909990055,
+          0.6230034230329703,
+          0.46894440316051833
+        ],
+        "rms_after": [
+          0.46155522545532546,
+          0.3694750386399806,
+          0.278747573731938
+        ],
+        "rms_reduction": 0.4074575785402881
+      },
+      {
+        "name": "500026",
+        "seed": 500026,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500027",
+        "seed": 500027,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 61.12602627863694,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 173.26562956273818,
+              "level": 0.8949097607124181
+            },
+            {
+              "start_mm": 230.0,
+              "end_mm": 346.15978913616283,
+              "level": 0.8859085251353326
+            }
+          ]
+        },
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.1185302734375,
+            "end_s": null,
+            "detection_s": 3.4,
+            "detection_latency_s": 0.2814697265624999,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.881591796875,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 13.0,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.8382544969229432,
+          0.6722160390373615,
+          0.506268994316897
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500028",
+        "seed": 500028,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 72.0292822927542,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                166.3568538561974
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.66357421875,
+            "end_s": 14.374267578125,
+            "detection_s": 4.0,
+            "detection_latency_s": 0.33642578125,
+            "confirmed_recovery_s": 16.6,
+            "stabilization_time_s": 12.936425781250001
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 13.6,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 2.1729736328125,
+        "commands": 3,
+        "false_interventions": 2,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.5999755859375,
+        "traversal_time_s": 28.5999755859375,
+        "rms_before": [
+          0.9545486621262684,
+          0.764179339587744,
+          0.5734623905775524
+        ],
+        "rms_after": [
+          0.45502995177073696,
+          0.3641645546473971,
+          0.2744265067521461
+        ],
+        "rms_reduction": 0.5233035571417046,
+        "calibration": [
+          0.05488815958987884,
+          0.050799994578364954,
+          0.047430053484520514
+        ],
+        "chatter_hz": 1263.2328728457223,
+        "noise_std": 0.04295037613252257
+      },
+      {
+        "name": "500029",
+        "seed": 500029,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 92.21311659817869,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                163.39867810214866
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.6727294921875,
+            "end_s": 9.412109375,
+            "detection_s": 5.0,
+            "detection_latency_s": 0.3272705078125,
+            "confirmed_recovery_s": 10.9,
+            "stabilization_time_s": 6.2272705078125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 7.9,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 1.049560546875,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 23.7999267578125,
+        "traversal_time_s": 23.7999267578125,
+        "rms_before": [
+          0.9355137133939798,
+          0.7492791500779867,
+          0.5641054965440572
+        ],
+        "rms_after": [
+          0.4662805902476803,
+          0.37475692214608186,
+          0.28326337652971395
+        ],
+        "rms_reduction": 0.5015780275886644
+      },
+      {
+        "name": "500030",
+        "seed": 500030,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 97.07660680511724,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                131.34891349831116
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 139.54660952395068,
+              "level": 0.9237369364782296
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 230.7624958152944,
+              "level": 0.9758873320508137
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 384.36044146319364,
+              "level": 0.913650428456118
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.9158935546875,
+            "end_s": 9.3768310546875,
+            "detection_s": 5.2,
+            "detection_latency_s": 0.2841064453125002,
+            "confirmed_recovery_s": 11.1,
+            "stabilization_time_s": 6.1841064453125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 8.1,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.93212890625,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 23.699951171875,
+        "traversal_time_s": 23.699951171875,
+        "rms_before": [
+          0.8291475052207298,
+          0.6637767441350896,
+          0.4988593148802145
+        ],
+        "rms_after": [
+          0.44574975271833817,
+          0.3578451058645202,
+          0.270958749412058
+        ],
+        "rms_reduction": 0.46239993497939325
+      },
+      {
+        "name": "500031",
+        "seed": 500031,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 94.52241282644931,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                170.82636236818507,
+                114.82941886580615,
+                169.24118627951805
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                164.18562642805682
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.7882080078125,
+            "end_s": 16.138916015625,
+            "detection_s": 5.1,
+            "detection_latency_s": 0.31179199218749964,
+            "confirmed_recovery_s": 17.7,
+            "stabilization_time_s": 12.9117919921875
+          },
+          {
+            "start_s": 27.8773193359375,
+            "end_s": 32.469970703125,
+            "detection_s": 28.2,
+            "detection_latency_s": 0.3226806640624993,
+            "confirmed_recovery_s": 34.1,
+            "stabilization_time_s": 6.222680664062501
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.7,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.1,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.560791015625,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.5,
+        "traversal_time_s": 40.5,
+        "rms_before": [
+          0.9063579691776865,
+          0.7270847279395579,
+          0.5472091531606526
+        ],
+        "rms_after": [
+          0.46905057489688584,
+          0.3783956587582717,
+          0.2884414516471286
+        ],
+        "rms_reduction": 0.482488607318759
+      },
+      {
+        "name": "500032",
+        "seed": 500032,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 90.77972772661593,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                175.76788214001095,
+                117.50540075019903,
+                108.41490191218244
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.60107421875,
+            "end_s": 15.66162109375,
+            "detection_s": 4.9,
+            "detection_latency_s": 0.29892578125000036,
+            "confirmed_recovery_s": 17.5,
+            "stabilization_time_s": 12.89892578125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.5,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.546630859375,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.0,
+        "traversal_time_s": 28.0,
+        "rms_before": [
+          0.8751107457065896,
+          0.7004362521207307,
+          0.5259885211662665
+        ],
+        "rms_after": [
+          0.45361240325439517,
+          0.36320633184392115,
+          0.2731830711717116
+        ],
+        "rms_reduction": 0.48165143042765923
+      },
+      {
+        "name": "500033",
+        "seed": 500033,
+        "scenario": {
+          "name": "retry_b",
+          "regions": [
+            {
+              "start_mm": 65.79920011567384,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                148.97260393338314,
+                119.82801377150179
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 177.5906586054346,
+              "level": 1.3722358665251777
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.35205078125,
+            "end_s": 11.1690673828125,
+            "detection_s": 3.7,
+            "detection_latency_s": 0.3479492187500002,
+            "confirmed_recovery_s": 12.8,
+            "stabilization_time_s": 9.44794921875
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 9.8,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 4.23828125,
+        "commands": 2,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 24.0999755859375,
+        "traversal_time_s": 24.0999755859375,
+        "rms_before": [
+          1.002056857494701,
+          0.8050093922153657,
+          0.6052364610544512
+        ],
+        "rms_after": [
+          0.46741877900245077,
+          0.37770456180458883,
+          0.2907635281333616
+        ],
+        "rms_reduction": 0.5335406613841546
+      },
+      {
+        "name": "500034",
+        "seed": 500034,
+        "scenario": {
+          "name": "retry_b",
+          "regions": [
+            {
+              "start_mm": 75.19135893460513,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                118.22298734339543,
+                143.54804763172348
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.8216552734375,
+            "end_s": 11.4600830078125,
+            "detection_s": 4.1,
+            "detection_latency_s": 0.27834472656249964,
+            "confirmed_recovery_s": 13.2,
+            "stabilization_time_s": 9.3783447265625
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 10.2,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 4.12158203125,
+        "commands": 2,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 24.0,
+        "traversal_time_s": 24.0,
+        "rms_before": [
+          0.833711340847816,
+          0.6666402478459317,
+          0.5002771410972853
+        ],
+        "rms_after": [
+          0.45341807393588734,
+          0.3633298145747799,
+          0.27318885653929464
+        ],
+        "rms_reduction": 0.4561450088050879
+      },
+      {
+        "name": "500035",
+        "seed": 500035,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 83.81674196784431,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                127.57286945803955,
+                169.21256011048985,
+                114.35318395018942
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 138.99505792800866,
+              "level": 1.7705598690233315
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 213.72952097721284,
+              "level": 1.5618027594806154
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 378.745377282115,
+              "level": 1.8057253528262307
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.2529296875,
+            "end_s": 15.3966064453125,
+            "detection_s": 4.6,
+            "detection_latency_s": 0.34707031249999964,
+            "confirmed_recovery_s": 17.2,
+            "stabilization_time_s": 12.9470703125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.2,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.6287841796875,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.199951171875,
+        "traversal_time_s": 28.199951171875,
+        "rms_before": [
+          1.1577691317019152,
+          0.9272077962235138,
+          0.6971607286912296
+        ],
+        "rms_after": [
+          0.45711890730712523,
+          0.36870186022947,
+          0.2792937766765264
+        ],
+        "rms_reduction": 0.6051726593926696
+      },
+      {
+        "name": "500036",
+        "seed": 500036,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500037",
+        "seed": 500037,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 143.53336035262754,
+              "level": 1.407304953709298
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500038",
+        "seed": 500038,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 68.62975498676393,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 101.02134665105842,
+              "level": 1.7848515658971271
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 261.78519896827663,
+              "level": 1.6755848113326635
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 384.5049846473081,
+              "level": 1.8636005748507753
+            }
+          ]
+        },
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.49365234375,
+            "end_s": null,
+            "detection_s": 3.8,
+            "detection_latency_s": 0.3063476562499998,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.9063720703125,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 13.39990234375,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.9568527217823453,
+          0.7651266380838455,
+          0.5760717710973037
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500039",
+        "seed": 500039,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 97.44367207440165,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                171.20400518563116,
+                109.57322080956044,
+                134.86912399795287
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                131.159544190805
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 131.64492112219156,
+              "level": 0.800288181187684
+            },
+            {
+              "start_mm": 330.0,
+              "end_mm": 417.48793011475664,
+              "level": 1.4277140321743653
+            }
+          ]
+        },
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.9342041015625,
+            "end_s": 16.0146484375,
+            "detection_s": 5.2,
+            "detection_latency_s": 0.2657958984375002,
+            "confirmed_recovery_s": 17.8,
+            "stabilization_time_s": 12.8657958984375
+          },
+          {
+            "start_s": 27.8106689453125,
+            "end_s": 32.2528076171875,
+            "detection_s": 28.2,
+            "detection_latency_s": 0.3893310546874993,
+            "confirmed_recovery_s": 34.1,
+            "stabilization_time_s": 6.289331054687501
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.8,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.1,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.46484375,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.39990234375,
+        "traversal_time_s": 40.39990234375,
+        "rms_before": [
+          0.7653182678773608,
+          0.6129856672539415,
+          0.46126585541283655
+        ],
+        "rms_after": [
+          0.4576342054955034,
+          0.3665566115335564,
+          0.277872577727107
+        ],
+        "rms_reduction": 0.40203412788672976
+      }
+    ]
+  },
+  "after": {
+    "successes": 32,
+    "holds": 8,
+    "false_interventions": 2,
+    "false_recoveries": 0,
+    "unverified_recoveries": 0,
+    "missed_incidents": 0,
+    "runs": [
+      {
+        "name": "500000",
+        "seed": 500000,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 86.96762350148715,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                166.03944719692248,
+                170.21806722052,
+                122.82938614697325
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                124.13002847166695
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.410400390625,
+            "end_s": 15.5208740234375,
+            "detection_s": 4.7,
+            "detection_latency_s": 0.2895996093750002,
+            "confirmed_recovery_s": 17.3,
+            "stabilization_time_s": 12.889599609375
+          },
+          {
+            "start_s": 28.1439208984375,
+            "end_s": 32.5277099609375,
+            "detection_s": 28.5,
+            "detection_latency_s": 0.3560791015625,
+            "confirmed_recovery_s": 34.4,
+            "stabilization_time_s": 6.256079101562499
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.3,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.4,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.45556640625,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.7999267578125,
+        "traversal_time_s": 40.7999267578125,
+        "rms_before": [
+          0.8590993063015613,
+          0.6884122748575824,
+          0.5174228168816928
+        ],
+        "rms_after": [
+          0.45778304880663195,
+          0.3688396670636953,
+          0.27804461925826535
+        ],
+        "rms_reduction": 0.46713605115408996
+      },
+      {
+        "name": "500001",
+        "seed": 500001,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 95.12606700790516,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "ATTEMPTS_EXHAUSTED",
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.8184814453125,
+            "end_s": null,
+            "detection_s": 5.1,
+            "detection_latency_s": 0.28151855468749964,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.881591796875,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 14.699951171875,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.8395331145531544,
+          0.6723455571849142,
+          0.5045519597480542
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500002",
+        "seed": 500002,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 72.41326366977007,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 155.38361678636969,
+              "level": 0.8886443067287562
+            },
+            {
+              "start_mm": 230.0,
+              "end_mm": 337.49238921401627,
+              "level": 1.498245146042035
+            }
+          ]
+        },
+        "reason": "ATTEMPTS_EXHAUSTED",
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.682861328125,
+            "end_s": null,
+            "detection_s": 4.0,
+            "detection_latency_s": 0.317138671875,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.917236328125,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 13.5999755859375,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.9027124680053532,
+          0.7268296626711551,
+          0.5484828271929091
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500003",
+        "seed": 500003,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500004",
+        "seed": 500004,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500005",
+        "seed": 500005,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500006",
+        "seed": 500006,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 87.98485763987635,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                152.91361668069368,
+                152.1614520596396,
+                156.71786775649758
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                104.25976032563581
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 133.14298001793037,
+              "level": 0.8573033799363929
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.4613037109375,
+            "end_s": 15.7391357421875,
+            "detection_s": 4.8,
+            "detection_latency_s": 0.3386962890624998,
+            "confirmed_recovery_s": 17.4,
+            "stabilization_time_s": 12.938696289062499
+          },
+          {
+            "start_s": 28.0772705078125,
+            "end_s": 32.385009765625,
+            "detection_s": 28.4,
+            "detection_latency_s": 0.3227294921874986,
+            "confirmed_recovery_s": 34.3,
+            "stabilization_time_s": 6.222729492187497
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.4,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.3,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.47998046875,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.699951171875,
+        "traversal_time_s": 40.699951171875,
+        "rms_before": [
+          0.9325446126777784,
+          0.7496344919325179,
+          0.5642130934377864
+        ],
+        "rms_after": [
+          0.4662911606941603,
+          0.37807649153701556,
+          0.28977253388844343
+        ],
+        "rms_reduction": 0.4999797818195346
+      },
+      {
+        "name": "500007",
+        "seed": 500007,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 95.36100405917338,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                128.3089337024327,
+                152.07056936914768,
+                119.4717504336337
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 150.6835217857615,
+              "level": 1.3547584714772414
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 253.33749044948954,
+              "level": 1.973371150866659
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 350.2262182914565,
+              "level": 1.724407567123925
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.830078125,
+            "end_s": 15.9951171875,
+            "detection_s": 5.2,
+            "detection_latency_s": 0.3699218750000002,
+            "confirmed_recovery_s": 17.8,
+            "stabilization_time_s": 12.969921875
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.8,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.6485595703125,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 27.7999267578125,
+        "traversal_time_s": 27.7999267578125,
+        "rms_before": [
+          1.1022444354004575,
+          0.8811374288621878,
+          0.6614306362630147
+        ],
+        "rms_after": [
+          0.48369692215070687,
+          0.38716945644786777,
+          0.2912758347119534
+        ],
+        "rms_reduction": 0.5611709103571256
+      },
+      {
+        "name": "500008",
+        "seed": 500008,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 86.87267555187162,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                146.7739712981905
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.40576171875,
+            "end_s": 8.94580078125,
+            "detection_s": 4.7,
+            "detection_latency_s": 0.2942382812500002,
+            "confirmed_recovery_s": 10.6,
+            "stabilization_time_s": 6.19423828125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 7.6,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.970947265625,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 23.7999267578125,
+        "traversal_time_s": 23.7999267578125,
+        "rms_before": [
+          0.8677336676054553,
+          0.6968551622934489,
+          0.5262924728253255
+        ],
+        "rms_after": [
+          0.4634010955962425,
+          0.3758625036908107,
+          0.28653889157994406
+        ],
+        "rms_reduction": 0.46596390932368026
+      },
+      {
+        "name": "500009",
+        "seed": 500009,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 143.99383951079096,
+              "level": 1.4558747322368695
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 274.9591523916402,
+              "level": 0.8641247042629248
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 370.9629703080602,
+              "level": 1.3391814604304533
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500010",
+        "seed": 500010,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 69.028931710746,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                119.0405092698501,
+                116.19386565572226,
+                179.56344439986512
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                179.21985245731778
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 3.5135498046875,
+            "end_s": 15.01318359375,
+            "detection_s": 3.8,
+            "detection_latency_s": 0.2864501953124998,
+            "confirmed_recovery_s": 16.4,
+            "stabilization_time_s": 12.886450195312499
+          },
+          {
+            "start_s": 28.7440185546875,
+            "end_s": 33.7689208984375,
+            "detection_s": 29.0,
+            "detection_latency_s": 0.2559814453125,
+            "confirmed_recovery_s": 34.9,
+            "stabilization_time_s": 6.155981445312499
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 13.4,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.9,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.50830078125,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 41.2999267578125,
+        "traversal_time_s": 41.2999267578125,
+        "rms_before": [
+          0.8549743333281847,
+          0.6848202364381193,
+          0.5151062801069733
+        ],
+        "rms_after": [
+          0.4758951832798117,
+          0.38421711442452927,
+          0.2946215646191735
+        ],
+        "rms_reduction": 0.4433807370248415
+      },
+      {
+        "name": "500011",
+        "seed": 500011,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 94.13865674373054,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                128.28958129971198
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.76904296875,
+            "end_s": 9.2840576171875,
+            "detection_s": 5.1,
+            "detection_latency_s": 0.33095703124999964,
+            "confirmed_recovery_s": 11.0,
+            "stabilization_time_s": 6.23095703125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 8.0,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.990234375,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 23.699951171875,
+        "traversal_time_s": 23.699951171875,
+        "rms_before": [
+          0.945084273454591,
+          0.7587305741688037,
+          0.5705155909904579
+        ],
+        "rms_after": [
+          0.4604885877349223,
+          0.3739400215278261,
+          0.2859008383640275
+        ],
+        "rms_reduction": 0.5127539409245627
+      },
+      {
+        "name": "500012",
+        "seed": 500012,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 69.64673812252336,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "ATTEMPTS_EXHAUSTED",
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.5445556640625,
+            "end_s": null,
+            "detection_s": 3.9,
+            "detection_latency_s": 0.3554443359374999,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.95556640625,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 13.5,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.9910855783762574,
+          0.7932638715614139,
+          0.5972187071361149
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500013",
+        "seed": 500013,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 89.439372771886,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "ATTEMPTS_EXHAUSTED",
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.5341796875,
+            "end_s": null,
+            "detection_s": 4.8,
+            "detection_latency_s": 0.2658203124999998,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.8658447265625,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 14.39990234375,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.8133831841593472,
+          0.6509224331917551,
+          0.4930689617140834
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500014",
+        "seed": 500014,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 80.11025364902216,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                141.85838684244564,
+                104.14811651459611,
+                166.3814305049749
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.067626953125,
+            "end_s": 15.3936767578125,
+            "detection_s": 4.4,
+            "detection_latency_s": 0.33237304687500036,
+            "confirmed_recovery_s": 17.0,
+            "stabilization_time_s": 12.932373046875
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.0,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.6700439453125,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.2999267578125,
+        "traversal_time_s": 28.2999267578125,
+        "rms_before": [
+          0.945711239254884,
+          0.7586374229171565,
+          0.5687089203682839
+        ],
+        "rms_after": [
+          0.4648996128606678,
+          0.3719614598861536,
+          0.28200552688624503
+        ],
+        "rms_reduction": 0.508412723077123
+      },
+      {
+        "name": "500015",
+        "seed": 500015,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 90.87297210292792,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                136.13714959019597
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.605712890625,
+            "end_s": 9.0960693359375,
+            "detection_s": 4.9,
+            "detection_latency_s": 0.29428710937500036,
+            "confirmed_recovery_s": 10.8,
+            "stabilization_time_s": 6.194287109375001
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 7.8,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.9530029296875,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 23.7999267578125,
+        "traversal_time_s": 23.7999267578125,
+        "rms_before": [
+          0.8666166827122476,
+          0.6956475082694688,
+          0.5230505064465315
+        ],
+        "rms_after": [
+          0.4591923764086058,
+          0.36851667090489815,
+          0.2793510280103028
+        ],
+        "rms_reduction": 0.470132083112602
+      },
+      {
+        "name": "500016",
+        "seed": 500016,
+        "scenario": {
+          "name": "retry_b",
+          "regions": [
+            {
+              "start_mm": 72.56081745915606,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                112.12609848757494,
+                170.68906058865917
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.6900634765625,
+            "end_s": 11.36083984375,
+            "detection_s": 4.0,
+            "detection_latency_s": 0.3099365234375,
+            "confirmed_recovery_s": 13.1,
+            "stabilization_time_s": 9.4099365234375
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 10.1,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 4.156005859375,
+        "commands": 2,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 24.0,
+        "traversal_time_s": 24.0,
+        "rms_before": [
+          0.8974964075637407,
+          0.7189686756370751,
+          0.539867685358709
+        ],
+        "rms_after": [
+          0.45381578348625573,
+          0.36373111773021183,
+          0.2737813939096989
+        ],
+        "rms_reduction": 0.49435364903783696
+      },
+      {
+        "name": "500017",
+        "seed": 500017,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 93.2199045957901,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                123.65226980574133,
+                103.38277153021562,
+                103.81014520912626
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                146.5176032685759
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 157.02216338266294,
+              "level": 0.8668552021102567
+            },
+            {
+              "start_mm": 330.0,
+              "end_mm": 387.70281795733007,
+              "level": 0.848982925310833
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.7230224609375,
+            "end_s": 15.730224609375,
+            "detection_s": 5.0,
+            "detection_latency_s": 0.2769775390625,
+            "confirmed_recovery_s": 17.6,
+            "stabilization_time_s": 12.876977539062501
+          },
+          {
+            "start_s": 27.9439697265625,
+            "end_s": 32.409912109375,
+            "detection_s": 28.3,
+            "detection_latency_s": 0.3560302734375007,
+            "confirmed_recovery_s": 34.2,
+            "stabilization_time_s": 6.256030273437503
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.6,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.2,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.3917236328125,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.5999755859375,
+        "traversal_time_s": 40.5999755859375,
+        "rms_before": [
+          0.8003934236881968,
+          0.6409672668330024,
+          0.4811507499341025
+        ],
+        "rms_after": [
+          0.4536998662633271,
+          0.3630045720007157,
+          0.2733606180502289
+        ],
+        "rms_reduction": 0.4331539305099644
+      },
+      {
+        "name": "500018",
+        "seed": 500018,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 76.48400659766449,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                120.04011141256728,
+                165.4473326622492,
+                159.63935525057815
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.88623046875,
+            "end_s": 15.1622314453125,
+            "detection_s": 4.2,
+            "detection_latency_s": 0.3137695312500002,
+            "confirmed_recovery_s": 16.8,
+            "stabilization_time_s": 12.91376953125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 13.8,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.668212890625,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.39990234375,
+        "traversal_time_s": 28.39990234375,
+        "rms_before": [
+          0.909167592866269,
+          0.7279746535886116,
+          0.5490987838659248
+        ],
+        "rms_after": [
+          0.4651294574379904,
+          0.376119027817268,
+          0.28534379833091894
+        ],
+        "rms_reduction": 0.48840075131625693
+      },
+      {
+        "name": "500019",
+        "seed": 500019,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 61.54061177979039,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 135.6777996154365,
+              "level": 1.498654888906048
+            }
+          ]
+        },
+        "reason": "ATTEMPTS_EXHAUSTED",
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.1392822265625,
+            "end_s": null,
+            "detection_s": 3.5,
+            "detection_latency_s": 0.3607177734375,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.9608154296875,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 13.0999755859375,
+        "traversal_time_s": null,
+        "rms_before": [
+          1.0178907908803452,
+          0.8147031818984128,
+          0.6132968188360957
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500020",
+        "seed": 500020,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 126.21524378193958,
+              "level": 1.992123881735215
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 234.91069132787325,
+              "level": 1.3427657201211676
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 360.7801341625723,
+              "level": 1.5691487633137216
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500021",
+        "seed": 500021,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 73.08695845033483,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                147.6788357453121
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 106.11396519715275,
+              "level": 0.8958446248276244
+            },
+            {
+              "start_mm": 230.0,
+              "end_mm": 294.3317573061955,
+              "level": 1.9842096079879235
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.7164306640625,
+            "end_s": 8.2476806640625,
+            "detection_s": 4.0,
+            "detection_latency_s": 0.2835693359375,
+            "confirmed_recovery_s": 9.9,
+            "stabilization_time_s": 6.1835693359375
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 6.9,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.9583740234375,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 24.0,
+        "traversal_time_s": 24.0,
+        "rms_before": [
+          0.8382580896418901,
+          0.673110689259907,
+          0.506504840268111
+        ],
+        "rms_after": [
+          0.4641763599163919,
+          0.37496014862919164,
+          0.28576369735474916
+        ],
+        "rms_reduction": 0.44626080481407415
+      },
+      {
+        "name": "500022",
+        "seed": 500022,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500023",
+        "seed": 500023,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 97.28596446306544,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                170.7371139896792,
+                108.2438642698902,
+                134.86222677684776
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                102.009617408183
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 152.13821958091313,
+              "level": 0.8321763511697301
+            },
+            {
+              "start_mm": 330.0,
+              "end_mm": 403.263367216898,
+              "level": 1.9080016645592974
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.9263916015625,
+            "end_s": 16.013671875,
+            "detection_s": 5.2,
+            "detection_latency_s": 0.2736083984375002,
+            "confirmed_recovery_s": 17.8,
+            "stabilization_time_s": 12.8736083984375
+          },
+          {
+            "start_s": 27.8106689453125,
+            "end_s": 32.072021484375,
+            "detection_s": 28.1,
+            "detection_latency_s": 0.2893310546875014,
+            "confirmed_recovery_s": 34.0,
+            "stabilization_time_s": 6.1893310546875
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.8,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.0,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.3060302734375,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.39990234375,
+        "traversal_time_s": 40.39990234375,
+        "rms_before": [
+          0.7883279117431612,
+          0.6328781936619116,
+          0.47592817321797165
+        ],
+        "rms_after": [
+          0.4593472319581486,
+          0.3706471380803435,
+          0.28306706198872583
+        ],
+        "rms_reduction": 0.41731451453693447
+      },
+      {
+        "name": "500024",
+        "seed": 500024,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 84.08021326746558,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "ATTEMPTS_EXHAUSTED",
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.2662353515625,
+            "end_s": null,
+            "detection_s": 4.6,
+            "detection_latency_s": 0.33376464843749964,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.933837890625,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 14.199951171875,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.9478943498218766,
+          0.7615447921333625,
+          0.5699417586735491
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500025",
+        "seed": 500025,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 89.37196292522621,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                171.64815697425536,
+                178.25441670493797,
+                154.71365631790673
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 179.60834745591131,
+              "level": 0.825090593855363
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.5306396484375,
+            "end_s": 15.74267578125,
+            "detection_s": 4.8,
+            "detection_latency_s": 0.2693603515624998,
+            "confirmed_recovery_s": 17.4,
+            "stabilization_time_s": 12.869360351562499
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.4,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.6295166015625,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.0,
+        "traversal_time_s": 28.0,
+        "rms_before": [
+          0.7789403909990055,
+          0.6230034230329703,
+          0.46894440316051833
+        ],
+        "rms_after": [
+          0.46155522545532546,
+          0.3694750386399806,
+          0.278747573731938
+        ],
+        "rms_reduction": 0.4074575785402881
+      },
+      {
+        "name": "500026",
+        "seed": 500026,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500027",
+        "seed": 500027,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 61.12602627863694,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 173.26562956273818,
+              "level": 0.8949097607124181
+            },
+            {
+              "start_mm": 230.0,
+              "end_mm": 346.15978913616283,
+              "level": 0.8859085251353326
+            }
+          ]
+        },
+        "reason": "ATTEMPTS_EXHAUSTED",
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.1185302734375,
+            "end_s": null,
+            "detection_s": 3.4,
+            "detection_latency_s": 0.2814697265624999,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.881591796875,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 13.0,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.8382544969229432,
+          0.6722160390373615,
+          0.506268994316897
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500028",
+        "seed": 500028,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 72.0292822927542,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                166.3568538561974
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.66357421875,
+            "end_s": 14.374267578125,
+            "detection_s": 4.0,
+            "detection_latency_s": 0.33642578125,
+            "confirmed_recovery_s": 16.6,
+            "stabilization_time_s": 12.936425781250001
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 13.6,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 2.1729736328125,
+        "commands": 3,
+        "false_interventions": 2,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.5999755859375,
+        "traversal_time_s": 28.5999755859375,
+        "rms_before": [
+          0.9545486621262684,
+          0.764179339587744,
+          0.5734623905775524
+        ],
+        "rms_after": [
+          0.45502995177073696,
+          0.3641645546473971,
+          0.2744265067521461
+        ],
+        "rms_reduction": 0.5233035571417046,
+        "calibration": [
+          0.05488815958987884,
+          0.050799994578364954,
+          0.047430053484520514
+        ],
+        "chatter_hz": 1263.2328728457223,
+        "noise_std": 0.04295037613252257
+      },
+      {
+        "name": "500029",
+        "seed": 500029,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 92.21311659817869,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                163.39867810214866
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.6727294921875,
+            "end_s": 9.412109375,
+            "detection_s": 5.0,
+            "detection_latency_s": 0.3272705078125,
+            "confirmed_recovery_s": 10.9,
+            "stabilization_time_s": 6.2272705078125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 7.9,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 1.049560546875,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 23.7999267578125,
+        "traversal_time_s": 23.7999267578125,
+        "rms_before": [
+          0.9355137133939798,
+          0.7492791500779867,
+          0.5641054965440572
+        ],
+        "rms_after": [
+          0.4662805902476803,
+          0.37475692214608186,
+          0.28326337652971395
+        ],
+        "rms_reduction": 0.5015780275886644
+      },
+      {
+        "name": "500030",
+        "seed": 500030,
+        "scenario": {
+          "name": "recover_a",
+          "regions": [
+            {
+              "start_mm": 97.07660680511724,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0
+              ],
+              "widths": [
+                131.34891349831116
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 139.54660952395068,
+              "level": 0.9237369364782296
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 230.7624958152944,
+              "level": 0.9758873320508137
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 384.36044146319364,
+              "level": 0.913650428456118
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.9158935546875,
+            "end_s": 9.3768310546875,
+            "detection_s": 5.2,
+            "detection_latency_s": 0.2841064453125002,
+            "confirmed_recovery_s": 11.1,
+            "stabilization_time_s": 6.1841064453125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 8.1,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.93212890625,
+        "commands": 1,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 23.699951171875,
+        "traversal_time_s": 23.699951171875,
+        "rms_before": [
+          0.8291475052207298,
+          0.6637767441350896,
+          0.4988593148802145
+        ],
+        "rms_after": [
+          0.44574975271833817,
+          0.3578451058645202,
+          0.270958749412058
+        ],
+        "rms_reduction": 0.46239993497939325
+      },
+      {
+        "name": "500031",
+        "seed": 500031,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 94.52241282644931,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                170.82636236818507,
+                114.82941886580615,
+                169.24118627951805
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                164.18562642805682
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.7882080078125,
+            "end_s": 16.138916015625,
+            "detection_s": 5.1,
+            "detection_latency_s": 0.31179199218749964,
+            "confirmed_recovery_s": 17.7,
+            "stabilization_time_s": 12.9117919921875
+          },
+          {
+            "start_s": 27.8773193359375,
+            "end_s": 32.469970703125,
+            "detection_s": 28.2,
+            "detection_latency_s": 0.3226806640624993,
+            "confirmed_recovery_s": 34.1,
+            "stabilization_time_s": 6.222680664062501
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.7,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.1,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.560791015625,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.5,
+        "traversal_time_s": 40.5,
+        "rms_before": [
+          0.9063579691776865,
+          0.7270847279395579,
+          0.5472091531606526
+        ],
+        "rms_after": [
+          0.46905057489688584,
+          0.3783956587582717,
+          0.2884414516471286
+        ],
+        "rms_reduction": 0.482488607318759
+      },
+      {
+        "name": "500032",
+        "seed": 500032,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 90.77972772661593,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                175.76788214001095,
+                117.50540075019903,
+                108.41490191218244
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.60107421875,
+            "end_s": 15.66162109375,
+            "detection_s": 4.9,
+            "detection_latency_s": 0.29892578125000036,
+            "confirmed_recovery_s": 17.5,
+            "stabilization_time_s": 12.89892578125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.5,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.546630859375,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.0,
+        "traversal_time_s": 28.0,
+        "rms_before": [
+          0.8751107457065896,
+          0.7004362521207307,
+          0.5259885211662665
+        ],
+        "rms_after": [
+          0.45361240325439517,
+          0.36320633184392115,
+          0.2731830711717116
+        ],
+        "rms_reduction": 0.48165143042765923
+      },
+      {
+        "name": "500033",
+        "seed": 500033,
+        "scenario": {
+          "name": "retry_b",
+          "regions": [
+            {
+              "start_mm": 65.79920011567384,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                148.97260393338314,
+                119.82801377150179
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 177.5906586054346,
+              "level": 1.3722358665251777
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.35205078125,
+            "end_s": 11.1690673828125,
+            "detection_s": 3.7,
+            "detection_latency_s": 0.3479492187500002,
+            "confirmed_recovery_s": 12.8,
+            "stabilization_time_s": 9.44794921875
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 9.8,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 4.23828125,
+        "commands": 2,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 24.0999755859375,
+        "traversal_time_s": 24.0999755859375,
+        "rms_before": [
+          1.002056857494701,
+          0.8050093922153657,
+          0.6052364610544512
+        ],
+        "rms_after": [
+          0.46741877900245077,
+          0.37770456180458883,
+          0.2907635281333616
+        ],
+        "rms_reduction": 0.5335406613841546
+      },
+      {
+        "name": "500034",
+        "seed": 500034,
+        "scenario": {
+          "name": "retry_b",
+          "regions": [
+            {
+              "start_mm": 75.19135893460513,
+              "end_mm": 400.0,
+              "centers": [
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                118.22298734339543,
+                143.54804763172348
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.8216552734375,
+            "end_s": 11.4600830078125,
+            "detection_s": 4.1,
+            "detection_latency_s": 0.27834472656249964,
+            "confirmed_recovery_s": 13.2,
+            "stabilization_time_s": 9.3783447265625
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 10.2,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 4.12158203125,
+        "commands": 2,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 24.0,
+        "traversal_time_s": 24.0,
+        "rms_before": [
+          0.833711340847816,
+          0.6666402478459317,
+          0.5002771410972853
+        ],
+        "rms_after": [
+          0.45341807393588734,
+          0.3633298145747799,
+          0.27318885653929464
+        ],
+        "rms_reduction": 0.4561450088050879
+      },
+      {
+        "name": "500035",
+        "seed": 500035,
+        "scenario": {
+          "name": "recover_c",
+          "regions": [
+            {
+              "start_mm": 83.81674196784431,
+              "end_mm": 400.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                127.57286945803955,
+                169.21256011048985,
+                114.35318395018942
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 138.99505792800866,
+              "level": 1.7705598690233315
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 213.72952097721284,
+              "level": 1.5618027594806154
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 378.745377282115,
+              "level": 1.8057253528262307
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 4.2529296875,
+            "end_s": 15.3966064453125,
+            "detection_s": 4.6,
+            "detection_latency_s": 0.34707031249999964,
+            "confirmed_recovery_s": 17.2,
+            "stabilization_time_s": 12.9470703125
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.2,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 1,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 7.6287841796875,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 28.199951171875,
+        "traversal_time_s": 28.199951171875,
+        "rms_before": [
+          1.1577691317019152,
+          0.9272077962235138,
+          0.6971607286912296
+        ],
+        "rms_after": [
+          0.45711890730712523,
+          0.36870186022947,
+          0.2792937766765264
+        ],
+        "rms_reduction": 0.6051726593926696
+      },
+      {
+        "name": "500036",
+        "seed": 500036,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": []
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500037",
+        "seed": 500037,
+        "scenario": {
+          "name": "stable",
+          "regions": [],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [
+            120.0,
+            280.0
+          ],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 143.53336035262754,
+              "level": 1.407304953709298
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 0,
+        "missed_incidents": 0,
+        "detected_within_1s": 0,
+        "incident_details": [],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 0.0,
+        "commands": 0,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": true,
+        "time_s": 20.0,
+        "traversal_time_s": 20.0,
+        "rms_before": null,
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500038",
+        "seed": 500038,
+        "scenario": {
+          "name": "unrecoverable",
+          "regions": [
+            {
+              "start_mm": 68.62975498676393,
+              "end_mm": 400.0,
+              "centers": [
+                3300.0
+              ],
+              "widths": [
+                2000.0
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 400.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 101.02134665105842,
+              "level": 1.7848515658971271
+            },
+            {
+              "start_mm": 173.33333333333331,
+              "end_mm": 261.78519896827663,
+              "level": 1.6755848113326635
+            },
+            {
+              "start_mm": 286.66666666666663,
+              "end_mm": 384.5049846473081,
+              "level": 1.8636005748507753
+            }
+          ]
+        },
+        "reason": "ATTEMPTS_EXHAUSTED",
+        "state": "HOLD",
+        "completed": false,
+        "run_success": false,
+        "incidents": 1,
+        "missed_incidents": 0,
+        "detected_within_1s": 1,
+        "incident_details": [
+          {
+            "start_s": 3.49365234375,
+            "end_s": null,
+            "detection_s": 3.8,
+            "detection_latency_s": 0.3063476562499998,
+            "confirmed_recovery_s": null,
+            "stabilization_time_s": null
+          }
+        ],
+        "claims": [],
+        "confirmed_recoveries": 0,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 9.9063720703125,
+        "commands": 3,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 1,
+        "stable_without_intervention": false,
+        "time_s": 13.39990234375,
+        "traversal_time_s": null,
+        "rms_before": [
+          0.9568527217823453,
+          0.7651266380838455,
+          0.5760717710973037
+        ],
+        "rms_after": null,
+        "rms_reduction": null
+      },
+      {
+        "name": "500039",
+        "seed": 500039,
+        "scenario": {
+          "name": "repeat_after_c",
+          "regions": [
+            {
+              "start_mm": 97.44367207440165,
+              "end_mm": 320.0,
+              "centers": [
+                2880.0,
+                3200.0,
+                3520.0
+              ],
+              "widths": [
+                171.20400518563116,
+                109.57322080956044,
+                134.86912399795287
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            },
+            {
+              "start_mm": 400.0,
+              "end_mm": 600.0,
+              "centers": [
+                3840.0
+              ],
+              "widths": [
+                131.159544190805
+              ],
+              "gain": 1.0,
+              "zone_class": "material-zone"
+            }
+          ],
+          "path_length_mm": 600.0,
+          "impact_positions_mm": [],
+          "version": "engagement-v2",
+          "engagement": [
+            {
+              "start_mm": 60.0,
+              "end_mm": 131.64492112219156,
+              "level": 0.800288181187684
+            },
+            {
+              "start_mm": 330.0,
+              "end_mm": 417.48793011475664,
+              "level": 1.4277140321743653
+            }
+          ]
+        },
+        "reason": "",
+        "state": "COMPLETED",
+        "completed": true,
+        "run_success": true,
+        "incidents": 2,
+        "missed_incidents": 0,
+        "detected_within_1s": 2,
+        "incident_details": [
+          {
+            "start_s": 4.9342041015625,
+            "end_s": 16.0146484375,
+            "detection_s": 5.2,
+            "detection_latency_s": 0.2657958984375002,
+            "confirmed_recovery_s": 17.8,
+            "stabilization_time_s": 12.8657958984375
+          },
+          {
+            "start_s": 27.8106689453125,
+            "end_s": 32.2528076171875,
+            "detection_s": 28.2,
+            "detection_latency_s": 0.3893310546874993,
+            "confirmed_recovery_s": 34.1,
+            "stabilization_time_s": 6.289331054687501
+          }
+        ],
+        "claims": [
+          {
+            "time_s": 14.8,
+            "grade": "confirmed_recovery"
+          },
+          {
+            "time_s": 31.1,
+            "grade": "confirmed_recovery"
+          }
+        ],
+        "confirmed_recoveries": 2,
+        "false_recoveries": 0,
+        "unverified_recoveries": 0,
+        "unstable_time_s": 8.46484375,
+        "commands": 4,
+        "false_interventions": 0,
+        "false_incidents": 0,
+        "false_incidents_per_1000_s": 0.0,
+        "stops": 0,
+        "stable_without_intervention": false,
+        "time_s": 40.39990234375,
+        "traversal_time_s": 40.39990234375,
+        "rms_before": [
+          0.7653182678773608,
+          0.6129856672539415,
+          0.46126585541283655
+        ],
+        "rms_after": [
+          0.4576342054955034,
+          0.3665566115335564,
+          0.277872577727107
+        ],
+        "rms_reduction": 0.40203412788672976
+      }
+    ]
+  }
+}

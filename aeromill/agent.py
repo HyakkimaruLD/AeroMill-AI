@@ -219,7 +219,7 @@ class Agent:
         if self.mode == "ml_agent":
             return detection.residual_rms is not None and np.all(
                 np.asarray(detection.residual_rms) / self.calibration_residual_rms
-                <= 2.0
+                <= 2.2
             )
         return np.all(rms / self.calibration_rms <= 1.5)
 

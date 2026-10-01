@@ -1,0 +1,27 @@
+{
+  "seed": 200005,
+  "processing_ms": {
+    "p50": 6.58142997417599,
+    "p95": 13.030533061828464,
+    "p99": 45.556017272174415
+  },
+  "window_span_s": 0.25,
+  "first_window_tick_s": 0.3,
+  "simulation_phases": [
+    {
+      "command_s": 4.4,
+      "ack_delay_s": 0.09999999999999964,
+      "slew_s": 0.2999999999999998,
+      "settle_s": 1.0,
+      "verify_s": 1.5
+    },
+    {
+      "command_s": 7.3,
+      "ack_delay_s": 0.10000000000000053,
+      "slew_s": 0.5999999999999996,
+      "settle_s": 1.0,
+      "verify_s": 1.5
+    }
+  ],
+  "truth_confirmation_s": 3.0
+}

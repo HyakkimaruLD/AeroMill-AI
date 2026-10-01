@@ -1,0 +1,596 @@
+{
+  "model_sha256": "270cd886d96610201b1acc7a67a42284f90a02f9a938232aa4674c6271e5a814",
+  "manifest_sha256": "22d3b89655d7f930e8bee9c25e2dca85a412fbedf7a7225009b10d4c6ff38749",
+  "baseline_commit": "55a4446",
+  "source_sha256": {
+    "__init__.py": "c559bfd2c21084eabea37003e4a11cead7977e6dce671a058fccb62bfcfcc4c7",
+    "__main__.py": "6336b9bb91e6c6fce7d37e69f5db4fde1917adaefd84945556f98ee309d51592",
+    "agent.py": "ac948cbd80adbba1f0c056a80c2f3c86e8fe1ae6fd000a607c6a77130be2a010",
+    "cli.py": "9ffce82a7ae047531b36505a9a9ec280154165adae532ae9d8edb5503b62f400",
+    "config.py": "44807be772da7fe329f29529e732150cf689d7ed757b8631daceb8ed23746838",
+    "contracts.py": "18380ea5a7019113ebad71e619cc191712432130f59f23bb4f0fdaf8a698d5d1",
+    "controller.py": "151cbc1dadb83684b62350ab68d9317067e7073f867bda16a9318995e9607370",
+    "data.py": "07eb4574d8a987da935c6d982b7550da1d01515ac77f2a4e974eff3f2cd952e9",
+    "detector.py": "c246e130a98a526d27f97b4e8b79be617d6f9d72e9a07518bbbf646c6290c951",
+    "engine.py": "fd2afa9a656d0c1b7996dc1d3502e82ca8e3075ae654378db6b222f671567091",
+    "evaluation.py": "080c4a0108d7878b7618901530d48c8299c4fd79faa64854f2abd08aa4cbc363",
+    "features.py": "25eae3f2dc1608a3a6259f71ed0360ab593af85b8fca927d00fbf1d209919e43",
+    "memory.py": "12d96cebbccc00a732826a65da3a9466fa831c54a100e8a4a0734bffcee6952d",
+    "parts.py": "570fb952b28c17ccccd1e3d13b85ca701028e22a76bbb23169b2019f4c9c9cd2",
+    "scenarios.py": "37a61196d6b1ead79a655e155688da6e8574d811d690df81f7ff430e4713c07f",
+    "session.py": "4000add4dadf1a38245de716d0553f9ad4fff0ae67031160d408e06a3a2e9689",
+    "simulator.py": "bd2d97f34a16266b79fe6166e4f953fb9ecffdd18611c298cb37574cdf6f5a36",
+    "training.py": "b6d1e7a99c7c54f206ced5ee4e0363e1cd5e81a530894ec335c11483d2f78ede",
+    "validation.py": "fcd2b691a8faaa2973c0ef78c478c13b5d30adbb28fe90070302bcde255b955a",
+    "viewer.py": "e1c3cb7af2d64be48361ba2bfe2d2207727decde9f409f0af8d309e654cc6abc"
+  },
+  "residual_ratio_limit_before": 2.0,
+  "residual_ratio_limit_after": 2.2,
+  "threshold_selection": "Validation seed 200005 only; maximum 2.117017 in the last ten stable VERIFY windows, rounded upward to one decimal. No demo tuning.",
+  "rows": [
+    {
+      "mode": "no_adaptation",
+      "completed": 60,
+      "controllable_runs": 30,
+      "controllable_successes": 0,
+      "detection_within_1s_fraction": 0.0,
+      "false_incidents_per_1000_s": 0.0,
+      "false_recoveries": 0,
+      "incidents": 30,
+      "mean_productivity_loss_completed": 0.0,
+      "missed_incidents": 30,
+      "processing_p95_ms_max": 72.98957108287142,
+      "recover_a_rms_measured_runs": 0,
+      "recover_a_rms_reduction_min": null,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 30,
+      "stops": 0,
+      "unverified_recoveries": 0,
+      "false_interventions": 0,
+      "controllable_extra_time": 0.0,
+      "controllable_completed_pairs": 30,
+      "errors": [],
+      "acceptance": {
+        "controllable": false,
+        "stable": true,
+        "detection": false,
+        "rms": false,
+        "concurrent_latency": true
+      }
+    },
+    {
+      "mode": "baseline",
+      "completed": 23,
+      "controllable_runs": 30,
+      "controllable_successes": 0,
+      "detection_within_1s_fraction": 0.8666666666666667,
+      "false_incidents_per_1000_s": 18.1206808780112,
+      "false_recoveries": 0,
+      "incidents": 30,
+      "mean_productivity_loss_completed": 0.06760837720788043,
+      "missed_incidents": 4,
+      "processing_p95_ms_max": 100.46864614123471,
+      "recover_a_rms_measured_runs": 0,
+      "recover_a_rms_reduction_min": null,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 20,
+      "stops": 37,
+      "unverified_recoveries": 0,
+      "false_interventions": 14,
+      "controllable_extra_time": null,
+      "controllable_completed_pairs": 0,
+      "errors": [],
+      "acceptance": {
+        "controllable": false,
+        "stable": false,
+        "detection": false,
+        "rms": false,
+        "concurrent_latency": false
+      }
+    },
+    {
+      "mode": "threshold_search",
+      "completed": 59,
+      "controllable_runs": 30,
+      "controllable_successes": 24,
+      "detection_within_1s_fraction": 0.7804878048780488,
+      "false_incidents_per_1000_s": 16.10415408836791,
+      "false_recoveries": 1,
+      "incidents": 41,
+      "mean_productivity_loss_completed": 0.17087471310028246,
+      "missed_incidents": 9,
+      "processing_p95_ms_max": 77.06881489139049,
+      "recover_a_rms_measured_runs": 8,
+      "recover_a_rms_reduction_min": 0.1625876396346474,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 20,
+      "stops": 1,
+      "unverified_recoveries": 2,
+      "false_interventions": 39,
+      "controllable_extra_time": 0.28126255780801007,
+      "controllable_completed_pairs": 29,
+      "errors": [],
+      "acceptance": {
+        "controllable": false,
+        "stable": false,
+        "detection": false,
+        "rms": false,
+        "concurrent_latency": true
+      }
+    },
+    {
+      "mode": "ml_agent",
+      "completed": 60,
+      "controllable_runs": 30,
+      "controllable_successes": 30,
+      "detection_within_1s_fraction": 1.0,
+      "false_incidents_per_1000_s": 0.0,
+      "false_recoveries": 0,
+      "incidents": 37,
+      "mean_productivity_loss_completed": 0.14394324408637155,
+      "missed_incidents": 0,
+      "processing_p95_ms_max": 78.99299805285409,
+      "recover_a_rms_measured_runs": 8,
+      "recover_a_rms_reduction_min": 0.4360216478024338,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 30,
+      "stops": 0,
+      "unverified_recoveries": 0,
+      "false_interventions": 0,
+      "controllable_extra_time": 0.28788648817274304,
+      "controllable_completed_pairs": 30,
+      "errors": [],
+      "acceptance": {
+        "controllable": true,
+        "stable": true,
+        "detection": true,
+        "rms": true,
+        "concurrent_latency": true
+      }
+    }
+  ],
+  "before_summary": {
+    "baseline": {
+      "completed": 23,
+      "controllable_runs": 30,
+      "controllable_successes": 0,
+      "detection_within_1s_fraction": 0.8666666666666667,
+      "false_incidents_per_1000_s": 18.1206808780112,
+      "false_recoveries": 0,
+      "incidents": 30,
+      "mean_productivity_loss_completed": 0.06760837720788043,
+      "missed_incidents": 4,
+      "processing_p95_ms_max": 117.58378998492844,
+      "recover_a_rms_measured_runs": 0,
+      "recover_a_rms_reduction_min": null,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 20,
+      "stops": 37,
+      "unverified_recoveries": 0
+    },
+    "ml_agent": {
+      "completed": 60,
+      "controllable_runs": 30,
+      "controllable_successes": 30,
+      "detection_within_1s_fraction": 1.0,
+      "false_incidents_per_1000_s": 0.0,
+      "false_recoveries": 0,
+      "incidents": 37,
+      "mean_productivity_loss_completed": 0.14760993109809029,
+      "missed_incidents": 0,
+      "processing_p95_ms_max": 127.84901522099945,
+      "recover_a_rms_measured_runs": 8,
+      "recover_a_rms_reduction_min": 0.4360216478024338,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 30,
+      "stops": 0,
+      "unverified_recoveries": 0
+    },
+    "no_adaptation": {
+      "completed": 60,
+      "controllable_runs": 30,
+      "controllable_successes": 0,
+      "detection_within_1s_fraction": 0.0,
+      "false_incidents_per_1000_s": 0.0,
+      "false_recoveries": 0,
+      "incidents": 30,
+      "mean_productivity_loss_completed": 0.0,
+      "missed_incidents": 30,
+      "processing_p95_ms_max": 231.7860809504049,
+      "recover_a_rms_measured_runs": 0,
+      "recover_a_rms_reduction_min": null,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 30,
+      "stops": 0,
+      "unverified_recoveries": 0
+    },
+    "threshold_search": {
+      "completed": 59,
+      "controllable_runs": 30,
+      "controllable_successes": 24,
+      "detection_within_1s_fraction": 0.7804878048780488,
+      "false_incidents_per_1000_s": 16.10415408836791,
+      "false_recoveries": 1,
+      "incidents": 41,
+      "mean_productivity_loss_completed": 0.17087471310028246,
+      "missed_incidents": 9,
+      "processing_p95_ms_max": 133.7818168918602,
+      "recover_a_rms_measured_runs": 8,
+      "recover_a_rms_reduction_min": 0.1625876396346474,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 20,
+      "stops": 1,
+      "unverified_recoveries": 2
+    }
+  },
+  "behavioral_changes": [
+    {
+      "family_id": "e2e-validation-5",
+      "changes": {
+        "claims": [
+          [
+            {
+              "grade": "confirmed_recovery",
+              "time_s": 14.0
+            }
+          ],
+          [
+            {
+              "grade": "confirmed_recovery",
+              "time_s": 10.5
+            }
+          ]
+        ],
+        "commands": [
+          3,
+          2
+        ],
+        "false_interventions": [
+          1,
+          0
+        ],
+        "incident_details": [
+          [
+            {
+              "confirmed_recovery_s": 17.0,
+              "detection_latency_s": 0.42746582031250036,
+              "detection_s": 4.4,
+              "end_s": 15.1385498046875,
+              "stabilization_time_s": 13.0274658203125,
+              "start_s": 3.9725341796875
+            }
+          ],
+          [
+            {
+              "confirmed_recovery_s": 13.5,
+              "detection_latency_s": 0.42746582031250036,
+              "detection_s": 4.4,
+              "end_s": 11.82861328125,
+              "stabilization_time_s": 9.5274658203125,
+              "start_s": 3.9725341796875
+            }
+          ]
+        ],
+        "productivity_loss": [
+          0.41499633789062496,
+          0.19499511718749996
+        ],
+        "rms_after": [
+          [
+            0.6156823508620555,
+            0.49311790820851203,
+            0.3712035426842514
+          ],
+          [
+            0.5665675791914798,
+            0.4546309548080926,
+            0.34229998137058143
+          ]
+        ],
+        "rms_reduction": [
+          0.5589228035762936,
+          0.5941088142863874
+        ],
+        "time_s": [
+          28.2999267578125,
+          23.89990234375
+        ],
+        "traversal_time_s": [
+          28.2999267578125,
+          23.89990234375
+        ],
+        "unstable_time_s": [
+          5.1217041015625,
+          4.307373046875
+        ]
+      }
+    }
+  ],
+  "before_false_interventions": {
+    "baseline": 14,
+    "ml_agent": 1,
+    "no_adaptation": 0,
+    "threshold_search": 39
+  },
+  "window_validation": {
+    "threshold": 0.8,
+    "overall": {
+      "chatter_windows": 5110,
+      "stable_windows": 7890,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "regime": {
+      "after": {
+        "chatter_windows": 4345,
+        "stable_windows": 5120,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "before": {
+        "chatter_windows": 45,
+        "stable_windows": 2205,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "during": {
+        "chatter_windows": 720,
+        "stable_windows": 565,
+        "recall": 1.0,
+        "fpr": 0.0
+      }
+    },
+    "engagement": {
+      "False": {
+        "chatter_windows": 4120,
+        "stable_windows": 5815,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "True": {
+        "chatter_windows": 990,
+        "stable_windows": 2075,
+        "recall": 1.0,
+        "fpr": 0.0
+      }
+    },
+    "family": {
+      "windows-recover_a-0": {
+        "chatter_windows": 20,
+        "stable_windows": 855,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-recover_a-5": {
+        "chatter_windows": 10,
+        "stable_windows": 925,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-recover_c-0": {
+        "chatter_windows": 595,
+        "stable_windows": 320,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-recover_c-5": {
+        "chatter_windows": 565,
+        "stable_windows": 345,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-repeat_after_c-0": {
+        "chatter_windows": 655,
+        "stable_windows": 1090,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-repeat_after_c-5": {
+        "chatter_windows": 995,
+        "stable_windows": 915,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-retry_b-0": {
+        "chatter_windows": 400,
+        "stable_windows": 490,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-retry_b-5": {
+        "chatter_windows": 250,
+        "stable_windows": 640,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-stable-0": {
+        "chatter_windows": 0,
+        "stable_windows": 990,
+        "recall": null,
+        "fpr": 0.0
+      },
+      "windows-stable-5": {
+        "chatter_windows": 0,
+        "stable_windows": 990,
+        "recall": null,
+        "fpr": 0.0
+      },
+      "windows-unrecoverable-0": {
+        "chatter_windows": 835,
+        "stable_windows": 140,
+        "recall": 1.0,
+        "fpr": 0.0
+      },
+      "windows-unrecoverable-5": {
+        "chatter_windows": 785,
+        "stable_windows": 190,
+        "recall": 1.0,
+        "fpr": 0.0
+      }
+    },
+    "total_rms": {
+      "threshold": 0.8,
+      "overall": {
+        "chatter_windows": 5110,
+        "stable_windows": 7890,
+        "recall": 0.9941291585127201,
+        "fpr": 0.059569074778200254
+      },
+      "regime": {
+        "after": {
+          "chatter_windows": 4345,
+          "stable_windows": 5120,
+          "recall": 0.998849252013809,
+          "fpr": 0.0751953125
+        },
+        "before": {
+          "chatter_windows": 45,
+          "stable_windows": 2205,
+          "recall": 1.0,
+          "fpr": 0.006802721088435374
+        },
+        "during": {
+          "chatter_windows": 720,
+          "stable_windows": 565,
+          "recall": 0.9652777777777778,
+          "fpr": 0.12389380530973451
+        }
+      },
+      "engagement": {
+        "False": {
+          "chatter_windows": 4120,
+          "stable_windows": 5815,
+          "recall": 0.9927184466019418,
+          "fpr": 0.0
+        },
+        "True": {
+          "chatter_windows": 990,
+          "stable_windows": 2075,
+          "recall": 1.0,
+          "fpr": 0.22650602409638554
+        }
+      },
+      "family": {
+        "windows-recover_a-0": {
+          "chatter_windows": 20,
+          "stable_windows": 855,
+          "recall": 1.0,
+          "fpr": 0.23391812865497075
+        },
+        "windows-recover_a-5": {
+          "chatter_windows": 10,
+          "stable_windows": 925,
+          "recall": 1.0,
+          "fpr": 0.0
+        },
+        "windows-recover_c-0": {
+          "chatter_windows": 595,
+          "stable_windows": 320,
+          "recall": 1.0,
+          "fpr": 0.03125
+        },
+        "windows-recover_c-5": {
+          "chatter_windows": 565,
+          "stable_windows": 345,
+          "recall": 1.0,
+          "fpr": 0.0
+        },
+        "windows-repeat_after_c-0": {
+          "chatter_windows": 655,
+          "stable_windows": 1090,
+          "recall": 1.0,
+          "fpr": 0.16972477064220184
+        },
+        "windows-repeat_after_c-5": {
+          "chatter_windows": 995,
+          "stable_windows": 915,
+          "recall": 1.0,
+          "fpr": 0.0
+        },
+        "windows-retry_b-0": {
+          "chatter_windows": 400,
+          "stable_windows": 490,
+          "recall": 1.0,
+          "fpr": 0.08163265306122448
+        },
+        "windows-retry_b-5": {
+          "chatter_windows": 250,
+          "stable_windows": 640,
+          "recall": 0.88,
+          "fpr": 0.0
+        },
+        "windows-stable-0": {
+          "chatter_windows": 0,
+          "stable_windows": 990,
+          "recall": null,
+          "fpr": 0.03535353535353535
+        },
+        "windows-stable-5": {
+          "chatter_windows": 0,
+          "stable_windows": 990,
+          "recall": null,
+          "fpr": 0.0
+        },
+        "windows-unrecoverable-0": {
+          "chatter_windows": 835,
+          "stable_windows": 140,
+          "recall": 1.0,
+          "fpr": 0.0
+        },
+        "windows-unrecoverable-5": {
+          "chatter_windows": 785,
+          "stable_windows": 190,
+          "recall": 1.0,
+          "fpr": 0.0
+        }
+      }
+    }
+  },
+  "pytest": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "239",
+    "time": "207.487",
+    "timestamp": "2026-10-01T10:34:56.124727+09:00",
+    "hostname": "DESKTOP-3E887MM"
+  },
+  "stable_demonstrations": {
+    "passed": 50,
+    "total": 50
+  },
+  "diagnostics": {
+    "before": {
+      "successes": 32,
+      "holds": 8,
+      "false_interventions": 2,
+      "false_recoveries": 0,
+      "unverified_recoveries": 0,
+      "missed_incidents": 0
+    },
+    "after": {
+      "successes": 32,
+      "holds": 8,
+      "false_interventions": 2,
+      "false_recoveries": 0,
+      "unverified_recoveries": 0,
+      "missed_incidents": 0
+    }
+  },
+  "latency_protocol": "Four concurrent mode workers, cold memory per run; maximum of per-run processing p95. Tests and diagnostic simulations ran separately.",
+  "limitations": [
+    "Synthetic simulation; not validated on real CNC.",
+    "Validation is not independent final-set certification.",
+    "Residual normalization still depends on RPM; demo false retries remain.",
+    "Baseline remains resonant by construction; RF is compared only against total RMS, not a spectral rule."
+  ]
+}
