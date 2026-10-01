@@ -13,6 +13,7 @@ from .contracts import AppliedState, Command, ControllerEvent, DataQuality, Obse
 from .controller import Controller
 from .detector import RMSDetector, RFDetector
 from .features import FeatureStream
+from .evaluation import RunEvaluator
 from .simulator import Simulator
 
 
@@ -32,6 +33,7 @@ class Engine:
         model_dir="artifacts",
         chatter_hz=1200.0,
         initial_phase=(0.0, 0.0),
+        memory=None,
     ):
         reference = np.asarray(profile.reference_rms, dtype=float)
         if (
@@ -41,6 +43,9 @@ class Engine:
         ):
             raise ValueError("invalid profile reference RMS")
         self.run_id = run_id or uuid4().hex
+        self.events = []
+        self._evaluator = RunEvaluator()
+        self._evaluation = None
         self.simulator = Simulator(
             scenario,
             seed=seed,
@@ -79,12 +84,19 @@ class Engine:
         # Open before any motion; inability to create the log prevents startup.
         with self.log_path.open("a"):
             pass
+        model_version = "rms-v1"
+        if mode == "ml_agent" and detector is None:
+            model_version = json.loads((Path(model_dir) / "model.json").read_text())[
+                "model_sha256"
+            ]
         self.agent = Agent(
             self.run_id,
             profile,
             mode=mode,
             path_length_mm=scenario.path_length_mm,
             log=self.log,
+            memory=memory,
+            model_version=model_version,
         )
         self.index = 0
         self.queued = None
@@ -116,6 +128,7 @@ class Engine:
     def log(self, row: dict) -> None:
         with self.log_path.open("a") as file:
             file.write(json.dumps(row, allow_nan=False) + "\n")
+        self.events.append(row)
 
     def stop(self, reason: str) -> None:
         self.agent.now = self.index
@@ -168,7 +181,10 @@ class Engine:
 
     def tick(self, *, stop: bool = False):
         try:
-            return self._tick(stop=stop)
+            step = self._tick(stop=stop)
+            if step is not None:
+                self._evaluator.append(step)
+            return step
         except OSError:
             self.agent.log = None
             self.stop("LOG_ERROR")
@@ -285,3 +301,14 @@ class Engine:
         while not self.done:
             self.tick()
         return self
+
+    def evaluate(self):
+        if not self.done:
+            return None
+        if self._evaluation is None:
+            self._evaluation = self._evaluator.evaluate(
+                self.events,
+                state=self.agent.state,
+                path_length_mm=self.agent.path_length_mm,
+            )
+        return self._evaluation

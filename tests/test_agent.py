@@ -213,7 +213,7 @@ def test_agent_import_graph_excludes_hidden_modules():
         if name in seen:
             return
         seen.add(name)
-        assert name not in {"simulator", "scenarios", "engine", "evaluation", "memory"}
+        assert name not in {"simulator", "scenarios", "engine", "evaluation"}
         tree = ast.parse((root / f"{name}.py").read_text())
         for node in ast.walk(tree):
             if isinstance(node, ast.ImportFrom):

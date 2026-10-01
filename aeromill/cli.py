@@ -30,6 +30,9 @@ def main():
         "--split", choices=("validation", "final", "test", "reserve"), required=True
     )
     evaluate.add_argument("--mode", default="all")
+    evaluate.add_argument("--warm-memory", action="store_true")
+    evaluate.add_argument("--output", default="artifacts/day4-validation")
+    evaluate.add_argument("--workers", type=int, default=1)
     args = parser.parse_args()
     if args.command == "data":
         from .data import build
@@ -44,9 +47,18 @@ def main():
             parser.error(
                 "final evaluation requires a freeze marker; none is created by Day 3"
             )
-        parser.error(
-            "evaluator deferred; Day 3 validation evidence: tests/evidence/day3_validation.py; withheld sets remain disabled"
-        )
+        from .evaluation import evaluate_validation
+
+        try:
+            evaluate_validation(
+                split=args.split,
+                mode=args.mode,
+                warm_memory=args.warm_memory,
+                output=args.output,
+                workers=args.workers,
+            )
+        except ValueError as exc:
+            parser.error(str(exc))
     else:
         e = Engine(
             NAMED_SCENARIOS[args.scenario],

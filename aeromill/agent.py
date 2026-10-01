@@ -5,9 +5,10 @@ from typing import Callable
 
 import numpy as np
 
-from .config import CANDIDATES, ToolProfile
+from .config import CANDIDATES, CANDIDATE_SET_VERSION, ToolProfile
 from .contracts import Command, Observation
 from .controller import admissible
+from .memory import Memory
 
 
 def set_cutting_parameters(agent: "Agent", rpm: float, feed: float) -> Command:
@@ -52,6 +53,17 @@ def record_outcome(agent: "Agent", success: bool, final_features: tuple) -> None
             command_id=agent.command.command_id,
             incident_id=agent.incident,
         )
+        agent.memory.remember(
+            agent.command_memory_key,
+            (agent.command.rpm, agent.command.feed_mm_min),
+            agent.command.command_id,
+            agent.now / 10,
+        )
+        agent.emit("memory_write", pair=[agent.command.rpm, agent.command.feed_mm_min])
+    elif agent.reusing_memory:
+        agent.memory.forget(agent.command_memory_key)
+        agent.emit("memory_delete", pair=[agent.command.rpm, agent.command.feed_mm_min])
+    agent.reusing_memory = False
 
 
 class Agent:
@@ -63,6 +75,9 @@ class Agent:
         mode: str = "threshold_search",
         path_length_mm: float = 400.0,
         log: Callable[[dict], None] | None = None,
+        memory: Memory | None = None,
+        model_version: str = "rms-v1",
+        candidate_set_version: str = CANDIDATE_SET_VERSION,
     ):
         if mode not in ("no_adaptation", "baseline", "threshold_search", "ml_agent"):
             raise ValueError("unknown mode")
@@ -88,6 +103,14 @@ class Agent:
         self.verify = deque(maxlen=10)
         self.previous_x = 0.0
         self.initial_features = ()
+        self.memory = memory if memory is not None else Memory()
+        self.model_version, self.candidate_set_version = (
+            model_version,
+            candidate_set_version,
+        )
+        self.zone_class = "nominal"
+        self.command_memory_key = None
+        self.reusing_memory = False
 
     def emit(self, event: str, **fields) -> None:
         row = dict(event=event, run_id=self.run_id, time_s=self.now / 10, **fields)
@@ -100,6 +123,10 @@ class Agent:
         self.state, self.entered = state, self.now
 
     def hold(self, reason: str) -> Command:
+        if self.reusing_memory and self.state in ("APPLY", "SETTLE", "VERIFY"):
+            self.memory.forget(self.command_memory_key)
+            self.emit("memory_delete", reason=reason)
+            self.reusing_memory = False
         self.reason = reason
         self.transition("HOLD")
         return feed_hold(self, reason)
@@ -108,7 +135,20 @@ class Agent:
         self.transition("PLAN")
         ranked = []
         seen = set()
-        for pair in self.candidates:
+        key = (
+            self.profile.profile_id,
+            self.zone_class,
+            self.model_version,
+            self.candidate_set_version,
+        )
+        entry = (
+            self.memory.get(key)
+            if self.mode in ("ml_agent", "threshold_search")
+            else None
+        )
+        self.emit("memory_hit" if entry else "memory_miss", key=list(key))
+        pairs = ((entry.pair,) if entry else ()) + self.candidates
+        for pair in pairs:
             reason = (
                 "duplicate"
                 if pair in seen
@@ -118,6 +158,8 @@ class Agent:
                 if not admissible(*pair)
                 else "current pair"
                 if abs(pair[0] - rpm) <= 1 and abs(pair[1] - feed) <= 1
+                else "outside candidate set"
+                if pair not in self.candidates
                 else "kept"
             )
             ranked.append(dict(pair=list(pair), reason=reason))
@@ -126,12 +168,15 @@ class Agent:
         self.emit(
             "planning_record",
             ranked=ranked,
+            memory="hit" if entry else "miss",
             excluded=[r for r in ranked if r["reason"] != "kept"],
             chosen=chosen,
         )
         if chosen is None:
             return self.hold("NO_CANDIDATE")
         self.tried.add(tuple(chosen))
+        self.command_memory_key = key
+        self.reusing_memory = entry is not None and tuple(chosen) == entry.pair
         self.attempts += 1
         self.command = set_cutting_parameters(self, *chosen)
         self.ack_tick = self.reached_tick = None
@@ -184,6 +229,7 @@ class Agent:
         if self.state in ("HOLD", "COMPLETED"):
             return None
         telemetry, detection = observation.telemetry, observation.detection
+        self.zone_class = telemetry.zone_class[-1]
         self.now = telemetry.sequence + 1
         if error:
             return self.hold(error)

@@ -1,0 +1,466 @@
+{
+  "manifest_sha256": "22d3b89655d7f930e8bee9c25e2dca85a412fbedf7a7225009b10d4c6ff38749",
+  "model_sha256": "270cd886d96610201b1acc7a67a42284f90a02f9a938232aa4674c6271e5a814",
+  "rows": [
+    {
+      "mode": "baseline",
+      "completed": 23,
+      "controllable_runs": 30,
+      "controllable_successes": 0,
+      "detection_within_1s_fraction": 0.8666666666666667,
+      "false_incidents_per_1000_s": 18.1206808780112,
+      "false_recoveries": 0,
+      "incidents": 30,
+      "mean_productivity_loss_completed": 0.06760837720788043,
+      "missed_incidents": 4,
+      "processing_p95_ms_max": 1455.8210061979478,
+      "recover_a_rms_measured_runs": 0,
+      "recover_a_rms_reduction_min": null,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 20,
+      "stops": 37,
+      "unverified_recoveries": 0,
+      "false_interventions": 14,
+      "memory_hits": 0,
+      "controllable_extra_time": null,
+      "controllable_completed_pairs": 0,
+      "acceptance": {
+        "controllable": false,
+        "stable": false,
+        "detection": false,
+        "rms": false,
+        "audit_latency": false
+      }
+    },
+    {
+      "mode": "ml_agent",
+      "completed": 60,
+      "controllable_runs": 30,
+      "controllable_successes": 30,
+      "detection_within_1s_fraction": 1.0,
+      "false_incidents_per_1000_s": 0.0,
+      "false_recoveries": 0,
+      "incidents": 37,
+      "mean_productivity_loss_completed": 0.14760993109809029,
+      "missed_incidents": 0,
+      "processing_p95_ms_max": 957.0615827105939,
+      "recover_a_rms_measured_runs": 8,
+      "recover_a_rms_reduction_min": 0.4360216478024338,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 30,
+      "stops": 0,
+      "unverified_recoveries": 0,
+      "false_interventions": 1,
+      "memory_hits": 7,
+      "controllable_extra_time": 0.29521986219618057,
+      "controllable_completed_pairs": 30,
+      "acceptance": {
+        "controllable": true,
+        "stable": true,
+        "detection": true,
+        "rms": true,
+        "audit_latency": false
+      }
+    },
+    {
+      "mode": "no_adaptation",
+      "completed": 60,
+      "controllable_runs": 30,
+      "controllable_successes": 0,
+      "detection_within_1s_fraction": 0.0,
+      "false_incidents_per_1000_s": 0.0,
+      "false_recoveries": 0,
+      "incidents": 30,
+      "mean_productivity_loss_completed": 0.0,
+      "missed_incidents": 30,
+      "processing_p95_ms_max": 792.9575188143651,
+      "recover_a_rms_measured_runs": 0,
+      "recover_a_rms_reduction_min": null,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 30,
+      "stops": 0,
+      "unverified_recoveries": 0,
+      "false_interventions": 0,
+      "memory_hits": 0,
+      "controllable_extra_time": 0.0,
+      "controllable_completed_pairs": 30,
+      "acceptance": {
+        "controllable": false,
+        "stable": true,
+        "detection": false,
+        "rms": false,
+        "audit_latency": false
+      }
+    },
+    {
+      "mode": "threshold_search",
+      "completed": 59,
+      "controllable_runs": 30,
+      "controllable_successes": 24,
+      "detection_within_1s_fraction": 0.7804878048780488,
+      "false_incidents_per_1000_s": 16.10415408836791,
+      "false_recoveries": 1,
+      "incidents": 41,
+      "mean_productivity_loss_completed": 0.17087471310028246,
+      "missed_incidents": 9,
+      "processing_p95_ms_max": 754.9937320174647,
+      "recover_a_rms_measured_runs": 8,
+      "recover_a_rms_reduction_min": 0.1625876396346474,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 20,
+      "stops": 1,
+      "unverified_recoveries": 2,
+      "false_interventions": 39,
+      "memory_hits": 24,
+      "controllable_extra_time": 0.28126255780801007,
+      "controllable_completed_pairs": 29,
+      "acceptance": {
+        "controllable": false,
+        "stable": false,
+        "detection": false,
+        "rms": false,
+        "audit_latency": false
+      }
+    },
+    {
+      "mode": "threshold_search_warm",
+      "completed": 59,
+      "controllable_runs": 30,
+      "controllable_successes": 23,
+      "detection_within_1s_fraction": 0.7619047619047619,
+      "false_incidents_per_1000_s": 15.915133534760322,
+      "false_recoveries": 0,
+      "incidents": 42,
+      "mean_productivity_loss_completed": 0.1850837319584216,
+      "missed_incidents": 10,
+      "processing_p95_ms_max": 210.34640877041966,
+      "recover_a_rms_measured_runs": 8,
+      "recover_a_rms_reduction_min": 0.1625876396346474,
+      "runs": 60,
+      "stable_runs": 30,
+      "stable_without_intervention": 20,
+      "stops": 1,
+      "unverified_recoveries": 2,
+      "false_interventions": 40,
+      "memory_hits": 66,
+      "controllable_extra_time": 0.31017056169181034,
+      "controllable_completed_pairs": 29,
+      "acceptance": {
+        "controllable": false,
+        "stable": false,
+        "detection": false,
+        "rms": false,
+        "audit_latency": false
+      }
+    }
+  ],
+  "serial_ml_recover_a_latency": {
+    "advance_5_calls": 48,
+    "first_lazy_advance_ms": 5585.887760971673,
+    "advance_5_ms": {
+      "p50": 127.51434848178178,
+      "p95": 179.6131140145007,
+      "p99": 3074.951935018186
+    },
+    "processing_ms": {
+      "p50": 19.83557199127972,
+      "p95": 26.67480674572289,
+      "p99": 60.84796792827553
+    },
+    "acquisition_simulation_s": 0.3,
+    "evaluation": {
+      "state": "COMPLETED",
+      "completed": true,
+      "run_success": true,
+      "incidents": 1,
+      "missed_incidents": 0,
+      "detected_within_1s": 1,
+      "incident_details": [
+        {
+          "start_s": 4.06201171875,
+          "end_s": 8.5682373046875,
+          "detection_s": 4.4,
+          "detection_latency_s": 0.33798828125000036,
+          "confirmed_recovery_s": 10.3,
+          "stabilization_time_s": 6.237988281250001
+        }
+      ],
+      "claims": [
+        {
+          "time_s": 7.3,
+          "grade": "confirmed_recovery"
+        }
+      ],
+      "confirmed_recoveries": 1,
+      "false_recoveries": 0,
+      "unverified_recoveries": 0,
+      "unstable_time_s": 0.9884033203125,
+      "commands": 1,
+      "false_interventions": 0,
+      "false_incidents": 0,
+      "false_incidents_per_1000_s": 0.0,
+      "stops": 0,
+      "stable_without_intervention": false,
+      "time_s": 23.89990234375,
+      "traversal_time_s": 23.89990234375,
+      "rms_before": [
+        0.9570475058270154,
+        0.7665258346205585,
+        0.5757489312429701
+      ],
+      "rms_after": [
+        0.4557871199602213,
+        0.3665964847494416,
+        0.27623314752218275
+      ],
+      "rms_reduction": 0.5237570578418037
+    },
+    "slew_simulation_s": 0.2999999999999998,
+    "settle_simulation_s": 1.0,
+    "verification_simulation_s": 1.5
+  },
+  "window_validation": {
+    "engagement": {
+      "False": {
+        "chatter_windows": 4120,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 5815
+      },
+      "True": {
+        "chatter_windows": 990,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 2075
+      }
+    },
+    "family": {
+      "windows-recover_a-0": {
+        "chatter_windows": 20,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 855
+      },
+      "windows-recover_a-5": {
+        "chatter_windows": 10,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 925
+      },
+      "windows-recover_c-0": {
+        "chatter_windows": 595,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 320
+      },
+      "windows-recover_c-5": {
+        "chatter_windows": 565,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 345
+      },
+      "windows-repeat_after_c-0": {
+        "chatter_windows": 655,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 1090
+      },
+      "windows-repeat_after_c-5": {
+        "chatter_windows": 995,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 915
+      },
+      "windows-retry_b-0": {
+        "chatter_windows": 400,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 490
+      },
+      "windows-retry_b-5": {
+        "chatter_windows": 250,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 640
+      },
+      "windows-stable-0": {
+        "chatter_windows": 0,
+        "fpr": 0.0,
+        "recall": null,
+        "stable_windows": 990
+      },
+      "windows-stable-5": {
+        "chatter_windows": 0,
+        "fpr": 0.0,
+        "recall": null,
+        "stable_windows": 990
+      },
+      "windows-unrecoverable-0": {
+        "chatter_windows": 835,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 140
+      },
+      "windows-unrecoverable-5": {
+        "chatter_windows": 785,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 190
+      }
+    },
+    "overall": {
+      "chatter_windows": 5110,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 7890
+    },
+    "regime": {
+      "after": {
+        "chatter_windows": 4345,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 5120
+      },
+      "before": {
+        "chatter_windows": 45,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 2205
+      },
+      "during": {
+        "chatter_windows": 720,
+        "fpr": 0.0,
+        "recall": 1.0,
+        "stable_windows": 565
+      }
+    },
+    "threshold": 0.8,
+    "total_rms": {
+      "engagement": {
+        "False": {
+          "chatter_windows": 4120,
+          "fpr": 0.0,
+          "recall": 0.9927184466019418,
+          "stable_windows": 5815
+        },
+        "True": {
+          "chatter_windows": 990,
+          "fpr": 0.22650602409638554,
+          "recall": 1.0,
+          "stable_windows": 2075
+        }
+      },
+      "family": {
+        "windows-recover_a-0": {
+          "chatter_windows": 20,
+          "fpr": 0.23391812865497075,
+          "recall": 1.0,
+          "stable_windows": 855
+        },
+        "windows-recover_a-5": {
+          "chatter_windows": 10,
+          "fpr": 0.0,
+          "recall": 1.0,
+          "stable_windows": 925
+        },
+        "windows-recover_c-0": {
+          "chatter_windows": 595,
+          "fpr": 0.03125,
+          "recall": 1.0,
+          "stable_windows": 320
+        },
+        "windows-recover_c-5": {
+          "chatter_windows": 565,
+          "fpr": 0.0,
+          "recall": 1.0,
+          "stable_windows": 345
+        },
+        "windows-repeat_after_c-0": {
+          "chatter_windows": 655,
+          "fpr": 0.16972477064220184,
+          "recall": 1.0,
+          "stable_windows": 1090
+        },
+        "windows-repeat_after_c-5": {
+          "chatter_windows": 995,
+          "fpr": 0.0,
+          "recall": 1.0,
+          "stable_windows": 915
+        },
+        "windows-retry_b-0": {
+          "chatter_windows": 400,
+          "fpr": 0.08163265306122448,
+          "recall": 1.0,
+          "stable_windows": 490
+        },
+        "windows-retry_b-5": {
+          "chatter_windows": 250,
+          "fpr": 0.0,
+          "recall": 0.88,
+          "stable_windows": 640
+        },
+        "windows-stable-0": {
+          "chatter_windows": 0,
+          "fpr": 0.03535353535353535,
+          "recall": null,
+          "stable_windows": 990
+        },
+        "windows-stable-5": {
+          "chatter_windows": 0,
+          "fpr": 0.0,
+          "recall": null,
+          "stable_windows": 990
+        },
+        "windows-unrecoverable-0": {
+          "chatter_windows": 835,
+          "fpr": 0.0,
+          "recall": 1.0,
+          "stable_windows": 140
+        },
+        "windows-unrecoverable-5": {
+          "chatter_windows": 785,
+          "fpr": 0.0,
+          "recall": 1.0,
+          "stable_windows": 190
+        }
+      },
+      "overall": {
+        "chatter_windows": 5110,
+        "fpr": 0.059569074778200254,
+        "recall": 0.9941291585127201,
+        "stable_windows": 7890
+      },
+      "regime": {
+        "after": {
+          "chatter_windows": 4345,
+          "fpr": 0.0751953125,
+          "recall": 0.998849252013809,
+          "stable_windows": 5120
+        },
+        "before": {
+          "chatter_windows": 45,
+          "fpr": 0.006802721088435374,
+          "recall": 1.0,
+          "stable_windows": 2205
+        },
+        "during": {
+          "chatter_windows": 720,
+          "fpr": 0.12389380530973451,
+          "recall": 0.9652777777777778,
+          "stable_windows": 565
+        }
+      },
+      "threshold": 0.8
+    }
+  },
+  "caveats": [
+    "Cold audit latency measured with concurrent workers; serial demo is one run, not corpus certification.",
+    "Warm is a second identical entry after an explicit priming run; not unseen-profile transfer.",
+    "Extra time includes completed controllable pairs only; stopped runs remain failures.",
+    "Window metrics reuse the unchanged frozen-model validation artifact."
+  ]
+}
