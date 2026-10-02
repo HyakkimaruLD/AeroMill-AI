@@ -1,0 +1,125 @@
+{
+  "acceptance": {
+    "controllable_min": 27,
+    "false_recovery_max": 0,
+    "processing_p95_ms_strict_max": 100,
+    "recover_a_rms_reduction_min": 0.4,
+    "runs_per_kind": 30,
+    "stable_min": 29,
+    "timely_fraction_min": 0.9,
+    "unverified_recovery_max": 0,
+    "window_fpr_max": 0.05,
+    "window_recall_min": 0.9
+  },
+  "commit": "6916afd3cf5674c3bb1434f9c784c9cda5634a67",
+  "config": {
+    "AXIS_MULTIPLIERS": [
+      1.0,
+      0.8,
+      0.6
+    ],
+    "CANDIDATES": {
+      "A": {
+        "feed_mm_min": 960.0,
+        "rpm": 3520.0,
+        "stopped": false
+      },
+      "B": {
+        "feed_mm_min": 960.0,
+        "rpm": 2880.0,
+        "stopped": false
+      },
+      "C": {
+        "feed_mm_min": 720.0,
+        "rpm": 3840.0,
+        "stopped": false
+      }
+    },
+    "CANDIDATE_SET_VERSION": "v1",
+    "CHATTER_MIN": 0.75,
+    "ENVELOPE_TAU_S": 0.35,
+    "FEED_LIMITS": [
+      600.0,
+      1200.0
+    ],
+    "FEED_SLEW": 600.0,
+    "FORMULA_VERSION": "v1",
+    "HOP_S": 0.1,
+    "IMPACT_TAU_S": 0.02,
+    "MAX_RUN_S": 65.0,
+    "RPM_LIMITS": [
+      2400.0,
+      4200.0
+    ],
+    "RPM_SLEW": 1000.0,
+    "SAMPLE_RATE": 8192,
+    "STABLE_MAX": 0.25,
+    "WINDOW_SAMPLES": 2048
+  },
+  "protocol": {
+    "cold_memory": true,
+    "crash_policy": "stop without retry",
+    "marker_commit": "parent source commit",
+    "modes": [
+      "no_adaptation",
+      "baseline",
+      "threshold_search",
+      "ml_agent"
+    ],
+    "run_split": "final",
+    "window_split": "test",
+    "workers": 1
+  },
+  "sha256": {
+    "aeromill/__init__.py": "c559bfd2c21084eabea37003e4a11cead7977e6dce671a058fccb62bfcfcc4c7",
+    "aeromill/__main__.py": "6336b9bb91e6c6fce7d37e69f5db4fde1917adaefd84945556f98ee309d51592",
+    "aeromill/agent.py": "ac948cbd80adbba1f0c056a80c2f3c86e8fe1ae6fd000a607c6a77130be2a010",
+    "aeromill/cli.py": "5d51e3cb530fa228aed4e7bc49a5ad04b1f0c139878e27c7b618f29e331a2dd8",
+    "aeromill/config.py": "44807be772da7fe329f29529e732150cf689d7ed757b8631daceb8ed23746838",
+    "aeromill/contracts.py": "18380ea5a7019113ebad71e619cc191712432130f59f23bb4f0fdaf8a698d5d1",
+    "aeromill/controller.py": "151cbc1dadb83684b62350ab68d9317067e7073f867bda16a9318995e9607370",
+    "aeromill/data.py": "02723a7a6ccc667b782c48a7e75943a1e5e042467d23f55811017a4076b8d6a4",
+    "aeromill/detector.py": "c246e130a98a526d27f97b4e8b79be617d6f9d72e9a07518bbbf646c6290c951",
+    "aeromill/engine.py": "fd2afa9a656d0c1b7996dc1d3502e82ca8e3075ae654378db6b222f671567091",
+    "aeromill/evaluation.py": "080c4a0108d7878b7618901530d48c8299c4fd79faa64854f2abd08aa4cbc363",
+    "aeromill/features.py": "25eae3f2dc1608a3a6259f71ed0360ab593af85b8fca927d00fbf1d209919e43",
+    "aeromill/freeze.py": "fb43fe7e79f280dc8cd140e803d2a6d6bf957dce4a2bf19a3a7e19f1ce49406f",
+    "aeromill/memory.py": "12d96cebbccc00a732826a65da3a9466fa831c54a100e8a4a0734bffcee6952d",
+    "aeromill/parts.py": "570fb952b28c17ccccd1e3d13b85ca701028e22a76bbb23169b2019f4c9c9cd2",
+    "aeromill/scenarios.py": "37a61196d6b1ead79a655e155688da6e8574d811d690df81f7ff430e4713c07f",
+    "aeromill/session.py": "4000add4dadf1a38245de716d0553f9ad4fff0ae67031160d408e06a3a2e9689",
+    "aeromill/simulator.py": "bd2d97f34a16266b79fe6166e4f953fb9ecffdd18611c298cb37574cdf6f5a36",
+    "aeromill/training.py": "6dcdc9d111464beaeb948ad3c53e9531a2f8e8057d8085500ffb27fc4bb88c61",
+    "aeromill/validation.py": "48b1ce824e585082231f8dc204d708bcf1247344692b6e30a0235e72199bc4f8",
+    "aeromill/viewer.py": "e1c3cb7af2d64be48361ba2bfe2d2207727decde9f409f0af8d309e654cc6abc",
+    "artifacts/model.json": "8d742cc96c2bf7c3bc5f2ac355400649c66af95fd7a542367cc43b579120694c",
+    "artifacts/model.pkl": "270cd886d96610201b1acc7a67a42284f90a02f9a938232aa4674c6271e5a814",
+    "data/manifest.json": "22d3b89655d7f930e8bee9c25e2dca85a412fbedf7a7225009b10d4c6ff38749",
+    "pyproject.toml": "451257eef3262bd1af1563e6e20e6278e6de1a568ebde58cf7490969470e9030",
+    "uv.lock": "8ab74277b4d7b4a451f1fedba469952553eaf6c51f61ef35303b0e629b9ea635"
+  },
+  "thresholds": {
+    "ack_deadline_s": 0.2,
+    "baseline_attempts": 1,
+    "calibration_deadline_s": 5.0,
+    "calibration_s": 2.0,
+    "calm_score": 0.3,
+    "detection_consecutive_ticks": 3,
+    "detection_score": 0.8,
+    "reached_deadline_s": 2.0,
+    "search_attempts": 3,
+    "settle_s": 1.0,
+    "truth_confirmation_s": 3.0,
+    "verification_last_ticks": 10,
+    "verify_residual_rms_ratio": 2.2,
+    "verify_s": 1.5,
+    "verify_total_rms_ratio": 1.5,
+    "warmup_rms_ratio": 1.5
+  },
+  "tool_profile": {
+    "h": 1.0,
+    "profile_id": "four-tooth-v1",
+    "teeth": 4
+  },
+  "utc": "2026-10-01T02:53:43.149790+00:00"
+}

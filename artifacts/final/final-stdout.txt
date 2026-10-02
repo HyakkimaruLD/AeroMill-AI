@@ -1,0 +1,318 @@
+no_adaptation 1/60 e2e-final-0 success=False
+no_adaptation 2/60 e2e-final-1 success=False
+no_adaptation 3/60 e2e-final-2 success=False
+no_adaptation 4/60 e2e-final-3 success=False
+no_adaptation 5/60 e2e-final-4 success=False
+no_adaptation 6/60 e2e-final-5 success=False
+no_adaptation 7/60 e2e-final-6 success=False
+no_adaptation 8/60 e2e-final-7 success=False
+no_adaptation 9/60 e2e-final-8 success=False
+no_adaptation 10/60 e2e-final-9 success=False
+no_adaptation 11/60 e2e-final-10 success=False
+no_adaptation 12/60 e2e-final-11 success=False
+no_adaptation 13/60 e2e-final-12 success=False
+no_adaptation 14/60 e2e-final-13 success=False
+no_adaptation 15/60 e2e-final-14 success=False
+no_adaptation 16/60 e2e-final-15 success=False
+no_adaptation 17/60 e2e-final-16 success=False
+no_adaptation 18/60 e2e-final-17 success=False
+no_adaptation 19/60 e2e-final-18 success=False
+no_adaptation 20/60 e2e-final-19 success=False
+no_adaptation 21/60 e2e-final-20 success=False
+no_adaptation 22/60 e2e-final-21 success=False
+no_adaptation 23/60 e2e-final-22 success=False
+no_adaptation 24/60 e2e-final-23 success=False
+no_adaptation 25/60 e2e-final-24 success=False
+no_adaptation 26/60 e2e-final-25 success=False
+no_adaptation 27/60 e2e-final-26 success=False
+no_adaptation 28/60 e2e-final-27 success=False
+no_adaptation 29/60 e2e-final-28 success=False
+no_adaptation 30/60 e2e-final-29 success=False
+no_adaptation 31/60 e2e-final-30 success=True
+no_adaptation 32/60 e2e-final-31 success=True
+no_adaptation 33/60 e2e-final-32 success=True
+no_adaptation 34/60 e2e-final-33 success=True
+no_adaptation 35/60 e2e-final-34 success=True
+no_adaptation 36/60 e2e-final-35 success=True
+no_adaptation 37/60 e2e-final-36 success=True
+no_adaptation 38/60 e2e-final-37 success=True
+no_adaptation 39/60 e2e-final-38 success=True
+no_adaptation 40/60 e2e-final-39 success=True
+no_adaptation 41/60 e2e-final-40 success=True
+no_adaptation 42/60 e2e-final-41 success=True
+no_adaptation 43/60 e2e-final-42 success=True
+no_adaptation 44/60 e2e-final-43 success=True
+no_adaptation 45/60 e2e-final-44 success=True
+no_adaptation 46/60 e2e-final-45 success=True
+no_adaptation 47/60 e2e-final-46 success=True
+no_adaptation 48/60 e2e-final-47 success=True
+no_adaptation 49/60 e2e-final-48 success=True
+no_adaptation 50/60 e2e-final-49 success=True
+no_adaptation 51/60 e2e-final-50 success=True
+no_adaptation 52/60 e2e-final-51 success=True
+no_adaptation 53/60 e2e-final-52 success=True
+no_adaptation 54/60 e2e-final-53 success=True
+no_adaptation 55/60 e2e-final-54 success=True
+no_adaptation 56/60 e2e-final-55 success=True
+no_adaptation 57/60 e2e-final-56 success=True
+no_adaptation 58/60 e2e-final-57 success=True
+no_adaptation 59/60 e2e-final-58 success=True
+no_adaptation 60/60 e2e-final-59 success=True
+baseline 1/60 e2e-final-0 success=False
+baseline 2/60 e2e-final-1 success=False
+baseline 3/60 e2e-final-2 success=False
+baseline 4/60 e2e-final-3 success=False
+baseline 5/60 e2e-final-4 success=False
+baseline 6/60 e2e-final-5 success=False
+baseline 7/60 e2e-final-6 success=False
+baseline 8/60 e2e-final-7 success=False
+baseline 9/60 e2e-final-8 success=False
+baseline 10/60 e2e-final-9 success=False
+baseline 11/60 e2e-final-10 success=False
+baseline 12/60 e2e-final-11 success=False
+baseline 13/60 e2e-final-12 success=False
+baseline 14/60 e2e-final-13 success=False
+baseline 15/60 e2e-final-14 success=False
+baseline 16/60 e2e-final-15 success=False
+baseline 17/60 e2e-final-16 success=False
+baseline 18/60 e2e-final-17 success=False
+baseline 19/60 e2e-final-18 success=False
+baseline 20/60 e2e-final-19 success=False
+baseline 21/60 e2e-final-20 success=False
+baseline 22/60 e2e-final-21 success=False
+baseline 23/60 e2e-final-22 success=False
+baseline 24/60 e2e-final-23 success=False
+baseline 25/60 e2e-final-24 success=False
+baseline 26/60 e2e-final-25 success=False
+baseline 27/60 e2e-final-26 success=False
+baseline 28/60 e2e-final-27 success=False
+baseline 29/60 e2e-final-28 success=False
+baseline 30/60 e2e-final-29 success=False
+baseline 31/60 e2e-final-30 success=False
+baseline 32/60 e2e-final-31 success=False
+baseline 33/60 e2e-final-32 success=False
+baseline 34/60 e2e-final-33 success=True
+baseline 35/60 e2e-final-34 success=False
+baseline 36/60 e2e-final-35 success=False
+baseline 37/60 e2e-final-36 success=False
+baseline 38/60 e2e-final-37 success=False
+baseline 39/60 e2e-final-38 success=False
+baseline 40/60 e2e-final-39 success=False
+baseline 41/60 e2e-final-40 success=False
+baseline 42/60 e2e-final-41 success=True
+baseline 43/60 e2e-final-42 success=False
+baseline 44/60 e2e-final-43 success=True
+baseline 45/60 e2e-final-44 success=False
+baseline 46/60 e2e-final-45 success=True
+baseline 47/60 e2e-final-46 success=True
+baseline 48/60 e2e-final-47 success=True
+baseline 49/60 e2e-final-48 success=True
+baseline 50/60 e2e-final-49 success=True
+baseline 51/60 e2e-final-50 success=True
+baseline 52/60 e2e-final-51 success=True
+baseline 53/60 e2e-final-52 success=True
+baseline 54/60 e2e-final-53 success=True
+baseline 55/60 e2e-final-54 success=True
+baseline 56/60 e2e-final-55 success=True
+baseline 57/60 e2e-final-56 success=True
+baseline 58/60 e2e-final-57 success=True
+baseline 59/60 e2e-final-58 success=True
+baseline 60/60 e2e-final-59 success=True
+threshold_search 1/60 e2e-final-0 success=True
+threshold_search 2/60 e2e-final-1 success=False
+threshold_search 3/60 e2e-final-2 success=False
+threshold_search 4/60 e2e-final-3 success=False
+threshold_search 5/60 e2e-final-4 success=True
+threshold_search 6/60 e2e-final-5 success=False
+threshold_search 7/60 e2e-final-6 success=False
+threshold_search 8/60 e2e-final-7 success=False
+threshold_search 9/60 e2e-final-8 success=False
+threshold_search 10/60 e2e-final-9 success=False
+threshold_search 11/60 e2e-final-10 success=False
+threshold_search 12/60 e2e-final-11 success=True
+threshold_search 13/60 e2e-final-12 success=False
+threshold_search 14/60 e2e-final-13 success=True
+threshold_search 15/60 e2e-final-14 success=True
+threshold_search 16/60 e2e-final-15 success=True
+threshold_search 17/60 e2e-final-16 success=True
+threshold_search 18/60 e2e-final-17 success=True
+threshold_search 19/60 e2e-final-18 success=True
+threshold_search 20/60 e2e-final-19 success=True
+threshold_search 21/60 e2e-final-20 success=True
+threshold_search 22/60 e2e-final-21 success=True
+threshold_search 23/60 e2e-final-22 success=True
+threshold_search 24/60 e2e-final-23 success=True
+threshold_search 25/60 e2e-final-24 success=True
+threshold_search 26/60 e2e-final-25 success=True
+threshold_search 27/60 e2e-final-26 success=True
+threshold_search 28/60 e2e-final-27 success=True
+threshold_search 29/60 e2e-final-28 success=True
+threshold_search 30/60 e2e-final-29 success=True
+threshold_search 31/60 e2e-final-30 success=False
+threshold_search 32/60 e2e-final-31 success=False
+threshold_search 33/60 e2e-final-32 success=False
+threshold_search 34/60 e2e-final-33 success=True
+threshold_search 35/60 e2e-final-34 success=False
+threshold_search 36/60 e2e-final-35 success=False
+threshold_search 37/60 e2e-final-36 success=False
+threshold_search 38/60 e2e-final-37 success=False
+threshold_search 39/60 e2e-final-38 success=False
+threshold_search 40/60 e2e-final-39 success=False
+threshold_search 41/60 e2e-final-40 success=False
+threshold_search 42/60 e2e-final-41 success=True
+threshold_search 43/60 e2e-final-42 success=False
+threshold_search 44/60 e2e-final-43 success=True
+threshold_search 45/60 e2e-final-44 success=False
+threshold_search 46/60 e2e-final-45 success=True
+threshold_search 47/60 e2e-final-46 success=True
+threshold_search 48/60 e2e-final-47 success=True
+threshold_search 49/60 e2e-final-48 success=True
+threshold_search 50/60 e2e-final-49 success=True
+threshold_search 51/60 e2e-final-50 success=True
+threshold_search 52/60 e2e-final-51 success=True
+threshold_search 53/60 e2e-final-52 success=True
+threshold_search 54/60 e2e-final-53 success=True
+threshold_search 55/60 e2e-final-54 success=True
+threshold_search 56/60 e2e-final-55 success=True
+threshold_search 57/60 e2e-final-56 success=True
+threshold_search 58/60 e2e-final-57 success=True
+threshold_search 59/60 e2e-final-58 success=True
+threshold_search 60/60 e2e-final-59 success=True
+ml_agent 1/60 e2e-final-0 success=True
+ml_agent 2/60 e2e-final-1 success=True
+ml_agent 3/60 e2e-final-2 success=True
+ml_agent 4/60 e2e-final-3 success=True
+ml_agent 5/60 e2e-final-4 success=True
+ml_agent 6/60 e2e-final-5 success=True
+ml_agent 7/60 e2e-final-6 success=True
+ml_agent 8/60 e2e-final-7 success=True
+ml_agent 9/60 e2e-final-8 success=True
+ml_agent 10/60 e2e-final-9 success=True
+ml_agent 11/60 e2e-final-10 success=True
+ml_agent 12/60 e2e-final-11 success=True
+ml_agent 13/60 e2e-final-12 success=True
+ml_agent 14/60 e2e-final-13 success=True
+ml_agent 15/60 e2e-final-14 success=True
+ml_agent 16/60 e2e-final-15 success=True
+ml_agent 17/60 e2e-final-16 success=True
+ml_agent 18/60 e2e-final-17 success=True
+ml_agent 19/60 e2e-final-18 success=True
+ml_agent 20/60 e2e-final-19 success=True
+ml_agent 21/60 e2e-final-20 success=True
+ml_agent 22/60 e2e-final-21 success=True
+ml_agent 23/60 e2e-final-22 success=True
+ml_agent 24/60 e2e-final-23 success=True
+ml_agent 25/60 e2e-final-24 success=True
+ml_agent 26/60 e2e-final-25 success=True
+ml_agent 27/60 e2e-final-26 success=True
+ml_agent 28/60 e2e-final-27 success=True
+ml_agent 29/60 e2e-final-28 success=True
+ml_agent 30/60 e2e-final-29 success=True
+ml_agent 31/60 e2e-final-30 success=True
+ml_agent 32/60 e2e-final-31 success=True
+ml_agent 33/60 e2e-final-32 success=True
+ml_agent 34/60 e2e-final-33 success=True
+ml_agent 35/60 e2e-final-34 success=True
+ml_agent 36/60 e2e-final-35 success=True
+ml_agent 37/60 e2e-final-36 success=True
+ml_agent 38/60 e2e-final-37 success=True
+ml_agent 39/60 e2e-final-38 success=True
+ml_agent 40/60 e2e-final-39 success=True
+ml_agent 41/60 e2e-final-40 success=True
+ml_agent 42/60 e2e-final-41 success=True
+ml_agent 43/60 e2e-final-42 success=True
+ml_agent 44/60 e2e-final-43 success=True
+ml_agent 45/60 e2e-final-44 success=True
+ml_agent 46/60 e2e-final-45 success=True
+ml_agent 47/60 e2e-final-46 success=True
+ml_agent 48/60 e2e-final-47 success=True
+ml_agent 49/60 e2e-final-48 success=True
+ml_agent 50/60 e2e-final-49 success=True
+ml_agent 51/60 e2e-final-50 success=True
+ml_agent 52/60 e2e-final-51 success=True
+ml_agent 53/60 e2e-final-52 success=True
+ml_agent 54/60 e2e-final-53 success=True
+ml_agent 55/60 e2e-final-54 success=True
+ml_agent 56/60 e2e-final-55 success=True
+ml_agent 57/60 e2e-final-56 success=True
+ml_agent 58/60 e2e-final-57 success=True
+ml_agent 59/60 e2e-final-58 success=True
+ml_agent 60/60 e2e-final-59 success=True
+{
+  "no_adaptation": {
+    "runs": 60,
+    "controllable_runs": 30,
+    "stable_runs": 30,
+    "controllable_successes": 0,
+    "stable_without_intervention": 30,
+    "incidents": 30,
+    "missed_incidents": 30,
+    "detection_within_1s_fraction": 0.0,
+    "false_recoveries": 0,
+    "unverified_recoveries": 0,
+    "recover_a_rms_reduction_min": null,
+    "recover_a_rms_measured_runs": 0,
+    "processing_p95_ms_max": 18.456407665507864,
+    "false_incidents_per_1000_s": 0.0,
+    "mean_productivity_loss_completed": 0.0,
+    "completed": 60,
+    "stops": 0
+  },
+  "baseline": {
+    "runs": 60,
+    "controllable_runs": 30,
+    "stable_runs": 30,
+    "controllable_successes": 0,
+    "stable_without_intervention": 18,
+    "incidents": 30,
+    "missed_incidents": 5,
+    "detection_within_1s_fraction": 0.8333333333333334,
+    "false_recoveries": 0,
+    "unverified_recoveries": 0,
+    "recover_a_rms_reduction_min": null,
+    "recover_a_rms_measured_runs": 0,
+    "processing_p95_ms_max": 31.381274037994416,
+    "false_incidents_per_1000_s": 25.74009448613053,
+    "mean_productivity_loss_completed": 0.05074981689453125,
+    "completed": 20,
+    "stops": 40
+  },
+  "threshold_search": {
+    "runs": 60,
+    "controllable_runs": 30,
+    "stable_runs": 30,
+    "controllable_successes": 20,
+    "stable_without_intervention": 18,
+    "incidents": 41,
+    "missed_incidents": 10,
+    "detection_within_1s_fraction": 0.7560975609756098,
+    "false_recoveries": 3,
+    "unverified_recoveries": 6,
+    "recover_a_rms_reduction_min": 0.14997137346610845,
+    "recover_a_rms_measured_runs": 8,
+    "processing_p95_ms_max": 22.360705013852556,
+    "false_incidents_per_1000_s": 20.11265410515098,
+    "mean_productivity_loss_completed": 0.17197610456391244,
+    "completed": 59,
+    "stops": 1
+  },
+  "ml_agent": {
+    "runs": 60,
+    "controllable_runs": 30,
+    "stable_runs": 30,
+    "controllable_successes": 30,
+    "stable_without_intervention": 30,
+    "incidents": 37,
+    "missed_incidents": 0,
+    "detection_within_1s_fraction": 1.0,
+    "false_recoveries": 0,
+    "unverified_recoveries": 0,
+    "recover_a_rms_reduction_min": 0.27870895206861557,
+    "recover_a_rms_measured_runs": 8,
+    "processing_p95_ms_max": 122.17040625400806,
+    "false_incidents_per_1000_s": 0.0,
+    "mean_productivity_loss_completed": 0.1493044026692708,
+    "completed": 60,
+    "stops": 0
+  }
+}

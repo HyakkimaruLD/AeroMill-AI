@@ -1,5 +1,6 @@
 """Validation-only experiment orchestration, kept outside truth grading."""
 
+from contextlib import nullcontext
 from concurrent.futures import ProcessPoolExecutor
 import csv
 import json
@@ -18,7 +19,11 @@ MODES = ("no_adaptation", "baseline", "threshold_search", "ml_agent")
 
 
 def run_entry(entry, mode, output, memory=None):
-    if entry["split"] != "validation":
+    if entry["split"] == "final":
+        from .freeze import require_active
+
+        require_active("final")
+    elif entry["split"] != "validation":
         raise ValueError("only validation is enabled")
     label = mode + ("_warm" if memory is not None else "")
     engine = None
@@ -77,10 +82,51 @@ def run_group(job):
         if warm:
             primer = run_entry(entry, mode, Path(output) / "priming", memory)
             primer["mode"] = mode + "_priming"
-        row = run_entry(entry, mode, output, memory)
+        if entry.get("split") == "final":
+            from .freeze import utc_now
+
+            with (Path(output) / "run-attempts.jsonl").open("a") as journal:
+                journal.write(
+                    json.dumps(
+                        dict(
+                            family_id=entry["family_id"],
+                            seed=entry["seed"],
+                            mode=mode,
+                            started_utc=utc_now(),
+                        )
+                    )
+                    + "\n"
+                )
+                journal.flush()
+        try:
+            row = run_entry(entry, mode, output, memory)
+        except Exception as exc:
+            if entry.get("split") == "final":
+                with (Path(output) / "raw-runs.jsonl").open("a") as journal:
+                    journal.write(
+                        json.dumps(
+                            dict(
+                                family_id=entry["family_id"],
+                                seed=entry["seed"],
+                                mode=mode,
+                                error=f"{type(exc).__name__}: {exc}",
+                                run_success=False,
+                            )
+                        )
+                        + "\n"
+                    )
+            raise
         if primer is not None:
             row["priming_run"] = primer
         rows.append(row)
+        if entry.get("split") == "final":
+            with (Path(output) / "raw-runs.jsonl").open("a") as journal:
+                journal.write(json.dumps(row, allow_nan=False) + "\n")
+                journal.flush()
+            if row["error"] is not None:
+                raise RuntimeError(
+                    f"final run crashed: {row['family_id']} {mode}: {row['error']}"
+                )
         print(
             f"{row['mode']} {len(rows)}/{len(entries)} {row['family_id']} success={row['run_success']}",
             flush=True,
@@ -153,88 +199,109 @@ def evaluate_validation(
     split="validation",
     mode="all",
     warm_memory=False,
-    output="artifacts/day4-validation",
+    output=None,
     workers=1,
 ):
-    if split != "validation":
+    if output is None:
+        output = "artifacts/final" if split == "final" else "artifacts/day4-validation"
+    session = nullcontext(None)
+    if split == "final":
+        from .freeze import evaluation_session
+
+        if mode != "all" or warm_memory or workers != 1:
+            raise ValueError("final requires all four cold modes and one worker")
+        session = evaluation_session(split, output)
+    elif split != "validation":
         raise ValueError("only validation is enabled; withheld sets remain disabled")
-    modes = list(MODES) if mode == "all" else [mode]
-    if any(m not in MODES for m in modes):
-        raise ValueError("unknown mode")
-    if warm_memory and modes != ["threshold_search"]:
-        raise ValueError("warm-memory experiment requires threshold_search alone")
-    manifest_path = Path("data/manifest.json")
-    manifest = json.loads(manifest_path.read_text())
-    entries = manifest["end_to_end"]["validation"]
-    if len(entries) != 60 or any(e["split"] != "validation" for e in entries):
-        raise ValueError("invalid validation manifest")
-    output = Path(output)
-    if warm_memory and output.resolve() == Path("artifacts/day4-validation").resolve():
-        output = output / "warm"
-    output.mkdir(parents=True, exist_ok=True)
-    cold = None
-    if warm_memory:
-        cold = json.loads(Path("artifacts/day4-validation/results.json").read_text())
+    with session as receipt:
+        modes = list(MODES) if mode == "all" else [mode]
+        if any(m not in MODES for m in modes):
+            raise ValueError("unknown mode")
+        if warm_memory and modes != ["threshold_search"]:
+            raise ValueError("warm-memory experiment requires threshold_search alone")
+        manifest_path = Path("data/manifest.json")
+        manifest = json.loads(manifest_path.read_text())
+        entries = manifest["end_to_end"][split]
+        if len(entries) != 60 or any(e["split"] != split for e in entries):
+            raise ValueError("invalid validation manifest")
+        output = Path(output)
         if (
-            cold["manifest_sha256"] != file_hash(manifest_path)
-            or cold["model_sha256"] != file_hash("artifacts/model.pkl")
-            or cold["warm_memory"]
+            warm_memory
+            and output.resolve() == Path("artifacts/day4-validation").resolve()
         ):
-            raise ValueError(
-                "warm experiment requires matching cold validation provenance"
+            output = output / "warm"
+        output.mkdir(parents=True, exist_ok=True)
+        cold = None
+        if warm_memory:
+            cold = json.loads(
+                Path("artifacts/day4-validation/results.json").read_text()
             )
-    started = perf_counter()
-    jobs = [(entries, m, output, warm_memory) for m in modes]
-    if workers > 1 and len(jobs) > 1:
-        with ProcessPoolExecutor(max_workers=min(workers, len(jobs))) as pool:
-            groups = list(pool.map(run_group, jobs))
-    else:
-        groups = [run_group(j) for j in jobs]
-    rows = [row for group in groups for row in group]
-    baselines = {
-        r["family_id"]: r["traversal_time_s"]
-        for r in rows
-        if r["mode"] == "no_adaptation"
-    }
-    if cold is not None:
+            if (
+                cold["manifest_sha256"] != file_hash(manifest_path)
+                or cold["model_sha256"] != file_hash("artifacts/model.pkl")
+                or cold["warm_memory"]
+            ):
+                raise ValueError(
+                    "warm experiment requires matching cold validation provenance"
+                )
+        started = perf_counter()
+        jobs = [(entries, m, output, warm_memory) for m in modes]
+        if workers > 1 and len(jobs) > 1:
+            with ProcessPoolExecutor(max_workers=min(workers, len(jobs))) as pool:
+                groups = list(pool.map(run_group, jobs))
+        else:
+            groups = [run_group(j) for j in jobs]
+        rows = [row for group in groups for row in group]
         baselines = {
             r["family_id"]: r["traversal_time_s"]
-            for r in cold["runs"]
+            for r in rows
             if r["mode"] == "no_adaptation"
         }
-    for row in rows:
-        baseline = baselines.get(row["family_id"])
-        time = row["traversal_time_s"]
-        row["productivity_loss"] = (
-            None if not baseline or time is None else time / baseline - 1
-        )
-    result = dict(
-        split=split,
-        warm_memory=warm_memory,
-        seconds=perf_counter() - started,
-        manifest_sha256=file_hash(manifest_path),
-        model_sha256=file_hash("artifacts/model.pkl"),
-        runs=rows,
-        summary=summarize(rows),
-        memory_protocol="explicit priming run then warm run of identical entry; shared Memory only"
-        if warm_memory
-        else "cold per run",
-        limitations=[
-            "Synthetic simulation; not validated on real CNC.",
-            "Baseline remains resonant by construction; only threshold_search controls for search policy.",
-            "RF advantage is versus total RMS only, not a spectral-rule comparator.",
-        ],
-    )
-    write_json(output / "results.json", result)
-    with (output / "runs.csv").open("w", newline="") as file:
-        writer = csv.DictWriter(file, fieldnames=list(rows[0]))
-        writer.writeheader()
-        writer.writerows(
-            {
-                k: json.dumps(v) if isinstance(v, (dict, list)) else v
-                for k, v in r.items()
+        if cold is not None:
+            baselines = {
+                r["family_id"]: r["traversal_time_s"]
+                for r in cold["runs"]
+                if r["mode"] == "no_adaptation"
             }
-            for r in rows
+        for row in rows:
+            baseline = baselines.get(row["family_id"])
+            time = row["traversal_time_s"]
+            row["productivity_loss"] = (
+                None if not baseline or time is None else time / baseline - 1
+            )
+        result = dict(
+            split=split,
+            warm_memory=warm_memory,
+            seconds=perf_counter() - started,
+            manifest_sha256=file_hash(manifest_path),
+            model_sha256=file_hash("artifacts/model.pkl"),
+            runs=rows,
+            summary=summarize(rows),
+            memory_protocol="explicit priming run then warm run of identical entry; shared Memory only"
+            if warm_memory
+            else "cold per run",
+            limitations=[
+                "Synthetic simulation; not validated on real CNC.",
+                "Baseline remains resonant by construction; only threshold_search controls for search policy.",
+                "RF advantage is versus total RMS only, not a spectral-rule comparator.",
+            ],
         )
-    print(json.dumps(result["summary"], indent=2), flush=True)
-    return result
+        if receipt is not None:
+            from .freeze import utc_now, verify_freeze
+
+            result["provenance"] = dict(
+                receipt, finished_utc=utc_now(), freeze_sha256_after=verify_freeze()
+            )
+        write_json(output / "results.json", result)
+        with (output / "runs.csv").open("w", newline="") as file:
+            writer = csv.DictWriter(file, fieldnames=list(rows[0]))
+            writer.writeheader()
+            writer.writerows(
+                {
+                    k: json.dumps(v) if isinstance(v, (dict, list)) else v
+                    for k, v in r.items()
+                }
+                for r in rows
+            )
+        print(json.dumps(result["summary"], indent=2), flush=True)
+        return result

@@ -1,0 +1,2 @@
+uv run --offline --no-sync python -m aeromill evaluate --split test --mode all --workers 1 --output artifacts/final
+uv run --offline --no-sync python -m aeromill evaluate --split final --mode all --workers 1 --output artifacts/final

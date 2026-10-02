@@ -1,0 +1,59 @@
+{
+  "commit": "a6b5d59bb20c679e77d7f43a44159999d73444d4",
+  "freeze_sha256": "af5a84271dc8faee59aa3224f23cd0edd4c58dfafa85865205c876aaf86713de",
+  "started_utc": "2026-10-01T02:54:06.441686+00:00",
+  "network": "offline; no dependency sync",
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "-m",
+        "aeromill",
+        "evaluate",
+        "--split",
+        "test",
+        "--mode",
+        "all",
+        "--workers",
+        "1",
+        "--output",
+        "artifacts/final"
+      ],
+      "started_utc": "2026-10-01T02:54:06.441713+00:00",
+      "freeze_sha256_before": "af5a84271dc8faee59aa3224f23cd0edd4c58dfafa85865205c876aaf86713de",
+      "exit_code": 0,
+      "finished_utc": "2026-10-01T02:55:51.739390+00:00",
+      "freeze_sha256_after": "af5a84271dc8faee59aa3224f23cd0edd4c58dfafa85865205c876aaf86713de"
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--offline",
+        "--no-sync",
+        "python",
+        "-m",
+        "aeromill",
+        "evaluate",
+        "--split",
+        "final",
+        "--mode",
+        "all",
+        "--workers",
+        "1",
+        "--output",
+        "artifacts/final"
+      ],
+      "started_utc": "2026-10-01T02:55:51.859743+00:00",
+      "freeze_sha256_before": "af5a84271dc8faee59aa3224f23cd0edd4c58dfafa85865205c876aaf86713de",
+      "exit_code": 0,
+      "finished_utc": "2026-10-01T03:07:44.232788+00:00",
+      "freeze_sha256_after": "af5a84271dc8faee59aa3224f23cd0edd4c58dfafa85865205c876aaf86713de"
+    }
+  ],
+  "finished_utc": "2026-10-01T03:07:44.355971+00:00"
+}

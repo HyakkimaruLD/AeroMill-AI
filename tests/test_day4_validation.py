@@ -5,7 +5,8 @@ from unittest.mock import patch
 import pytest
 
 
-def test_validation_runner_refuses_withheld_before_engine():
+def test_validation_runner_refuses_withheld_before_engine(monkeypatch, tmp_path):
+    monkeypatch.chdir(tmp_path)
     m = importlib.import_module("aeromill.evaluation")
     from aeromill import validation
 
@@ -14,11 +15,12 @@ def test_validation_runner_refuses_withheld_before_engine():
         with patch.object(
             validation, "Engine", side_effect=AssertionError("must not start")
         ):
-            with pytest.raises(ValueError, match="validation"):
+            with pytest.raises(ValueError, match="validation|freeze"):
                 m.evaluate_validation(split=split)
 
 
-def test_cli_final_guard_and_validation_route(monkeypatch, capsys):
+def test_cli_final_guard_and_validation_route(monkeypatch, capsys, tmp_path):
+    monkeypatch.chdir(tmp_path)
     from aeromill import cli, evaluation
 
     with patch(

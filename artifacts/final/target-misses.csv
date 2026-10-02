@@ -1,0 +1,11 @@
+family_id,seed,mode,target,value
+e2e-final-8,300008,threshold_search,Recover A RMS reduction >= 0.40,0.3325725118510421
+e2e-final-12,300012,threshold_search,Recover A RMS reduction >= 0.40,0.14997137346610845
+e2e-final-24,300024,threshold_search,Recover A RMS reduction >= 0.40,0.3723251039681018
+e2e-final-28,300028,threshold_search,Recover A RMS reduction >= 0.40,0.36654638616877533
+e2e-final-0,300000,ml_agent,Recover A RMS reduction >= 0.40,0.3358892728292846
+e2e-final-16,300016,ml_agent,Recover A RMS reduction >= 0.40,0.3550708786794653
+e2e-final-24,300024,ml_agent,Recover A RMS reduction >= 0.40,0.3723251039681018
+e2e-final-27,300027,ml_agent,Processing p95 < 100 ms,103.53193644550629
+e2e-final-28,300028,ml_agent,Recover A RMS reduction >= 0.40,0.27870895206861557
+e2e-final-34,300034,ml_agent,Processing p95 < 100 ms,122.17040625400806

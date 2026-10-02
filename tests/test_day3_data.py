@@ -71,7 +71,8 @@ def test_manifest_family_seed_separation():
         d.validate_manifest(m)
 
 
-def test_withheld_generation_and_metrics_refused(monkeypatch):
+def test_withheld_generation_and_metrics_refused(monkeypatch, tmp_path):
+    monkeypatch.chdir(tmp_path)
     d = data_module()
     m = d.make_manifest()
 
@@ -84,12 +85,12 @@ def test_withheld_generation_and_metrics_refused(monkeypatch):
         m["end_to_end"]["final"][0],
         m["end_to_end"]["reserve"][0],
     ]:
-        with pytest.raises(ValueError, match="withheld"):
+        with pytest.raises(ValueError, match="withheld|freeze"):
             d.generate_episode(e)
     from aeromill import training
 
     for split in ("train", "test", "final", "reserve"):
-        with pytest.raises(ValueError, match="validation"):
+        with pytest.raises(ValueError, match="validation|freeze"):
             training.window_metrics(np.array([0]), np.array([0.0]), split=split)
 
 
@@ -101,7 +102,8 @@ def test_binary_window_requires_all_samples():
     assert d.window_label(np.array(["transition"] * 2048)) == -1
 
 
-def test_final_cli_freeze_gate(capsys, monkeypatch):
+def test_final_cli_freeze_gate(capsys, monkeypatch, tmp_path):
+    monkeypatch.chdir(tmp_path)
     from aeromill.cli import main
 
     monkeypatch.setattr("sys.argv", ["aeromill", "evaluate", "--split", "final"])

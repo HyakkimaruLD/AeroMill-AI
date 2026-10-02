@@ -1,0 +1,185 @@
+test 1/60 seed=100010
+test 2/60 seed=100011
+test 3/60 seed=100012
+test 4/60 seed=100013
+test 5/60 seed=100014
+test 6/60 seed=100080
+test 7/60 seed=100081
+test 8/60 seed=100082
+test 9/60 seed=100083
+test 10/60 seed=100084
+test 11/60 seed=101010
+test 12/60 seed=101011
+test 13/60 seed=101012
+test 14/60 seed=101013
+test 15/60 seed=101014
+test 16/60 seed=101080
+test 17/60 seed=101081
+test 18/60 seed=101082
+test 19/60 seed=101083
+test 20/60 seed=101084
+test 21/60 seed=102010
+test 22/60 seed=102011
+test 23/60 seed=102012
+test 24/60 seed=102013
+test 25/60 seed=102014
+test 26/60 seed=102080
+test 27/60 seed=102081
+test 28/60 seed=102082
+test 29/60 seed=102083
+test 30/60 seed=102084
+test 31/60 seed=103010
+test 32/60 seed=103011
+test 33/60 seed=103012
+test 34/60 seed=103013
+test 35/60 seed=103014
+test 36/60 seed=103080
+test 37/60 seed=103081
+test 38/60 seed=103082
+test 39/60 seed=103083
+test 40/60 seed=103084
+test 41/60 seed=104010
+test 42/60 seed=104011
+test 43/60 seed=104012
+test 44/60 seed=104013
+test 45/60 seed=104014
+test 46/60 seed=104080
+test 47/60 seed=104081
+test 48/60 seed=104082
+test 49/60 seed=104083
+test 50/60 seed=104084
+test 51/60 seed=105010
+test 52/60 seed=105011
+test 53/60 seed=105012
+test 54/60 seed=105013
+test 55/60 seed=105014
+test 56/60 seed=105080
+test 57/60 seed=105081
+test 58/60 seed=105082
+test 59/60 seed=105083
+test 60/60 seed=105084
+{
+  "threshold": 0.8,
+  "overall": {
+    "chatter_windows": 4705,
+    "stable_windows": 8280,
+    "recall": 1.0,
+    "fpr": 0.0
+  },
+  "regime": {
+    "after": {
+      "chatter_windows": 3955,
+      "stable_windows": 5485,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "before": {
+      "chatter_windows": 15,
+      "stable_windows": 2235,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "during": {
+      "chatter_windows": 735,
+      "stable_windows": 560,
+      "recall": 1.0,
+      "fpr": 0.0
+    }
+  },
+  "engagement": {
+    "False": {
+      "chatter_windows": 3900,
+      "stable_windows": 6490,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "True": {
+      "chatter_windows": 805,
+      "stable_windows": 1790,
+      "recall": 1.0,
+      "fpr": 0.0
+    }
+  },
+  "family": {
+    "windows-recover_a-1": {
+      "chatter_windows": 25,
+      "stable_windows": 840,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-recover_a-8": {
+      "chatter_windows": 30,
+      "stable_windows": 790,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-recover_c-1": {
+      "chatter_windows": 335,
+      "stable_windows": 605,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-recover_c-8": {
+      "chatter_windows": 595,
+      "stable_windows": 315,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-repeat_after_c-1": {
+      "chatter_windows": 855,
+      "stable_windows": 1065,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-repeat_after_c-8": {
+      "chatter_windows": 655,
+      "stable_windows": 1095,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-retry_b-1": {
+      "chatter_windows": 405,
+      "stable_windows": 510,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-retry_b-8": {
+      "chatter_windows": 220,
+      "stable_windows": 715,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-stable-1": {
+      "chatter_windows": 0,
+      "stable_windows": 990,
+      "recall": null,
+      "fpr": 0.0
+    },
+    "windows-stable-8": {
+      "chatter_windows": 0,
+      "stable_windows": 990,
+      "recall": null,
+      "fpr": 0.0
+    },
+    "windows-unrecoverable-1": {
+      "chatter_windows": 780,
+      "stable_windows": 195,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "windows-unrecoverable-8": {
+      "chatter_windows": 805,
+      "stable_windows": 170,
+      "recall": 1.0,
+      "fpr": 0.0
+    }
+  },
+  "transitional_windows": 765,
+  "provenance": {
+    "split": "test",
+    "started_utc": "2026-10-01T02:54:18.949575+00:00",
+    "freeze_sha256": "af5a84271dc8faee59aa3224f23cd0edd4c58dfafa85865205c876aaf86713de",
+    "finished_utc": "2026-10-01T02:55:51.410393+00:00",
+    "freeze_sha256_after": "af5a84271dc8faee59aa3224f23cd0edd4c58dfafa85865205c876aaf86713de"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "checks": [
+    [
+      "Window recall \u226590%",
+      "100.0%",
+      "100.0%",
+      true
+    ],
+    [
+      "Window FPR \u22645%",
+      "0.0%",
+      "0.0%",
+      true
+    ],
+    [
+      "Controllable \u226527/30",
+      "30/30",
+      "30/30",
+      true
+    ],
+    [
+      "Stable \u226529/30",
+      "30/30",
+      "30/30",
+      true
+    ],
+    [
+      "False/unverified recovery =0/0",
+      "0/0",
+      "0/0",
+      true
+    ],
+    [
+      "Timely detection \u226590%",
+      "100.0%",
+      "100.0%",
+      true
+    ],
+    [
+      "Recover A RMS \u226540%",
+      "43.6%",
+      "27.9%",
+      false
+    ],
+    [
+      "Processing p95 <100 ms",
+      "78.99",
+      "122.17",
+      false
+    ]
+  ],
+  "failed_runs": 94,
+  "summary_words": 206
+}

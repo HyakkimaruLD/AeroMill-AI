@@ -77,8 +77,25 @@ RMS ratio limit of 2.2, selected on validation. Two false retries remain in the
 Cold validation results are in `artifacts/day4-validation/`; warm results use
 its `warm/` directory and retain a separate priming run. Memory is cold by default;
 reused corrections must pass verification again. The evaluator never treats
-RF scores as truth. Test/final/reserve execution remains disabled, and no freeze
-marker is included. Validation datasets and raw runs are not shipped.
+RF scores as truth. The frozen source, model and manifest are identified by
+`artifacts/FROZEN.json`. Final evidence is retained in `artifacts/final/`:
+`SUMMARY.md`, `acceptance.md`, `failed-runs.md`, per-run JSONL logs,
+`runs.csv`, `results.json`, test-window arrays, commands and execution receipts.
+Reserve execution remains disabled.
+
+The single evaluation uses these commands from the project root, with an
+external writable cache supplied through `UV_CACHE_DIR`:
+
+```bash
+uv run --offline --no-sync python -m aeromill evaluate --split test --mode all --workers 1 --output artifacts/final
+uv run --offline --no-sync python -m aeromill evaluate --split final --mode all --workers 1 --output artifacts/final
+```
+
+These are provenance commands, not instructions to repeat the experiment.
+The committed start receipts refuse another attempt. Both entry points verify
+frozen file hashes; a changed, added or missing source file blocks execution.
+A crash ends the attempt, and its receipt and available raw records remain.
+Do not rebuild or retrain the frozen artifacts to reinterpret these results.
 
 The offline dataset/training commands remain available for reproducing training:
 `python -m aeromill data build` and `python -m aeromill train`. Smoke seeds

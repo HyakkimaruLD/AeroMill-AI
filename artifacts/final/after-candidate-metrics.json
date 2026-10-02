@@ -1,0 +1,30 @@
+{
+  "method": "Reporting from saved episode arrays, with no inference or simulation. The frozen generator emits one window per 0.1-second tick starting at tick 3 (0.3 s). For saved regime=after windows, assign the latest manifest command whose scheduled time is strictly less than the window-end time. Transitional labels remain excluded from recall/FPR; before and during groups remain in window-metrics.json.",
+  "threshold": 0.8,
+  "candidates": {
+    "A": {
+      "windows": 2770,
+      "chatter_windows": 1635,
+      "stable_windows": 1080,
+      "transitional_windows": 55,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "B": {
+      "windows": 3485,
+      "chatter_windows": 1315,
+      "stable_windows": 1970,
+      "transitional_windows": 200,
+      "recall": 1.0,
+      "fpr": 0.0
+    },
+    "C": {
+      "windows": 3615,
+      "chatter_windows": 1005,
+      "stable_windows": 2435,
+      "transitional_windows": 175,
+      "recall": 1.0,
+      "fpr": 0.0
+    }
+  }
+}

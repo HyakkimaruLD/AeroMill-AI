@@ -231,7 +231,11 @@ def window_label(states):
 
 
 def generate_episode(entry):
-    if entry["split"] not in ("train", "validation"):
+    if entry["split"] == "test":
+        from .freeze import require_active
+
+        require_active("test")
+    elif entry["split"] not in ("train", "validation"):
         raise ValueError("withheld split: manifests only")
     profile = ToolProfile(**entry["profile"])
     target = AppliedState(**entry["initial_state"])

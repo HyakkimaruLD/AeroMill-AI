@@ -1,0 +1,15 @@
+{
+  "freeze_sha256": "af5a84271dc8faee59aa3224f23cd0edd4c58dfafa85865205c876aaf86713de",
+  "frozen_files": 26,
+  "unique_final_rows": 240,
+  "unique_final_attempts": 240,
+  "unique_run_ids": 240,
+  "test_episodes": 60,
+  "independent_window_recount": "matches all saved groups",
+  "evaluator_unchanged_since_validation": true,
+  "summary_definition_unchanged_since_validation": true,
+  "manifest_seed_overlap": 0,
+  "reserve": "manifest metadata only; no evaluation or generated artifact",
+  "forbidden_text_matches": 0,
+  "observation_limit": "Receipts, logs and commit hashes attest this execution; they are not an external access audit."
+}

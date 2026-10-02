@@ -14,7 +14,11 @@ from .features import FEATURE_NAMES
 
 
 def window_metrics(labels, scores, *, split, threshold=0.8):
-    if split != "validation":
+    if split == "test":
+        from .freeze import require_active
+
+        require_active("test")
+    elif split != "validation":
         raise ValueError("metrics require validation split")
     labels = np.asarray(labels)
     scores = np.asarray(scores)
@@ -29,19 +33,19 @@ def window_metrics(labels, scores, *, split, threshold=0.8):
     )
 
 
-def validation_report(data, scores):
-    if not np.all(data["split"] == "validation"):
+def validation_report(data, scores, *, split="validation"):
+    if not np.all(data["split"] == split):
         raise ValueError("metrics require validation split")
     result = {
         "threshold": 0.8,
-        "overall": window_metrics(data["label"], scores, split="validation"),
+        "overall": window_metrics(data["label"], scores, split=split),
     }
     for column in ("regime", "engagement", "family"):
         result[column] = {
             str(value): window_metrics(
                 data["label"][data[column] == value],
                 scores[data[column] == value],
-                split="validation",
+                split=split,
             )
             for value in np.unique(data[column])
         }
@@ -134,3 +138,60 @@ def load_model(directory=Path("artifacts")):
         return model
     except Exception as exc:
         raise ValueError(f"cannot load model: {exc}") from exc
+
+
+def evaluate_test(output="artifacts/final"):
+    """Generate the fixed test episodes once, without fitting or changing labels."""
+    from .data import generate_episode
+    from .freeze import evaluation_session, utc_now, verify_freeze
+
+    output = Path(output)
+    with evaluation_session("test", output) as receipt:
+        manifest = json.loads(Path("data/manifest.json").read_text())
+        entries = [e for e in manifest["episodes"] if e["split"] == "test"]
+        model = load_model()
+        parts = []
+        (output / "test-episodes").mkdir()
+        with (output / "test-episodes.jsonl").open("x") as journal:
+            for entry in entries:
+                with (output / "test-attempts.jsonl").open("a") as attempts:
+                    attempts.write(
+                        json.dumps(
+                            dict(
+                                family_id=entry["family_id"],
+                                seed=entry["seed"],
+                                started_utc=utc_now(),
+                            )
+                        )
+                        + "\n"
+                    )
+                part = generate_episode(entry)
+                part["score"] = model.predict_proba(part["features"])[:, 1]
+                np.savez_compressed(
+                    output / "test-episodes" / f"{entry['seed']}.npz", **part
+                )
+                parts.append(part)
+                journal.write(
+                    json.dumps(
+                        dict(
+                            family_id=entry["family_id"],
+                            seed=entry["seed"],
+                            windows=len(part["label"]),
+                        )
+                    )
+                    + "\n"
+                )
+                journal.flush()
+                print(
+                    f"test {len(parts)}/{len(entries)} seed={entry['seed']}", flush=True
+                )
+        data = {key: np.concatenate([p[key] for p in parts]) for key in parts[0]}
+        np.savez_compressed(output / "test-windows.npz", **data)
+        report = validation_report(data, data["score"], split="test")
+        report["transitional_windows"] = int(np.count_nonzero(data["label"] < 0))
+        report["provenance"] = dict(
+            receipt, finished_utc=utc_now(), freeze_sha256_after=verify_freeze()
+        )
+        write_json(output / "window-metrics.json", report)
+        print(json.dumps(report, indent=2), flush=True)
+        return report

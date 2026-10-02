@@ -1,0 +1,125 @@
+{
+  "engagement": {
+    "False": {
+      "chatter_windows": 3900,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 6490
+    },
+    "True": {
+      "chatter_windows": 805,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 1790
+    }
+  },
+  "family": {
+    "windows-recover_a-1": {
+      "chatter_windows": 25,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 840
+    },
+    "windows-recover_a-8": {
+      "chatter_windows": 30,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 790
+    },
+    "windows-recover_c-1": {
+      "chatter_windows": 335,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 605
+    },
+    "windows-recover_c-8": {
+      "chatter_windows": 595,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 315
+    },
+    "windows-repeat_after_c-1": {
+      "chatter_windows": 855,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 1065
+    },
+    "windows-repeat_after_c-8": {
+      "chatter_windows": 655,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 1095
+    },
+    "windows-retry_b-1": {
+      "chatter_windows": 405,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 510
+    },
+    "windows-retry_b-8": {
+      "chatter_windows": 220,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 715
+    },
+    "windows-stable-1": {
+      "chatter_windows": 0,
+      "fpr": 0.0,
+      "recall": null,
+      "stable_windows": 990
+    },
+    "windows-stable-8": {
+      "chatter_windows": 0,
+      "fpr": 0.0,
+      "recall": null,
+      "stable_windows": 990
+    },
+    "windows-unrecoverable-1": {
+      "chatter_windows": 780,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 195
+    },
+    "windows-unrecoverable-8": {
+      "chatter_windows": 805,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 170
+    }
+  },
+  "overall": {
+    "chatter_windows": 4705,
+    "fpr": 0.0,
+    "recall": 1.0,
+    "stable_windows": 8280
+  },
+  "provenance": {
+    "finished_utc": "2026-10-01T02:55:51.410393+00:00",
+    "freeze_sha256": "af5a84271dc8faee59aa3224f23cd0edd4c58dfafa85865205c876aaf86713de",
+    "freeze_sha256_after": "af5a84271dc8faee59aa3224f23cd0edd4c58dfafa85865205c876aaf86713de",
+    "split": "test",
+    "started_utc": "2026-10-01T02:54:18.949575+00:00"
+  },
+  "regime": {
+    "after": {
+      "chatter_windows": 3955,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 5485
+    },
+    "before": {
+      "chatter_windows": 15,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 2235
+    },
+    "during": {
+      "chatter_windows": 735,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "stable_windows": 560
+    }
+  },
+  "threshold": 0.8,
+  "transitional_windows": 765
+}

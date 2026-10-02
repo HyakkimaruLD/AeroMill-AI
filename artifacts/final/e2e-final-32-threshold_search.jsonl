@@ -1,0 +1,245 @@
+{"event": "run", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 0.0, "seed": 300032, "mode": "threshold_search", "scenario": "stable", "scenario_version": "engagement-v2", "profile_id": "four-tooth-v1", "h": 0.9919787933460612, "reference_rms": [0.4436264028320018, 0.35490112226560144, 0.26617584169920105]}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 0.1, "state": "WARMUP", "x_mm": 1.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": null}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 0.2, "state": "WARMUP", "x_mm": 3.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": null}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 0.3, "state": "WARMUP", "x_mm": 5.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 0.4, "state": "WARMUP", "x_mm": 7.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 0.5, "state": "WARMUP", "x_mm": 10.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 0.6, "state": "WARMUP", "x_mm": 11.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 0.7, "state": "WARMUP", "x_mm": 13.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 0.8, "state": "WARMUP", "x_mm": 15.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 0.9, "state": "WARMUP", "x_mm": 17.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 1.0, "state": "WARMUP", "x_mm": 20.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 1.1, "state": "WARMUP", "x_mm": 21.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 1.2, "state": "WARMUP", "x_mm": 23.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 1.3, "state": "WARMUP", "x_mm": 25.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 1.4, "state": "WARMUP", "x_mm": 27.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 1.5, "state": "WARMUP", "x_mm": 30.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 1.6, "state": "WARMUP", "x_mm": 31.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 1.7, "state": "WARMUP", "x_mm": 33.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 1.8, "state": "WARMUP", "x_mm": 35.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 1.9, "state": "WARMUP", "x_mm": 37.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 2.0, "state": "WARMUP", "x_mm": 40.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 2.1, "state": "WARMUP", "x_mm": 41.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 2.2, "state": "WARMUP", "x_mm": 43.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "transition", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 2.3, "previous": "WARMUP", "state": "MONITOR"}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 2.3, "state": "MONITOR", "x_mm": 45.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 2.4, "state": "MONITOR", "x_mm": 47.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 2.5, "state": "MONITOR", "x_mm": 50.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 2.6, "state": "MONITOR", "x_mm": 51.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 2.7, "state": "MONITOR", "x_mm": 53.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 2.8, "state": "MONITOR", "x_mm": 55.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 2.9, "state": "MONITOR", "x_mm": 57.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 3.0, "state": "MONITOR", "x_mm": 60.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 3.1, "state": "MONITOR", "x_mm": 61.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 3.2, "state": "MONITOR", "x_mm": 63.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 3.3, "state": "MONITOR", "x_mm": 65.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 3.4, "state": "MONITOR", "x_mm": 67.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 3.5, "state": "MONITOR", "x_mm": 70.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 3.6, "state": "MONITOR", "x_mm": 71.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 3.7, "state": "MONITOR", "x_mm": 73.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 3.8, "state": "MONITOR", "x_mm": 75.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 3.9, "state": "MONITOR", "x_mm": 77.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 4.0, "state": "MONITOR", "x_mm": 80.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 4.1, "state": "MONITOR", "x_mm": 81.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 4.2, "state": "MONITOR", "x_mm": 83.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 4.3, "state": "MONITOR", "x_mm": 85.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 4.4, "state": "MONITOR", "x_mm": 87.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 4.5, "state": "MONITOR", "x_mm": 90.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 4.6, "state": "MONITOR", "x_mm": 91.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 4.7, "state": "MONITOR", "x_mm": 93.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 4.8, "state": "MONITOR", "x_mm": 95.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 4.9, "state": "MONITOR", "x_mm": 97.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 5.0, "state": "MONITOR", "x_mm": 100.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 5.1, "state": "MONITOR", "x_mm": 101.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 5.2, "state": "MONITOR", "x_mm": 103.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 5.3, "state": "MONITOR", "x_mm": 105.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 5.4, "state": "MONITOR", "x_mm": 107.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 5.5, "state": "MONITOR", "x_mm": 110.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 5.6, "state": "MONITOR", "x_mm": 111.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 5.7, "state": "MONITOR", "x_mm": 113.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 5.8, "state": "MONITOR", "x_mm": 115.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 5.9, "state": "MONITOR", "x_mm": 117.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 6.0, "state": "MONITOR", "x_mm": 120.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 6.1, "state": "MONITOR", "x_mm": 121.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 6.2, "state": "MONITOR", "x_mm": 123.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 6.3, "state": "MONITOR", "x_mm": 125.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 6.4, "state": "MONITOR", "x_mm": 127.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 6.5, "state": "MONITOR", "x_mm": 130.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 6.6, "state": "MONITOR", "x_mm": 131.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 6.7, "state": "MONITOR", "x_mm": 133.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 6.8, "state": "MONITOR", "x_mm": 135.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 6.9, "state": "MONITOR", "x_mm": 137.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 7.0, "state": "MONITOR", "x_mm": 140.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 7.1, "state": "MONITOR", "x_mm": 141.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 7.2, "state": "MONITOR", "x_mm": 143.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 7.3, "state": "MONITOR", "x_mm": 145.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 7.4, "state": "MONITOR", "x_mm": 147.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 7.5, "state": "MONITOR", "x_mm": 150.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 7.6, "state": "MONITOR", "x_mm": 151.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 7.7, "state": "MONITOR", "x_mm": 153.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 7.8, "state": "MONITOR", "x_mm": 155.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 7.9, "state": "MONITOR", "x_mm": 157.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 8.0, "state": "MONITOR", "x_mm": 160.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 8.1, "state": "MONITOR", "x_mm": 161.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 8.2, "state": "MONITOR", "x_mm": 163.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 8.3, "state": "MONITOR", "x_mm": 165.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 8.4, "state": "MONITOR", "x_mm": 167.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 8.5, "state": "MONITOR", "x_mm": 170.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 8.6, "state": "MONITOR", "x_mm": 171.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 8.7, "state": "MONITOR", "x_mm": 173.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 8.8, "state": "MONITOR", "x_mm": 175.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 8.9, "state": "MONITOR", "x_mm": 177.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 9.0, "state": "MONITOR", "x_mm": 180.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 9.1, "state": "MONITOR", "x_mm": 181.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 9.2, "state": "MONITOR", "x_mm": 183.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 9.3, "state": "MONITOR", "x_mm": 185.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 9.4, "state": "MONITOR", "x_mm": 187.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 9.5, "state": "MONITOR", "x_mm": 190.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 9.6, "state": "MONITOR", "x_mm": 191.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 9.7, "state": "MONITOR", "x_mm": 193.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 9.8, "state": "MONITOR", "x_mm": 195.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 9.9, "state": "MONITOR", "x_mm": 197.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 10.0, "state": "MONITOR", "x_mm": 200.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 10.1, "state": "MONITOR", "x_mm": 201.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 10.2, "state": "MONITOR", "x_mm": 203.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 10.3, "state": "MONITOR", "x_mm": 205.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 10.4, "state": "MONITOR", "x_mm": 207.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 10.5, "state": "MONITOR", "x_mm": 210.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 10.6, "state": "MONITOR", "x_mm": 211.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 10.7, "state": "MONITOR", "x_mm": 213.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 10.8, "state": "MONITOR", "x_mm": 215.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 10.9, "state": "MONITOR", "x_mm": 217.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 11.0, "state": "MONITOR", "x_mm": 220.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 11.1, "state": "MONITOR", "x_mm": 221.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 11.2, "state": "MONITOR", "x_mm": 223.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 11.3, "state": "MONITOR", "x_mm": 225.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 11.4, "state": "MONITOR", "x_mm": 227.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 11.5, "state": "MONITOR", "x_mm": 230.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 11.6, "state": "MONITOR", "x_mm": 231.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 11.7, "state": "MONITOR", "x_mm": 233.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 11.8, "state": "MONITOR", "x_mm": 235.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 11.9, "state": "MONITOR", "x_mm": 237.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.0, "state": "MONITOR", "x_mm": 240.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.1, "state": "MONITOR", "x_mm": 241.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.2, "state": "MONITOR", "x_mm": 243.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.3, "state": "MONITOR", "x_mm": 245.99853515625, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.4, "state": "MONITOR", "x_mm": 247.998046875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.5, "state": "MONITOR", "x_mm": 250.0, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.6, "state": "MONITOR", "x_mm": 251.99951171875, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 1.0}
+{"event": "incident", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.7, "incident_id": 1}
+{"event": "transition", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.7, "previous": "MONITOR", "state": "PLAN"}
+{"event": "memory_miss", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.7, "key": ["four-tooth-v1", "nominal", "rms-v1", "v1"]}
+{"event": "planning_record", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.7, "ranked": [{"pair": [3520.0, 960.0], "reason": "kept"}, {"pair": [2880.0, 960.0], "reason": "kept"}, {"pair": [3840.0, 720.0], "reason": "kept"}], "memory": "miss", "excluded": [], "chosen": [3520.0, 960.0]}
+{"event": "set_cutting_parameters", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.7, "command_id": "2511c4f64bcb438ea9d8375c15314cdd:1:1", "rpm": 3520.0, "feed_mm_min": 960.0, "incident_id": 1}
+{"event": "transition", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.7, "previous": "PLAN", "state": "APPLY"}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.7, "state": "APPLY", "x_mm": 253.9990234375, "rpm": 3200.0, "feed_mm_min": 1200.0, "score": 1.0}
+{"event": "ack", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.8, "command_id": "2511c4f64bcb438ea9d8375c15314cdd:1:1", "status": "accepted", "reason": ""}
+{"event": "transition", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.8, "previous": "APPLY", "state": "SETTLE"}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.8, "state": "SETTLE", "x_mm": 255.94849854707718, "rpm": 3299.9755859375, "feed_mm_min": 1140.0146484375, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 12.9, "state": "SETTLE", "x_mm": 257.7980224788189, "rpm": 3399.951171875, "feed_mm_min": 1080.029296875, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 13.0, "state": "SETTLE", "x_mm": 259.549670368433, "rpm": 3500.048828125, "feed_mm_min": 1019.970703125, "score": 1.0}
+{"event": "reached", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 13.1, "command_id": "2511c4f64bcb438ea9d8375c15314cdd:1:1"}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 13.1, "state": "SETTLE", "x_mm": 261.19916993379593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 13.2, "state": "SETTLE", "x_mm": 262.79877930879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 13.3, "state": "SETTLE", "x_mm": 264.39838868379593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 13.4, "state": "SETTLE", "x_mm": 265.99799805879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 13.5, "state": "SETTLE", "x_mm": 267.59956055879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 13.6, "state": "SETTLE", "x_mm": 269.19916993379593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 13.7, "state": "SETTLE", "x_mm": 270.79877930879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 13.8, "state": "SETTLE", "x_mm": 272.39838868379593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 13.9, "state": "SETTLE", "x_mm": 273.99799805879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 14.0, "state": "SETTLE", "x_mm": 275.59956055879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "transition", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 14.1, "previous": "SETTLE", "state": "VERIFY"}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 14.1, "state": "VERIFY", "x_mm": 277.19916993379593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 14.2, "state": "VERIFY", "x_mm": 278.79877930879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 14.3, "state": "VERIFY", "x_mm": 280.39838868379593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 14.4, "state": "VERIFY", "x_mm": 281.99799805879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 14.5, "state": "VERIFY", "x_mm": 283.59956055879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 14.6, "state": "VERIFY", "x_mm": 285.19916993379593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 14.7, "state": "VERIFY", "x_mm": 286.79877930879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 14.8, "state": "VERIFY", "x_mm": 288.39838868379593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 1.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 14.9, "state": "VERIFY", "x_mm": 289.99799805879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.0, "state": "VERIFY", "x_mm": 291.59956055879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.1, "state": "VERIFY", "x_mm": 293.19916993379593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.2, "state": "VERIFY", "x_mm": 294.79877930879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.3, "state": "VERIFY", "x_mm": 296.39838868379593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.4, "state": "VERIFY", "x_mm": 297.99799805879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.5, "state": "VERIFY", "x_mm": 299.59956055879593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "record_outcome", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.6, "command_id": "2511c4f64bcb438ea9d8375c15314cdd:1:1", "success": false, "initial_features": [1.5660218239819896, 1.8893631726275302, 1.8183370975223763, 216.0, 0.21702304749637383, 0.021790908434112674, 0.00730516564356698, 1.563777413927915, 1.949707755071938, 1.8449367823918894, 216.0, 0.22557791849269634, 0.026084943600571828, 0.005836493881928639, 1.5885881091443674, 1.9858958072238022, 1.8524565408442168, 216.0, 0.24271786673712936, 0.037944257322158184, 0.005661750764471396, 3200.0, 1200.0], "final_features": [1.1957441715589117, 2.0442689229663618, 1.8535528686952347, 232.0, 0.23239227141567426, 0.036591992381968856, -0.019981889911459216, 1.1983048346918983, 2.211539307980231, 1.8894823892209702, 232.0, 0.24723941985217324, 0.04502452168891864, -0.014772851037222479, 1.2213411937307066, 2.239124074265098, 1.9500287593281358, 232.0, 0.2730195990552061, 0.06478123594924556, -0.00975373315075806, 3520.0, 960.0]}
+{"event": "transition", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.6, "previous": "VERIFY", "state": "PLAN"}
+{"event": "memory_miss", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.6, "key": ["four-tooth-v1", "nominal", "rms-v1", "v1"]}
+{"event": "planning_record", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.6, "ranked": [{"pair": [3520.0, 960.0], "reason": "already tried"}, {"pair": [2880.0, 960.0], "reason": "kept"}, {"pair": [3840.0, 720.0], "reason": "kept"}], "memory": "miss", "excluded": [{"pair": [3520.0, 960.0], "reason": "already tried"}], "chosen": [2880.0, 960.0]}
+{"event": "set_cutting_parameters", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.6, "command_id": "2511c4f64bcb438ea9d8375c15314cdd:1:2", "rpm": 2880.0, "feed_mm_min": 960.0, "incident_id": 1}
+{"event": "transition", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.6, "previous": "PLAN", "state": "APPLY"}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.6, "state": "APPLY", "x_mm": 301.19916993379593, "rpm": 3520.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "ack", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.7, "command_id": "2511c4f64bcb438ea9d8375c15314cdd:1:2", "status": "accepted", "reason": ""}
+{"event": "transition", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.7, "previous": "APPLY", "state": "SETTLE"}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.7, "state": "SETTLE", "x_mm": 302.79877930879593, "rpm": 3420.0244140625, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.8, "state": "SETTLE", "x_mm": 304.39838868379593, "rpm": 3320.048828125, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 15.9, "state": "SETTLE", "x_mm": 305.99799805879593, "rpm": 3220.0732421875, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 16.0, "state": "SETTLE", "x_mm": 307.59956055879593, "rpm": 3119.9755859375, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 16.1, "state": "SETTLE", "x_mm": 309.19916993379593, "rpm": 3020.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 16.2, "state": "SETTLE", "x_mm": 310.79877930879593, "rpm": 2920.0244140625, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "reached", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 16.3, "command_id": "2511c4f64bcb438ea9d8375c15314cdd:1:2"}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 16.3, "state": "SETTLE", "x_mm": 312.39838868379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 16.4, "state": "SETTLE", "x_mm": 313.99799805879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 16.5, "state": "SETTLE", "x_mm": 315.59956055879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 16.6, "state": "SETTLE", "x_mm": 317.19916993379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 16.7, "state": "SETTLE", "x_mm": 318.79877930879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 16.8, "state": "SETTLE", "x_mm": 320.39838868379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 16.9, "state": "SETTLE", "x_mm": 321.99799805879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 17.0, "state": "SETTLE", "x_mm": 323.59956055879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 17.1, "state": "SETTLE", "x_mm": 325.19916993379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 17.2, "state": "SETTLE", "x_mm": 326.79877930879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "transition", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 17.3, "previous": "SETTLE", "state": "VERIFY"}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 17.3, "state": "VERIFY", "x_mm": 328.39838868379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 17.4, "state": "VERIFY", "x_mm": 329.99799805879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 17.5, "state": "VERIFY", "x_mm": 331.59956055879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 17.6, "state": "VERIFY", "x_mm": 333.19916993379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 17.7, "state": "VERIFY", "x_mm": 334.79877930879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 17.8, "state": "VERIFY", "x_mm": 336.39838868379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 17.9, "state": "VERIFY", "x_mm": 337.99799805879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.0, "state": "VERIFY", "x_mm": 339.59956055879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.1, "state": "VERIFY", "x_mm": 341.19916993379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.2, "state": "VERIFY", "x_mm": 342.79877930879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.3, "state": "VERIFY", "x_mm": 344.39838868379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.4, "state": "VERIFY", "x_mm": 345.99799805879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.5, "state": "VERIFY", "x_mm": 347.59956055879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.6, "state": "VERIFY", "x_mm": 349.19916993379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.7, "state": "VERIFY", "x_mm": 350.79877930879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "record_outcome", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.8, "command_id": "2511c4f64bcb438ea9d8375c15314cdd:1:2", "success": true, "initial_features": [1.1957441715589117, 2.0442689229663618, 1.8535528686952347, 232.0, 0.23239227141567426, 0.036591992381968856, -0.019981889911459216, 1.1983048346918983, 2.211539307980231, 1.8894823892209702, 232.0, 0.24723941985217324, 0.04502452168891864, -0.014772851037222479, 1.2213411937307066, 2.239124074265098, 1.9500287593281358, 232.0, 0.2730195990552061, 0.06478123594924556, -0.00975373315075806, 3520.0, 960.0], "final_features": [1.0327945465489714, 2.083936997214167, 1.8963432940971832, 192.0, 0.24574948691264417, 0.04709430537161439, 0.000604583963251526, 1.0330583786578778, 2.1615383785285203, 1.9185481546199243, 192.0, 0.26271707357583873, 0.0592388598190133, -0.0014847226260433222, 1.040945140289327, 2.2466466711773143, 1.9905732197967332, 192.0, 0.29467533272830193, 0.08295923292042882, -0.0006695498885595508, 2880.0, 960.0]}
+{"event": "recovery_claim", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.8, "command_id": "2511c4f64bcb438ea9d8375c15314cdd:1:2", "incident_id": 1}
+{"event": "memory_write", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.8, "pair": [2880.0, 960.0]}
+{"event": "transition", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.8, "previous": "VERIFY", "state": "MONITOR"}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.8, "state": "MONITOR", "x_mm": 352.39838868379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 18.9, "state": "MONITOR", "x_mm": 353.99799805879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 19.0, "state": "MONITOR", "x_mm": 355.59956055879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 19.1, "state": "MONITOR", "x_mm": 357.19916993379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 19.2, "state": "MONITOR", "x_mm": 358.79877930879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 19.3, "state": "MONITOR", "x_mm": 360.39838868379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 19.4, "state": "MONITOR", "x_mm": 361.99799805879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 19.5, "state": "MONITOR", "x_mm": 363.59956055879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 19.6, "state": "MONITOR", "x_mm": 365.19916993379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 19.7, "state": "MONITOR", "x_mm": 366.79877930879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 19.8, "state": "MONITOR", "x_mm": 368.39838868379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 19.9, "state": "MONITOR", "x_mm": 369.99799805879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 20.0, "state": "MONITOR", "x_mm": 371.59956055879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 20.1, "state": "MONITOR", "x_mm": 373.19916993379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 20.2, "state": "MONITOR", "x_mm": 374.79877930879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 20.3, "state": "MONITOR", "x_mm": 376.39838868379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 20.4, "state": "MONITOR", "x_mm": 377.99799805879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 20.5, "state": "MONITOR", "x_mm": 379.59956055879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 20.6, "state": "MONITOR", "x_mm": 381.19916993379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 20.7, "state": "MONITOR", "x_mm": 382.79877930879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 20.8, "state": "MONITOR", "x_mm": 384.39838868379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 20.9, "state": "MONITOR", "x_mm": 385.99799805879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 21.0, "state": "MONITOR", "x_mm": 387.59956055879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 21.1, "state": "MONITOR", "x_mm": 389.19916993379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 21.2, "state": "MONITOR", "x_mm": 390.79877930879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 21.3, "state": "MONITOR", "x_mm": 392.39838868379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 21.4, "state": "MONITOR", "x_mm": 393.99799805879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 21.5, "state": "MONITOR", "x_mm": 395.59956055879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 21.6, "state": "MONITOR", "x_mm": 397.19916993379593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 21.7, "state": "MONITOR", "x_mm": 398.79877930879593, "rpm": 2880.0, "feed_mm_min": 960.0, "score": 0.0}
+{"event": "transition", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 21.8, "previous": "MONITOR", "state": "COMPLETED"}
+{"event": "tick", "run_id": "2511c4f64bcb438ea9d8375c15314cdd", "time_s": 21.8, "state": "COMPLETED", "x_mm": 400.0, "rpm": 2880.0, "feed_mm_min": 0.0, "score": 0.0}

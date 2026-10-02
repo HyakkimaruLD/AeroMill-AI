@@ -31,7 +31,7 @@ def main():
     )
     evaluate.add_argument("--mode", default="all")
     evaluate.add_argument("--warm-memory", action="store_true")
-    evaluate.add_argument("--output", default="artifacts/day4-validation")
+    evaluate.add_argument("--output")
     evaluate.add_argument("--workers", type=int, default=1)
     args = parser.parse_args()
     if args.command == "data":
@@ -43,13 +43,24 @@ def main():
 
         train()
     elif args.command == "evaluate":
-        if args.split == "final" and not Path("artifacts/FROZEN.json").is_file():
-            parser.error(
-                "final evaluation requires a freeze marker; none is created by Day 3"
+        if args.output is None:
+            args.output = (
+                "artifacts/final"
+                if args.split in ("final", "test")
+                else "artifacts/day4-validation"
             )
         from .evaluation import evaluate_validation
 
         try:
+            if args.split in ("final", "test"):
+                from .freeze import verify_freeze
+
+                verify_freeze()
+            if args.split == "test":
+                from .training import evaluate_test
+
+                evaluate_test(output=args.output)
+                return
             evaluate_validation(
                 split=args.split,
                 mode=args.mode,
