@@ -7,7 +7,6 @@ from pathlib import Path
 import numpy as np
 import plotly.graph_objects as go
 import streamlit as st
-import streamlit.components.v1 as components
 
 from aeromill.parts import DEMO_SEED_MIN, Part, random_part
 from aeromill.scenarios import EngagementSegment, Region, Scenario
@@ -1143,7 +1142,8 @@ def install_guide():
     assets = Path(__file__).parent / "assets"
     css = json.dumps((assets / "guide.css").read_text())
     js = json.dumps((assets / "guide.js").read_text())
-    components.html(
+    # our own static code only, never user input: st.iframe runs it with access to the page
+    st.iframe(
         f"""<script>
         const doc = window.parent.document;
         if (!doc.getElementById("am-guide-style")) {{
@@ -1159,7 +1159,7 @@ def install_guide():
           doc.head.appendChild(script);
         }}
         </script>""",
-        height=0,
+        height=1,
     )
 
 

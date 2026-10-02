@@ -11,6 +11,34 @@ Python 3.12 and [uv](https://docs.astral.sh/uv/):
 ```bash
 uv sync
 uv run streamlit run app.py
+```
+
+Then open http://localhost:8501 in a browser.
+
+### Built-in guide
+
+New to milling chatter or to this project? Press **Guide** in the top-right
+corner. It walks through the screen one block at a time: what each part is for,
+why it is there and how to read every chart. Use the arrow keys to move and Esc
+to close; when it closes, the screen is exactly as it was.
+
+The guide follows what is on the screen, so it says different things on
+different tabs:
+
+- **Live run**: the agent loop, the live readouts, the vibration, spectrum and
+  detector charts, the agent's plan and decision log, and the evaluator's
+  verdict. After an Unknown part run it also explains the hidden stability map
+  and what really happened inside the part.
+- **Mode comparison**: what the four control modes are, how to read the
+  comparison chart and every column of the results table.
+
+It is most useful **after your first run**: start a run (sidebar → Start), let
+it finish, then press Guide, and it explains everything that just happened.
+Before any run it can only show the controls.
+
+From the command line, without the dashboard:
+
+```bash
 uv run python -m aeromill run --scenario recover_a --seed 42 --mode ml_agent
 uv run python -m pytest -q
 ```

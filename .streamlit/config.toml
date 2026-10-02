@@ -11,3 +11,7 @@ toolbarMode = "minimal"
 
 [browser]
 gatherUsageStats = false
+
+[server]
+# no first-run e-mail prompt and no auto-opened tab; open http://localhost:8501 yourself
+headless = true
