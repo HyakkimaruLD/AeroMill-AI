@@ -1,0 +1,82 @@
+/* Guide tour. Everything here lives in its own layer and is removed when the tour closes. */
+:root {
+  --g-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --g-ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --g-ink: #e8e6e1;
+  --g-ink2: #b5b2aa;
+  --g-ink3: #7d7b75;
+  --g-steel: #4f86c6;
+}
+
+.am-guide-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-left: 10px; padding: 4px 12px 4px 9px;
+  border-radius: 999px; border: 1px solid #2e3a48;
+  background: linear-gradient(180deg, #1c2430, #171c22);
+  color: #c9d6e6; font-size: .78rem; font-weight: 600; letter-spacing: .02em;
+  cursor: pointer;
+  transition: border-color .2s var(--g-ease-out), background .2s var(--g-ease-out), transform .15s var(--g-ease-out);
+}
+.am-guide-btn:hover { border-color: var(--g-steel); background: linear-gradient(180deg, #213044, #19212b); }
+.am-guide-btn:active { transform: scale(.97); }
+.am-guide-btn:focus-visible { outline: 2px solid var(--g-steel); outline-offset: 2px; }
+.am-guide-btn svg { width: 14px; height: 14px; }
+
+.amg-root { position: fixed; inset: 0; z-index: 2147483000; pointer-events: none; }
+.amg-root svg.amg-veil { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: auto; }
+.amg-shade { fill: rgba(8, 9, 11, 0.72); }
+.amg-ring { fill: none; stroke: url(#amg-ring-grad); stroke-width: 1.6; }
+.amg-sweep { fill: url(#amg-sweep-grad); }
+
+.amg-card {
+  position: absolute; left: 0; top: 0; width: 360px; max-width: calc(100vw - 32px);
+  pointer-events: auto;
+  background: rgba(24, 26, 29, 0.82);
+  -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px;
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, .75), 0 0 0 1px rgba(79, 134, 198, .10), inset 0 1px 0 rgba(255, 255, 255, .04);
+  padding: 16px 18px 14px; color: var(--g-ink2);
+  font-family: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  will-change: transform;
+}
+.amg-kicker { color: var(--g-steel); font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.amg-title { color: var(--g-ink); font-size: 1.08rem; font-weight: 650; margin: 4px 0 8px; letter-spacing: -.005em; }
+.amg-body { font-size: .88rem; line-height: 1.55; }
+.amg-body p { margin: 0 0 8px; }
+.amg-why { color: var(--g-ink3); font-size: .82rem; }
+.amg-why b { color: var(--g-ink2); font-weight: 600; }
+.amg-read { margin: 6px 0 2px; padding: 0; list-style: none; }
+.amg-read li { display: flex; gap: 9px; align-items: baseline; font-size: .84rem; margin: 5px 0; }
+.amg-chip { flex: none; display: inline-block; min-width: 18px; height: 10px; border-radius: 3px; transform: translateY(1px); }
+.amg-chip.line { height: 3px; border-radius: 2px; transform: translateY(-2px); }
+.amg-chip.dash { height: 0; border-top: 2px dashed currentColor; background: none !important; transform: translateY(-3px); }
+.amg-chip.dot { height: 0; border-top: 2px dotted currentColor; background: none !important; transform: translateY(-3px); }
+
+.amg-foot { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+.amg-progress { flex: 1; height: 3px; border-radius: 3px; background: rgba(255, 255, 255, .07); overflow: hidden; }
+.amg-progress i { display: block; height: 100%; width: 100%; transform-origin: left center; background: linear-gradient(90deg, #3d6aa1, #7fa8d8); transition: transform .5s cubic-bezier(0, 0.55, 0.45, 1); }
+.amg-count { color: var(--g-ink3); font-size: .72rem; font-variant-numeric: tabular-nums; min-width: 38px; text-align: right; }
+.amg-btn {
+  border: 1px solid #2c3036; background: #1e2125; color: var(--g-ink2);
+  border-radius: 9px; padding: 5px 12px; font-size: .8rem; cursor: pointer;
+  transition: background .15s var(--g-ease-out), border-color .15s var(--g-ease-out), color .15s var(--g-ease-out);
+}
+.amg-btn:hover { border-color: #3b4148; color: var(--g-ink); }
+.amg-btn.primary { background: #2b4a70; border-color: #3a6496; color: #eef3f9; }
+.amg-btn.primary:hover { background: #335983; }
+.amg-btn:disabled { opacity: .35; cursor: default; }
+.amg-btn:focus-visible { outline: 2px solid var(--g-steel); outline-offset: 2px; }
+.amg-close {
+  position: absolute; top: 10px; right: 10px; width: 26px; height: 26px; border-radius: 8px;
+  border: 0; background: transparent; color: var(--g-ink3); cursor: pointer; font-size: 16px; line-height: 26px;
+}
+.amg-close:hover { background: rgba(255, 255, 255, .06); color: var(--g-ink); }
+.amg-keys { color: var(--g-ink3); font-size: .68rem; margin-top: 8px; }
+.amg-keys kbd { font-family: inherit; border: 1px solid #33373d; border-bottom-width: 2px; border-radius: 4px; padding: 0 4px; color: var(--g-ink2); }
+
+.amg-logo { width: 44px; height: 44px; margin-bottom: 6px; }
+.amg-logo circle, .amg-logo path { fill: none; stroke: #8fb3de; stroke-width: 1.6; stroke-linecap: round; }
+
+@media (prefers-reduced-transparency: reduce) {
+  .amg-card { background: #1b1d20; -webkit-backdrop-filter: none; backdrop-filter: none; }
+}

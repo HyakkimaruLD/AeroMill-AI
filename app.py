@@ -7,6 +7,7 @@ from pathlib import Path
 import numpy as np
 import plotly.graph_objects as go
 import streamlit as st
+import streamlit.components.v1 as components
 
 from aeromill.parts import DEMO_SEED_MIN, Part, random_part
 from aeromill.scenarios import EngagementSegment, Region, Scenario
@@ -122,6 +123,10 @@ def status_html(state: str) -> str:
     return f'<span class="am-dot" style="background:{STATUS[role]}"></span>{label}'
 
 
+def status_html_text(role: str, label: str) -> str:
+    return f'<span class="am-dot" style="background:{STATUS[role]}"></span>{label}'
+
+
 def tile(key: str, value: str, sub: str = "") -> str:
     return f'<div class="am-tile"><div class="am-k">{key}</div><div class="am-v">{value}</div><div class="am-s">{sub or "&nbsp;"}</div></div>'
 
@@ -170,7 +175,7 @@ def describe(event: dict) -> str:
     fields = ", ".join(
         f"{k}={str(v)[:8] + '…' if k.endswith('_id') and len(str(v)) > 10 else v}"
         for k, v in event.items()
-        if k not in skip and v not in ("", None) and not isinstance(v, (list, dict))
+        if k not in skip and v not in ("", None) and not isinstance(v, (list, tuple, dict))
     )
     return f"<b>{kind.replace('_', ' ')}</b> {fields}"
 
@@ -311,7 +316,14 @@ def setpoint_chart(
         line=dict(width=2, color=color),
         name=unit,
     )
-    return base_layout(fig, title, height=170, y_title=unit, x_title="time, s")
+    fig = base_layout(fig, title, height=170, y_title=unit, x_title="time, s")
+    values = np.append(np.asarray(s.series[key], dtype=float), target)
+    values = values[np.isfinite(values)]
+    if len(values) and np.ptp(values) < 20:
+        # a flat line otherwise gets an absurd axis like 3200.5 / 3201
+        mid = float(values.mean())
+        fig.update_yaxes(range=[mid - 60, mid + 60])
+    return fig
 
 
 def toolpath_chart(s) -> go.Figure:
@@ -966,25 +978,189 @@ with catalog_tab:
             f"Loaded: {CATALOG.get(st.session_state.preset, {}).get('title', st.session_state.preset)}. Press Start in the sidebar."
         )
 
+MODE_STORY = {
+    "no_adaptation": ("Nobody in control", "Never changes speed or feed. This is the 'before' picture."),
+    "baseline": ("Simple loudness rule", "If the vibration gets loud, slow the feed once. It keeps the same spindle speed."),
+    "threshold_search": ("Loudness rule + candidates", "Same A/B/C candidates and checks as the agent, but it decides by loudness, not ML."),
+    "ml_agent": ("ML agent", "Our agent: an ML detector decides, then plan, act, settle and verify."),
+}
+MODE_COLOR = {"no_adaptation": "#5a5d62", "baseline": "#7d7b75", "threshold_search": "#c0703f", "ml_agent": "#4f86c6"}
+
+
+def outcome(row):
+    """Same three verdicts as the live run, so the two screens never disagree."""
+    if row.get("run_success"):
+        return "good", "Succeeded"
+    honest = row.get("state") == "HOLD" and not row.get("missed_incidents") and not row.get("false_recoveries")
+    if honest:
+        return "warning", "Stopped safely"
+    if row.get("state") == "COMPLETED" and row.get("incidents") and row.get("missed_incidents"):
+        return "critical", "Chatter not fixed"
+    return "critical", "Did not succeed"
+
+
+def latency(row):
+    vals = [d.get("detection_latency_s") for d in row.get("incident_details") or [] if d.get("detection_latency_s") is not None]
+    return max(vals) if vals else None
+
+
+def compare_story(rows):
+    by = {r["mode"]: r for r in rows}
+    ml, ts, none = by.get("ml_agent"), by.get("threshold_search"), by.get("no_adaptation")
+    lines = []
+    if none and none.get("incidents"):
+        lines.append(f"Without any control this part spends <b>{none['unstable_time_s']:.1f} s</b> in chatter.")
+    elif none:
+        lines.append("This part never chatters, so the best possible result is to do nothing.")
+    if ml and none and none.get("incidents"):
+        lines.append(f"The ML agent cuts that to <b>{ml['unstable_time_s']:.1f} s</b>.")
+    if ml and ts:
+        if ts.get("false_interventions", 0) > ml.get("false_interventions", 0):
+            lines.append(f"The loudness rule raised <b>{ts['false_interventions']}</b> false alarm(s) here; the ML agent raised "
+                         f"{ml['false_interventions']}. Loud is not the same as chatter, and that is where the ML detector pays off.")
+        elif abs(ts["unstable_time_s"] - ml["unstable_time_s"]) < 0.05 and ts.get("commands") == ml.get("commands"):
+            lines.append("On this part the loudness rule and the ML agent behave the same. "
+                         "Try <b>Louder, still stable</b> to see where they differ.")
+    return " ".join(lines)
+
+
 with compare_tab:
     st.markdown(
-        '<div class="am-h">Mode comparison <span>· same scenario, seed and disturbances; metrics from the independent evaluator</span></div>',
+        '<div class="am-h">Mode comparison <span>· one part, four ways to control it</span></div>'
+        '<div class="am-brief"><b>What is compared</b><span>The same part, seed, noise and disturbances run four times. '
+        "Only the controller changes. Every result comes from the independent evaluator, which sees the hidden truth.</span></div>",
         unsafe_allow_html=True,
     )
-    st.caption(
-        "The threshold baseline stays inside the resonance zone by construction. The ML contribution is judged against threshold search, which uses the same candidates."
-    )
+    cols = st.columns(4, gap="small")
+    for col, (mode, (name, what)) in zip(cols, MODE_STORY.items()):
+        col.markdown(
+            f'<div class="am-cat" style="min-height:96px"><div class="am-cat-t">'
+            f'<span class="am-dot" style="background:{MODE_COLOR[mode]}"></span>{name}</div>'
+            f'<div class="am-cat-s">{what}</div></div>',
+            unsafe_allow_html=True,
+        )
+
     if source != "Preset":
         st.info("Comparison runs on presets. Pick a preset in the sidebar.")
     elif st.button("Run comparison", type="primary"):
-        with st.spinner("Running all modes…"):
+        with st.spinner("Running all four modes on the same part…"):
             st.session_state.comparison = compare(preset, int(seed))
+            st.session_state.comparison_of = CATALOG.get(preset, {}).get("title", preset)
+
     rows = st.session_state.get("comparison")
     if rows:
-        st.dataframe(rows, hide_index=True, width="stretch")
+        st.markdown(
+            f'<div class="am-h">Result <span>· {st.session_state.get("comparison_of", "")}</span></div>'
+            f'<div class="am-brief"><b>What this shows</b><span>{compare_story(rows)}</span></div>',
+            unsafe_allow_html=True,
+        )
+
+        cards = []
+        for r in rows:
+            role, verdict = outcome(r)
+            name = MODE_STORY.get(r["mode"], (r["mode"], ""))[0]
+            fixed = f"{r.get('confirmed_recoveries', 0)} of {r.get('incidents', 0)} fixed" if r.get("incidents") else "no chatter in this part"
+            cut = "—" if r.get("traversal_time_s") is None else f"{r['traversal_time_s']:.1f} s"
+            cards.append(
+                f'<div class="am-tile"><div class="am-k"><span class="am-dot" style="background:{MODE_COLOR.get(r["mode"], GRID)}"></span>{name}</div>'
+                f'<div class="am-v" style="font-size:1.05rem">{status_html_text(role, verdict)}</div>'
+                f'<div class="am-s">{fixed} · {r.get("commands", 0)} command(s)</div>'
+                f'<div class="am-s">in chatter {r.get("unstable_time_s", 0):.1f} s · cut {cut}</div></div>'
+            )
+        st.markdown(f'<div class="am-tiles" style="grid-template-columns:repeat(4,minmax(0,1fr))">{"".join(cards)}</div>',
+                    unsafe_allow_html=True)
+
+        # a part that never chatters makes every chatter bar zero, so ask the question that matters there
+        chatters = any(r.get("unstable_time_s", 0) > 0.05 for r in rows)
+        if chatters:
+            values = [r.get("unstable_time_s", 0) for r in rows]
+            labels = [f"{v:.1f} s" for v in values]
+            title, axis, hover = "Time spent in chatter · shorter is better", "seconds of chatter (hidden truth)", "%{y}: %{x:.2f} s in chatter<extra></extra>"
+        else:
+            values = [r.get("false_interventions", 0) for r in rows]
+            labels = [str(int(v)) for v in values]
+            title = "False alarms · fewer is better (this part never chatters)"
+            axis, hover = "commands sent without real chatter", "%{y}: %{x} false alarm(s)<extra></extra>"
+
+        fig = go.Figure()
+        names = [MODE_STORY.get(r["mode"], (r["mode"],))[0] for r in rows]
+        fig.add_bar(
+            y=names, x=values, orientation="h",
+            marker=dict(color=[MODE_COLOR.get(r["mode"], GRID) for r in rows], line=dict(width=0), cornerradius=4),
+            text=labels, textposition="outside", cliponaxis=False,
+            textfont=dict(color=INK_2, size=11), hovertemplate=hover,
+        )
+        fig = base_layout(fig, title, height=230, x_title=axis)
+        fig.update_layout(hovermode="closest", bargap=0.35, margin=dict(l=170, r=40, t=34, b=40))
+        fig.update_yaxes(autorange="reversed", showgrid=False)
+        longest = max(values + [1.0])
+        fig.update_xaxes(range=[0, longest * 1.2])  # room for the value labels at the bar ends
+        if not chatters:
+            fig.update_xaxes(dtick=1)
+        if not chatters and not any(values):
+            # nothing to compare: a row of zero-length bars says less than one plain sentence
+            st.markdown(
+                f'<div class="am-verdict good"><span class="am-dot" style="background:{STATUS["good"]}"></span>'
+                "<b>No false alarms</b><span>This part never chatters, and all four modes left it alone: "
+                "0 commands sent for nothing.</span></div>",
+                unsafe_allow_html=True,
+            )
+        else:
+            st.plotly_chart(fig, width="stretch", config=CHART_CFG)
+
+        table = []
+        for r in rows:
+            lat = latency(r)
+            table.append({
+                "Mode": MODE_STORY.get(r["mode"], (r["mode"],))[0],
+                "Outcome": outcome(r)[1],
+                "Episodes": r.get("incidents", 0),
+                "Fixed": r.get("confirmed_recoveries", 0),
+                "Missed": r.get("missed_incidents", 0),
+                "In chatter, s": f"{r.get('unstable_time_s', 0):.2f}",
+                "Detected, s": "—" if lat is None else f"{lat:.2f}",
+                "Commands": r.get("commands", 0),
+                "False alarms": r.get("false_interventions", 0),
+                "Cut, s": "—" if r.get("traversal_time_s") is None else f"{r['traversal_time_s']:.1f}",
+                "Extra time": "—" if r.get("productivity_loss") is None else f"{r['productivity_loss'] * 100:.0f}%",
+            })
+        st.dataframe(table, hide_index=True, width="stretch")
+
+        with st.expander("All evaluator metrics"):
+            flat = [{k: v for k, v in r.items() if not isinstance(v, (list, tuple, dict))} for r in rows]
+            st.dataframe(flat, hide_index=True, width="stretch")
         st.download_button(
             "Export comparison JSON",
             json.dumps(rows, default=str).encode(),
             file_name="aeromill_comparison.json",
             mime="application/json",
         )
+
+
+def install_guide():
+    # The tour runs in the page itself, not in the component's iframe, so it can draw over
+    # the dashboard and survive reruns. It never touches Streamlit state.
+    assets = Path(__file__).parent / "assets"
+    css = json.dumps((assets / "guide.css").read_text())
+    js = json.dumps((assets / "guide.js").read_text())
+    components.html(
+        f"""<script>
+        const doc = window.parent.document;
+        if (!doc.getElementById("am-guide-style")) {{
+          const style = doc.createElement("style");
+          style.id = "am-guide-style";
+          style.textContent = {css};
+          doc.head.appendChild(style);
+        }}
+        if (!doc.getElementById("am-guide-script")) {{
+          const script = doc.createElement("script");
+          script.id = "am-guide-script";
+          script.textContent = {js};
+          doc.head.appendChild(script);
+        }}
+        </script>""",
+        height=0,
+    )
+
+
+install_guide()
