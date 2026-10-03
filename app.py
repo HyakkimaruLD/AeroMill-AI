@@ -126,6 +126,59 @@ def status_html_text(role: str, label: str) -> str:
     return f'<span class="am-dot" style="background:{STATUS[role]}"></span>{label}'
 
 
+PAIR_LETTER = {(3520.0, 960.0): "A", (2880.0, 960.0): "B", (3840.0, 720.0): "C"}
+REASON_TEXT = {
+    "already tried": "tried · didn't help",
+    "current pair": "current setting",
+    "outside the limits": "outside machine limits",
+    "outside candidate set": "not an approved pair",
+    "duplicate": "listed twice",
+}
+
+
+def plan_card(plan, incident, attempt, fresh, outcome=None, stopped=False) -> str:
+    """Agent plan as a short list: one line per candidate, with a status a person can read."""
+    excluded = {}
+    for c in plan.get("excluded", []):
+        excluded.setdefault(tuple(c["pair"]), c.get("reason", ""))  # first reason wins; later ones are just "duplicate"
+    chosen = tuple(plan["chosen"]) if plan.get("chosen") else None
+    rows, shown, nxt = [], set(), 0
+    for i, c in enumerate(plan.get("ranked", [])):
+        pair = tuple(c["pair"])
+        if pair in shown:
+            continue
+        shown.add(pair)
+        letter = PAIR_LETTER.get(pair, "M")
+        if pair == chosen and outcome is True:
+            cls, status = "worked", "fixed it"
+        elif pair == chosen and outcome is False:
+            cls, status = "tried", "tried · didn't help"
+        elif pair == chosen:
+            remembered = plan.get("memory") == "hit" and i == 0
+            cls, status = "chosen" + (" enter" if fresh else ""), "remembered fix" if remembered else "chosen"
+        elif pair in excluded and i == 0 and plan.get("memory") == "hit" and excluded[pair] == "current pair":
+            cls, status = "next", "remembered fix · already in use"
+        elif pair in excluded:
+            cls, status = "tried", REASON_TEXT.get(excluded[pair], excluded[pair])
+        else:
+            nxt += 1
+            cls, status = "next", "next if needed" if nxt == 1 else f"then #{nxt}"
+        rows.append(
+            f'<div class="ap-row {cls}"><span class="ap-l">{letter}</span>'
+            f'<span class="ap-p">{fmt_pair(pair)}</span><span class="ap-s">{status}</span></div>'
+        )
+    if chosen is None or (stopped and outcome is False):
+        rows.append('<div class="ap-none">All approved pairs tried. None helped, so the agent stopped the cut.</div>')
+    bars = "".join(
+        f'<i class="{"now" if k == attempt else "used" if k < attempt else ""}"></i>' for k in (1, 2, 3)
+    )
+    return (
+        f'<div class="ap"><div class="ap-top"><span class="ap-kick"><b>Incident {incident}</b> · '
+        f'plan at {plan.get("time_s", 0):.1f} s</span>'
+        f'<span class="ap-att">attempt {min(attempt, 3)} of 3 {bars}</span></div>{"".join(rows)}</div>'
+    )
+
+
 def tile(key: str, value: str, sub: str = "") -> str:
     return f'<div class="am-tile"><div class="am-k">{key}</div><div class="am-v">{value}</div><div class="am-s">{sub or "&nbsp;"}</div></div>'
 
@@ -448,6 +501,12 @@ def map_chart(m, traj, feed) -> go.Figure:
     return fig
 
 
+def chatter_s(res):
+    # the evaluator's own number, so the legend always matches the verdict tiles
+    ev = res.get("evaluation") or {}
+    return float(ev.get("unstable_time_s") or 0.0)
+
+
 def envelope_chart(r, without_agent=None, events=()) -> go.Figure:
     def thin(res):
         step = max(1, len(res["envelope"]) // 1500)
@@ -463,9 +522,9 @@ def envelope_chart(r, without_agent=None, events=()) -> go.Figure:
 
     if without_agent is not None:
         tw, aw = thin(without_agent)
-        fig.add_scatter(x=tw, y=aw, mode="lines", name="same part, no agent",
+        fig.add_scatter(x=tw, y=aw, mode="lines", name=f"same part, no agent · {chatter_s(without_agent):.1f} s in chatter",
                         line=dict(width=1.6, color=INK_3, dash="dot"))
-    fig.add_scatter(x=t, y=a, mode="lines", name="with the agent", line=dict(width=2.2, color=AXES["Y"]),
+    fig.add_scatter(x=t, y=a, mode="lines", name=f"with the agent · {chatter_s(r):.1f} s in chatter", line=dict(width=2.2, color=AXES["Y"]),
                     fill="tozeroy", fillcolor="rgba(192,112,63,0.10)")
 
     # mark when chatter began and when the agent acted, so the spike tells a story
@@ -533,6 +592,7 @@ for key, default in {
 
 
 def reset_run():
+    st.session_state.seen_plans = 0
     st.session_state.session = None
     st.session_state.running = False
     st.session_state.seen_events = 0
@@ -816,20 +876,18 @@ def live_view():
             unsafe_allow_html=True,
         )
         if plans:
-            p = plans[-1]
-            rows = "".join(
-                f'<tr class="{"chosen" if c["pair"] == p.get("chosen") else ""}"><td>{fmt_pair(c["pair"])}</td>'
-                f"<td>{'chosen' if c['pair'] == p.get('chosen') else f'ranked #{i}'}</td></tr>"
-                for i, c in enumerate(p.get("ranked", []), 1)
-            )
-            rows += "".join(
-                f"<tr><td>{fmt_pair(c['pair'])}</td><td>excluded · {c.get('reason', '')}</td></tr>"
-                for c in p.get("excluded", [])
-            )
-            st.markdown(
-                f'<div class="am-card"><table class="am-plan"><tr><th>candidate</th><th>decision</th></tr>{rows}</table></div>',
-                unsafe_allow_html=True,
-            )
+            incidents = [e for e in s.events if e.get("event") == "incident"]
+            since = incidents[-1].get("time_s", 0) if incidents else 0
+            attempt = sum(1 for pl in plans if pl.get("time_s", 0) >= since) or 1
+            fresh = len(plans) > st.session_state.get("seen_plans", 0)
+            st.session_state.seen_plans = len(plans)
+            # the verdict on the latest choice: the first outcome logged *after* this plan.
+            # Order, not time: the previous pair's failure is logged in the same tick as the new plan.
+            last = plans[-1]
+            at = max(i for i, e in enumerate(s.events) if e is last or e == last)
+            outcome = next((e.get("success") for e in s.events[at + 1:] if e.get("event") == "record_outcome"), None)
+            card = plan_card(last, max(1, len(incidents)), attempt, fresh, outcome, s.state == "HOLD")
+            st.markdown(card, unsafe_allow_html=True)
         else:
             st.markdown(
                 '<div class="am-card am-empty">No incident yet. The agent is observing.</div>',

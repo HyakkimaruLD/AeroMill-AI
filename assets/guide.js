@@ -175,8 +175,13 @@
       target: () => headerAndNext("Agent plan"),
       kicker: "Planning",
       title: "Agent plan",
-      body: `<p>When an incident opens, the agent ranks the allowed speed and feed pairs and picks one.</p>
-        <p>A pair is skipped when it was already tried, is the current one, or is outside the machine limits. A fix remembered from earlier on the same zone comes first.</p>
+      body: `<p>When an incident opens, the agent ranks the approved speed and feed pairs A, B and C and picks one. The bars at the top show which attempt this is, out of three.</p>
+        <ul class="amg-read">
+          <li>${chip(COLORS.x)}<span><b>chosen</b>: being tried right now.</span></li>
+          <li>${chip(COLORS.good)}<span><b>fixed it</b>: Verify confirmed the chatter is gone.</span></li>
+          <li>${chip("#c98a7a")}<span><b>tried · didn't help</b>: crossed out, so the agent moves to the next pair.</span></li>
+          <li>${chip(COLORS.mute)}<span><b>next if needed</b>: the queue. A fix remembered from this zone would come first.</span></li>
+        </ul>
         <p class="amg-why">Only pre-approved pairs are allowed, so the agent can never send an arbitrary speed to the machine.</p>`,
     },
     {
